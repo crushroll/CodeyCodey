@@ -1,0 +1,243 @@
+<a name="0"><h1>Help</h1></a>
+Welcome to Codey Codey, the programming tool. This is the main help index page. Press links (that look like this <A 0>Help Index<A>) below, to jump to one of the help sections.
+
+<h2>Sections</h2>
+<ul>
+<li> <a href="#1">Things to know</a>
+<li> <a href="#2">Projects</a>
+<li> <a href="#3">Libraries</a>
+<li> <a href="#4">Things</a>
+<li> <a href="#5">Commands</a>
+<li> <a href="#6">Coding</a>
+<li> <a href="#7">Layout</a>
+<li> <a href="#8">Runtime</a>
+<li> <a href="#9">Variables</a>
+<li> <a href="#10">Sound and video</a>
+<li> <a href="#11">Sprite editor</a>
+<li> <a href="#12">Credits</a>
+</ul>
+
+<a name="1"><h1>Things to know</h1></a>
+Codey Codey is a full-fledged drag-n-drop programming tool, designed for mobile tablets such as the iPad.
+Programming tools are complex beasts, and require many features. This presents a challenge for a touch screen interface.
+ 
+<h2>Example screen</h2>
+<p><img src="cmds_tab_screen.png" width="75%" /><p>
+ 
+To simplify the view, the screen is divided into two sides:
+<ul>
+<li> The left side panel manages <a href="#2">Projects</a>, <a href="#4">Things</a> and <a href="#5">Commands</a> as denoted by the three tabs at the top-left.
+<li> The right side panel manages <a href="#3">Libraries</a>, <a href="#6">Coding</a>, <a href="#11">Sprite editor</a> and <a href="#0">Help</a>.
+</ul>
+ 
+Most things you see on the screen can be pressed, held or dragged.
+ 
+<h2>Tabs</h2>
+There are many tabs. Tabs can be pressed to switch the view.
+<p><img src="top_left_tabs.png" width="25%" /><p>
+If you press and hold a tab, it will show a help tip about what the tab does.
+<p><img src="proj_tab_tip.png" width="25%" /><p>
+ 
+<h2>Dragging, pop-up menus and scrolling</h2>
+If you press and immediately release sprites, library items or commands nothing happens.
+However, if you press and hold for a moment, they highlight and can be dragged. Why the delay you say? It's a trade-off between accidently dragging something, and scrolling through the items in the panel - this is more obvious on the <a href="#5"></a> tab.
+If you press and hold for longer, a popup menu appears with actions you can apply to the item you're pressing.
+<p><img src="proj_open_popup.png" width="35%" /></p>
+ 
+<h2>Toolbar</h2>
+At the top-right of the screen is the toolbar for switching between this view, the <a href="#7"></a> and the <a href="#8"></a>.
+<p><img src="toolbar.png" width="25%" /></p>
+ 
+The 'more' button provides settings for the current view. The following are for this view:
+<p><img src="more_but_popup.png" width="35%" /></p>
+<ul>
+<li> <b>naming</b> - controls whether new items, such as projects and sprites, are automatically named, e.g. Project 1. Or you need to enter a name for the item when you create it. The name of a item can always be renamed at a later time.
+<li> <b>libraries</b> - controls whether you want to see library projects (see <a href="#3">Libraries</a>). Library projects contain sprites that can be included into your project from the library panel.
+<li> <b>cmds (size)</b> - specifies the size (shown in parentheses) of commands to help visibility on different devices.
+<li> <b>help (size)</b> - specifies the size (shown in parentheses) of the help text of the <b>help</b> tab.
+<li> <b>title</b> - shows the initial title screen again. For those that really love it! :-)
+</ul>
+
+<a name="2"><h1>Projects</h1></a>
+The project screen is visible when the <b>projects</b> tab (top-left) is selected.
+<p><img src="proj_tab_screen.png" /></p>
+The darker purple left panel shows open projects.
+The lighter purple <b>library</b> tab panel on the right shows projects and project folders.
+
+<h2>Library projects</h2>
+Select the project <b>library</b> tab, and you'll be presented with a <b>&lt;new project&gt;</b> box, and several folders:
+<ul>
+<li> <b>my projects</b> - that is where your projects will be.
+<li> <b>examples</b> - the list of example projects that you'll see in the command help. 
+<li> <b>library</b> - if the <b>library</b> setting is on, you'll see library projects folder.
+</ul>
+
+Press and hold on <b>&lt;new project&gt;</b>, until the popup menu appears, then select <b>add</b>.
+<p><img src="projnew_lib_popup.png" width="15%" /></p>
+Depending on whether <b>naming</b> is on or off, you'll either be asked for a new project name, or it will be named automatically.
+<p><img src="projnew_name.png" width="25%" /></p>
+
+If you press and hold on a library project, the following popup menu will appear:
+<p><img src="proj_lib_popup.png" width="50%" /></p>
+<ul>
+<li> <b>open</b> or <b>close</b> - if the project is open, then <b>close</b> is available, otherwise <b>open</b>.
+<li> <b>info</b> - provides infomation about the project. Note: This pops up as a help panel, just press in the bread crumb trail to go back.
+<li> <b>rename</b> - rename the project. Note: you can have projects with the same name, so remember what they are!
+<li> <b>duplicate</b> - make a copy of the project. Useful if you want to experiment, or if you have a good base project you like to start from.
+<li> <b>delete</b> - deletes the project, gone, nada!
+</ul>
+
+<h2>Open projects</h2>
+Only open projects are listed in the open projects panel. The star on the project indicates it is open.
+If you press and hold on an open project (in the open projects panel), the following popup menu will appear:
+<p><img src="proj_open_popup.png" width="35%" /></p>
+<ul>
+<li> <b>close</b> - close the project. It will be removed from the left panel. To re-open go to the appropriate folder in the library.
+<li> <b>make lib</b> - convert the project into a library project. The project will no longer be shown in the open projecnts panel (unless <b>libraries</b> setting is on).
+<li> <b>rename</b> - same as above.
+<li> <b>duplicate</b> - same as above.
+<li> <b>delete</b> - same as above.
+</ul>
+
+Tip: You can also drag the <b>&lt;new project&gt;</b> box, or a library project to the open projects panel to create a new project or open one respectively.
+<p><img src="projnew_drag.png" width="25%" /></p>
+
+<a name="3"><h1>Libraries</h1></a>
+Libraries are available for the <b>projects</b> tab, and all sub-tabs within the <b>things</b> tab.
+More detail about the content of each library can be found in the associated section: <a href="#2">Projects</a> and <a href="#4">Things</a>.
+
+A library is actually a special type of project in the <b>libraries</b> folder (visible from the projects <b>library</b> tab if the <b>libraries</b> switch is on - see information about the more button in <a href="#1">Things to know</a>).
+
+A library project (right now) can contain sprites, sounds and videos, which a presented in the <b>library</b> tab for each of those things (see <a href="#4">Things</a>).
+Codey Codey has a built-in <b>library</b> project with a few images and sounds. You can import additional images or sounds and videos into this library. Then they will be available to use in all of your real projects.
+<p><img src="sprite_import_but.png" width="25%" /></p>
+
+You can also create your own library project. Just create a project and add things to it. Then select <b>make lib</b> from open project menu, and the project will become a library.
+
+In a future release of Codey Codey, a number of additional library features will be added:
+<ul>
+<li> Buy and/or download projects from the community, including library projects.
+<li> Share and/or sell projects to the community, including library projects.
+<li> The variable <b>library</b> tab will show variables that have been shared with you, e.g. to exchange data between projects in community.
+</ul>
+
+<a name="4"><h1>Things</h1></a>
+Things (as denoted by the <b>things</b> tab) is where sprites, sounds, videos and variable are managed, each within their own tab of the same name.
+
+<h2>Sprites</h2>
+A sprite is the most important thing in Codey Codey. You can't write code or run anything without a sprite.
+
+Go to the <b>sprites</b> sub-tab (within <b>things</b>) and you'll see the green sprites panel, showing sprites used in the current project.
+<p><img src="sprites_tab.png" width="25%" /></p>
+
+<h2>Creating sprites</h2>
+To create a sprite, go to the sprite image <b>library</b> tab, then either:
+<ul>
+<li> Drag the <b>&lt;new image&gt;</b> box to the <b>sprites</b> tab panel, and drop it on the background. If there are existing sprites, make sure you don't hover the sprite over another sprite and you don't see a black box with arrows - we'll talk about this below in adding frames.
+<p><img src="spritenew_lib_drag.png" width="50%" /></p>
+
+<li> Press and hold on the <b>&lt;new image&gt;</b> box, and the sprite popup menu will apppear. Click the <b>sprite</b> button (with the + icon).
+<p><img src="spritenew_lib_popup.png" width="15%" /></p>
+
+<li> Drag a library sprite to the <b>sprites</b> tab panel.
+<p><img src="sprite_lib_drag.png" width="50%" /></p>
+</ul>
+
+Depending on whether <b>naming</b> is on or off, you'll either be asked for a new sprite name, or it will be named automatically.
+<p><img src="sprite_name.png" width="50%" /></p>
+
+You'll definitely have a sprite in the sprite tab panel now!
+<p><img src="sprites_tab_panel.png" width="25%" /></p>
+The sprite box will show the image for your sprite, the name of the sprite and an arrow.
+In-fact, now that you have a sprite in your project, even with no code, you can pressed the <b>run</b> button to see what happens (see <a href="#8">Runtime</a>).
+
+<h2>Managing sprites</h2>
+If you press and hold on a sprite, the sprite popup appears:
+<p><img src="sprites_tab_popup.png" width="25%" /></p>
+
+The following buttons are available:
+<ul>
+<li> <b>edit</b> - open the image editor to edit the image of the currently selected frame of the sprite. See <b>Editing sprite images</b> below.
+<li> <b>library</b> - add the selected sprite to the library. This is helpful if you've edited a sprite, and want to make it available in the library for other projects.
+<li> <b>rename</b> - rename the selected sprite.
+<li> <b>duplicate</b> - make a copy of the sprite, and give it a new name. This is useful if you want to edit the sprite, say add an explosion.
+<li> <b>delete</b> - delete the sprite from the project. It is completely gone.
+</ul>
+
+<h2>Creating frames</h2>
+Now you have a sprite, let's talk about frames, the second (and actually more) important thing!
+On each sprite there is an arrow under the sprite name. This shows and hides the list of frames for the sprite. Try pressing it.
+You'll notice when you first create a sprite, it will have one frame, which has the same image as the sprite. You many also notice that there is a thick border around the frame, that indicates the selected frame, or the frame that the sprite is showing.
+
+Quite often when you write a game you need to able the change the image of a sprite, say from an alien to an explosion when the alien is destroyed. This is the purpose of frames. 
+You add all the frames you need for each sprite, then select the starting frame and use frame commands you can change the image of the sprite at runtime.
+
+Adding an frame is similar to adding a sprite. Go to the sprite image <b>library</b> tab, then either:
+<ul>
+<li> Drag any of the images over to the <b>sprite</b> tab panel, but this time, hover the image over a sprite or a frame. You will notice a black border with a little arrow, this indicates that the image will become a new frame of the sprite.
+<p><img src="frame_lib_drag.png" width="50%" /></p>
+
+<li> Press and hold on a image and pressed the <b>frame</b> button (with the + icon). This will append the image as a new frame of the currently selected sprite.
+<p><img src="frame_lib_popup.png" width="50%" /></p>
+</ul>
+
+Frame numbers indicate the order of frames when selecting a frame in a command, or using the [next frame] and [prev frame] commands.
+
+<h2>Managing frames</h2>
+If you press and hold on a frame, the frame popup appears:
+<p><img src="frame_popup.png" width="25%" /></p>
+
+The following buttons are available (and very similar to the sprite popup):
+<ul>
+<li> <b>edit</b> - open the image editor to edit the image for the selected frame. See <b>Editing sprite images</b> below.
+<li> <b>library</b> - add the selected sprite to the library. This is helpful if you've edited a sprite, and want to make it available in the library for other projects.
+<li> <b>duplicate</b> - make a copy of the sprite, and give it a new name. This is useful if you want to edit the sprite, say add an explosion.
+<li> <b>delete</b> - delete the sprite from the project. It is completely gone.
+</ul>
+
+<h2>Managing images</h2>
+As seen above, the image popup menu has several additional buttons as follows:
+<ul>
+<li> <b>view</b> - open the image viewer to see the image in more details, zoom, etc. See <b>Editing sprites</b> below.
+<li> <b>rename</b> - to rename the default name of the image in the library. This name is used to automatically name sprites.
+<li> <b>duplicate</b> - to make a copy of the image, typically so you can edit it.
+<li> <b>delete</b> - delete a local image from the library. Note: this deletes the image from the library project and permanently from codey codey.
+</ul>
+
+<h2>Editing sprite images</h2>
+The sprite image editor is quite sophisticated, providing for quite a few features.
+<p><img src="image_editor_menu.png" width="25%" /></p>
+
+If you press and hold on each button, a help tip will appear. However, some buttons need a bit more explanation.
+
+<a name="5"><h1>Commands</h1></a>
+
+<a name="6"><h1>Coding</h1></a>
+ 
+Tip: When all code for all events for all sprites is complete (i.e. there are no further commands to run), the program ends. This includes events that don't fire, such as (when sprite pressed) and (when sprite released) comands.
+To ensure your program keeps running, add a repeat forever loop as in this example.
+<a href="projects/examples/ex02">Example #2</a>
+
+<a name="7"><h1>Layout</h1></a>
+
+<a name="8"><h1>Runtime</h1></a>
+
+<a name="9"><h1>Variables</h1></a>
+
+<a name="10"><h1>Sounds and video</h1></a>
+
+<a name="11"><h1>Sprite editor</h1></a>
+
+<a name="12"><h1>Credits</h1></a>
+Codey Codey
+Copyright (c) 2019 - Paul Sagor
+
+Made for Wade. Thanks for the inspiration and all the ideas and help with testing.
+
+Codey Codey is completely developed in AppGameKit (tier 1).
+
+
+<p><img src="Made-With-AGK-250px.png" width="25%" /></p>
+
+
+Give it a try: <a href="www.appgamekit.com">AppGameKit web site</a>

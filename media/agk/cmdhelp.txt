@@ -1,0 +1,381 @@
+// CODE_EVENT_BLOCK
+#0001
+Define a block of code that is called when you use the (call block) command. \
+A list of parameters can be passed to the 'call block' command, which are passed to this event.
+
+Use the 'param' commands to get the value of each parameter, 1 through 5. \
+
+<B>Example</B>
+This project randomly draws rectangles:
+
+<P E1>
+
+<B>Fact</B>: In other programming languages, e.g. JavaScript, this might be called a function or procedure.
+
+// CODE_EVENT_TIMER
+#0002
+
+// CODE_EVENT_RUN
+#0003
+You must have one of these commands to be able to start your project. \
+When the run button (green with white play icon) is pressed, the attached code will run until until the last command.
+
+<B>Example</B>
+This example draws a square using the sprite pen. However, you can't see it, because the code ends and clears the pen.
+Open the project and try it.
+
+<B>Tip</B>: You need at least one command that keeps the project running, e.g. 'repeat forever' loop, 'wait for seconds', 'wait until'. \
+Otherwise, as soon as all commands in all event blocks have executed, the project stops.
+
+<P E3>
+
+Change the example. Drag the 'wait until' command over the bottom og the last 'change angle by' command. \
+As you drag under the command you'll see a black border, that means you can snap it - let go!
+
+<G help/when_run_pressed.png>
+
+Now, with this the project stays running until you press the screen.
+
+<B>Note</B>: Changes to sprites will still be visible when the code ends. \
+However, some element won't still be visible, e.g. pen. The reason for this is these elements are only visible while the sprite is active (running).
+
+// CODE_EVENT_COLL_ANY_THING
+#0005
+
+<B>Example</B>
+When this sprite is hit by any another sprite, this block is called. 
+The 'hit sprite?' command inside an 'if' block can be used to check for the actual sprite.
+
+<B>Tip</B>: This block lets you detect any sprite hit, and check with an 'if' and 'hit sprite?' combo. \
+However, if you just need to detect one sprite, then you can use 'when sprite hit' with a sprite.
+
+<B>Example</B>
+
+// CODE_EVENT_COLL_ANY_EDGE
+#0006
+
+// CODE_EVENT_COLL_THING
+#0007
+
+<B>Example</B>
+If the sprite shown in the command collides with sprite containing this code, the say command is executed, and the sprites display "Hit".
+
+<PI E8>
+
+// CODE_EVENT_RECEIVED
+#0008
+If sprite "sprite" sends a message, sprite "frog" can received it and respond to it.
+
+<B>Tip</B>: This is a common app or game development approach to keep code that produces an event (e.g. a bullet hitting an enemy), \
+from the code the needs to know about (e.g. a score variable).
+
+<B>Example</B>
+
+// CODE_EVENT_CLONE
+#000A
+Whenever a sprite calls the (clone this sprite) command, a copy of the sprite is created with exactly the same look and position as the original. \
+Then this block is executed for the clone. You would usually put code for changing the clone here, such as repositioning, or any logic that \
+just the clone would need.
+
+To delete a clone, you need to call the (delete this clone) cmd from within this event. If you want to delete all clones call (delete all clones).
+
+<B>Note</B>: Clones still receive all the same events that the master sprite receives, e.g. ptr and sprite presses, hits, etc.
+
+<B>Example</B>
+
+// CODE_EVENT_COLL_EDGE
+#000B
+
+<B>Example</B>
+If this sprite collides with one or more screen edges, the say command is executed and the sprite displays "Collided" for 1 second.
+
+// CODE_EVENT_PTR_PRESSED
+#000C
+If you're on a tablet such as iPad, the pointer is your finger pressing the screen!
+
+<B>Example</B>
+The sprite will go to wherever you press on the screen.
+
+<P E4>
+
+// CODE_EVENT_PTR_RELEASED
+#000D
+
+// CODE_EVENT_PTR_DOWN
+//#000E
+
+// CODE_EVENT_SPRITE_PRESSED
+#000F
+
+<B>Example</B>
+If you press on the sprite and keep holding, you can drag the sprite around. If you let go, the sprite will snap back to the middle of the screen.
+
+<P E5>
+
+// CODE_EVENT_SPRITE_RELEASED
+#0011
+
+//// CODE_EVENT_COLL_PHYSICS 0x0004
+// CODE_EVENT_VAR_PRESSED 0x0010
+// CODE_EVENT_VAR_RELEASED 0x0012
+
+// CODE_MOVE_SET_X 0x1001 //
+// CODE_MOVE_SET_Y 0x1002 //
+// CODE_MOVE_MOVE_X 0x1003 //
+// CODE_MOVE_MOVE_Y 0x1004 //
+// CODE_MOVE_SET_ANGLE 0x1005 // 
+// CODE_MOVE_MOVE_ANGLE 0x1006 //
+// CODE_MOVE_SET_POS 0x1007 //
+// CODE_MOVE_POINT_AT_POS 0x1008 //
+// CODE_MOVE_POINT_AT_THING 0x1009 //
+// CODE_MOVE_GET_X 0x1100A //
+// CODE_MOVE_GET_Y 0x1100B //
+// CODE_MOVE_GET_ANGLE 0x1100C //
+// CODE_MOVE_FORWARD 0x100D //
+// CODE_MOVE_DIST_TO_POS 0x1100E //
+// CODE_MOVE_DIST_TO_THING 0x1100F //
+// CODE_MOVE_WRAP_SCREEN_X 0x1010 //
+// CODE_MOVE_WRAP_SCREEN_Y 0x1011 //
+// CODE_MOVE_SET_RANDOM_POS 0x1012 //
+
+// CODE_LOOK_SET_COLOR 0x2001 //
+// CODE_LOOK_SHOW 0x2002 //
+// CODE_LOOK_HIDE 0x2003 //
+// CODE_LOOK_GET_FRAME 0x12004 //
+// CODE_LOOK_SET_FRAME 0x2005 // test
+// CODE_LOOK_SET_SCALE 0x2006 //
+// CODE_LOOK_BRING_TO_FRONT 0x2007
+// CODE_LOOK_SEND_TO_BACK 0x2008
+//// CODE_LOOK_SET_DEPTH 0x2009
+// CODE_LOOK_SET_TRANSPARENCY 0x200A //
+// CODE_LOOK_GET_WIDTH 0x12012 //
+// CODE_LOOK_GET_HEIGHT 0x12013 //
+// CODE_LOOK_GET_DEPTH 0x12014
+// CODE_LOOK_GET_TRANSPARENCY 0x12015 //
+// CODE_LOOK_GET_COLOR 0x12016 //
+// CODE_LOOK_GET_SCALE_X 0x12017 //
+// CODE_LOOK_GET_SCALE_Y 0x12018 //
+// CODE_LOOK_SET_SCALE_X 0x2019 //
+// CODE_LOOK_SET_SCALE_Y 0x201A //
+// CODE_LOOK_CREATE_CLONE 0x201B //
+// CODE_LOOK_DELETE_CLONE 0x201C // test
+// CODE_LOOK_CHANGE_SCALE 0x201D
+// CODE_LOOK_CHANGE_SCALE_X 0x201E
+// CODE_LOOK_CHANGE_SCALE_Y 0x201F
+// CODE_LOOK_PREV_FRAME 0x2020 //
+// CODE_LOOK_NEXT_FRAME 0x2021 //
+// CODE_LOOK_SET_FRAME_IMAGE 0x2022 // test
+// CODE_LOOK_GET_VISIBLE 0x22023 // test
+// CODE_LOOK_PRINT 0x2024
+// CODE_LOOK_PEN_DOWN 0x2025 // test
+// CODE_LOOK_PEN_UP 0x2026 // test
+// CODE_LOOK_SET_PEN_COLOR 0x2027 // test
+// CODE_LOOK_SET_PEN_SIZE 0x2028 // test
+// CODE_LOOK_CHANGE_TRANSPARENCY 0x2029
+// CODE_LOOK_FLIP_X 0x202A
+// CODE_LOOK_FLIP_Y 0x202B
+// CODE_LOOK_SET_PRINT_BG_COLOR 0x202C
+// CODE_LOOK_SET_PRINT_BORDER_COLOR 0x202D
+// CODE_LOOK_SET_PRINT_TEXT_COLOR 0x202E
+// CODE_LOOK_DELETE_ALL_CLONES 0x202F
+// CODE_LOOK_SET_PEN_STYLE 0x2030
+// CODE_LOOK_SAVE_PEN 0x2031 // test
+// CODE_LOOK_STAMP_PEN 0x2032 // test
+// CODE_LOOK_CLEAR_PEN 0x2033 // test
+// CODE_LOOK_STOP_SAVE_PEN 0x2034 // test
+// CODE_LOOK_DRAW_OVAL 0x2035 // test
+// CODE_LOOK_STAMP_SPRITE 0x2036 // test
+// CODE_LOOK_TILE_BG 0x2037
+// CODE_LOOK_SET_PIXEL_SCALING 0x2038
+// CODE_LOOK_ERASE_STAMP_SPRITES 0x2039 // test
+// CODE_LOOK_PRINT_FOR_TIME 0x2039
+// CODE_LOOK_SET_COLOR_PARTS 0x0203A //
+// CODE_LOOK_CHANGE_COLOR_PARTS 0x0203B // test
+// CODE_LOOK_SET_PRINT_FONT 0x203C
+// CODE_LOOK_SET_PRINT_FONT_SIZE 0x203D
+// CODE_LOOK_BRING_FORWARD 0x203E
+// CODE_LOOK_SEND_BACKWARD 0x203F
+// CODE_LOOK_GET_OFF_SCREEN 0x22040 // test
+// CODE_LOOK_UPDATES_OFF 0x2041 // test
+// CODE_LOOK_UPDATES_ON 0x2042 // test
+
+// CODE_FLOW_REPEAT_TIMES 0x3001 //
+// CODE_FLOW_REPEAT_FOREVER 0x3002 //
+// CODE_FLOW_REPEAT_UNTIL 0x3003 // test
+// CODE_FLOW_REPEAT_WHILE 0x3004 // test
+// CODE_FLOW_IF 0x3005 //
+// CODE_FLOW_ELSE 0x3006 //
+// CODE_FLOW_ENDIF 0x3007 //
+// CODE_FLOW_RESET_TIMER 0x3008 //
+// CODE_FLOW_GET_TIMER 0x13009 //
+// CODE_FLOW_WAIT_SECS 0x301E // 
+// CODE_FLOW_IF_ELSE 0x301F //
+// CODE_FLOW_CALL_BLOCK 0x3020
+// CODE_FLOW_SEND_EVENT 0x3021
+//// CODE_FLOW_REPEAT_WHILE 0x3022 // test
+// CODE_FLOW_REPEAT_END 0x3022 //
+// CODE_FLOW_STOP 0x3023
+// CODE_FLOW_EXIT_LOOP 0x3024
+// CODE_FLOW_SKIP_LOOP 0x3025
+// CODE_FLOW_COMMENT 0x3026
+// CODE_FLOW_WAIT_UNTIL 0x3027
+// CODE_FLOW_PARAM_VALUE 0x213029
+// CODE_FLOW_PARAM_BOOL 0x2302A
+
+// CODE_SENSE_PTR_X 0x14001 //
+// CODE_SENSE_PTR_Y 0x14002 //
+// CODE_SENSE_SPRITE_PRESSED 0x24003 //
+// CODE_SENSE_SPRITE_INFO 0x14004 //
+// CODE_SENSE_SPRITE_VIS 0x24005 //
+// CODE_SENSE_KEY_PRESSED 0x24006
+// CODE_SENSE_KEY_HELD 0x24007
+// CODE_SENSE_KEY_RELEASED 0x24008
+// CODE_SENSE_COLL_THING 0x24009
+// CODE_SENSE_COLL_EDGE 0x2400A
+// CODE_SENSE_SET_AS_BG 0x400F
+// CODE_SENSE_X_MAX 0x14010
+// CODE_SENSE_Y_MAX 0x14011
+// CODE_SENSE_VAR_PRESSED 0x24012 //
+// CODE_SENSE_SPRITE_DOWN 0x24013 //
+// CODE_SENSE_SPRITE_RELEASED 0x24014 //
+// CODE_SENSE_VAR_DOWN 0x24015 //
+// CODE_SENSE_VAR_RELEASED 0x24016 //
+// CODE_SENSE_PTR_PRESSED 0x24017 //
+// CODE_SENSE_PTR_DOWN 0x24018 //
+// CODE_SENSE_PTR_RELEASED 0x24019 //
+// CODE_SENSE_SPRITE_OFF_SCREEN 0x2401A //
+// CODE_SENSE_X_MID 0x1401B
+// CODE_SENSE_Y_MID 0x1401C
+// CODE_SENSE_TRUE 0x2401D
+// CODE_SENSE_FALSE 0x2401E
+// CODE_SENSE_EQ 0x2401F //
+// CODE_SENSE_NE 0x24020 //
+// CODE_SENSE_LT 0x24021 //
+// CODE_SENSE_LE 0x24022 //
+// CODE_SENSE_GT 0x24023 //
+// CODE_SENSE_GE 0x24024 //
+// CODE_SENSE_NOT 0x24025 //
+// CODE_SENSE_OR 0x24026 //
+// CODE_SENSE_AND 0x24027 //
+// CODE_SENSE_AS_BOOL 0x24028 //
+
+// CODE_EMIT_PLAY_SOUND 0x5020
+// CODE_EMIT_STOP_SOUND 0x5021
+// CODE_EMIT_STOP_ALL_SOUNDS 0x5022
+// CODE_EMIT_GET_SOUND_VOLUME 0x15023 //
+// CODE_EMIT_SET_SOUND_VOLUME 0x5024
+// CODE_EMIT_SET_CHANNEL_VOLUME 0x5025
+// CODE_EMIT_PLAY_VIDEO 0x5026
+// CODE_EMIT_GET_CHANNEL_VOLUME 0x5027
+// CODE_EMIT_STOP_VIDEO 0x5028
+// CODE_EMIT_SET_BG_COLOR 0x5029
+// CODE_EMIT_SET_VAR_TITLE_COLOR 0x502A
+// CODE_EMIT_SET_VAR_TITLE_POS 0x502B
+// CODE_EMIT_SET_VAR_TITLE_FONT 0x502C
+// CODE_EMIT_GET_VIDEO_X 0x1502D
+// CODE_EMIT_GET_VIDEO_Y 0x1502E
+// CODE_EMIT_SET_VAR_TITLE_DIR 0x502F
+// CODE_EMIT_SET_VAR_BOX_COLOR 0x5030
+// CODE_EMIT_SET_VAR_TEXT_COLOR 0x5031
+// CODE_EMIT_SET_VAR_TEXT_FONT 0x5032
+// CODE_EMIT_PRELOAD_SOUND 0x5033 //
+// CODE_EMIT_UNLOAD_SOUND 0x5034 //
+// CODE_EMIT_SET_SOUND_LOOPS 0x5035 //
+// CODE_EMIT_GET_CHANNEL 0x15036 //
+// CODE_EMIT_PLAY_SOUND_DONE 0x5037 //
+// CODE_EMIT_SET_VIDEO_POS 0x5038 //
+// CODE_EMIT_SET_VIDEO_WIDTH 0x5039 //
+// CODE_EMIT_SET_VIDEO_HEIGHT 0x503A //
+// CODE_EMIT_SET_VIDEO_VOLUME 0x503B //
+// CODE_EMIT_LOAD_VIDEO 0x503C //
+// CODE_EMIT_UNLOAD_VIDEO 0x503D //
+// CODE_EMIT_PAUSE_VIDEO 0x503E //
+// CODE_EMIT_GET_VIDEO_DURATION 0x1503F //
+// CODE_EMIT_PLAY_VIDEO_DONE 0x5040 //
+// CODE_EMIT_GET_VIDEO_TIME 0x15041 //
+// CODE_EMIT_SHOW_VIDEO_PANEL 0x5042 //
+// CODE_EMIT_HIDE_VIDEO_PANEL 0x5043 //
+// CODE_EMIT_SET_VIDEO_TIME 0x5044 //
+// CODE_EMIT_SHOW_VIDEO 0x5045 //
+// CODE_EMIT_HIDE_VIDEO 0x5046 //
+// CODE_EMIT_MAKE_COLOR 0x215047 // test
+
+// CODE_CALC_RANDOM 0x16003 //
+// CODE_CALC_PLUS 0x16004 //
+// CODE_CALC_MINUS 0x16005 //
+// CODE_CALC_MULTIPLY 0x16006 //
+// CODE_CALC_DIVIDE 0x16007 //
+// CODE_CALC_MOD 0x16008 //
+// CODE_CALC_POW 0x16009 //
+// CODE_CALC_ROUND 0x1600A //
+// CODE_CALC_SIN 0x1600B //
+// CODE_CALC_COS 0x1600C //
+// CODE_CALC_TAN 0x1600D //
+// CODE_CALC_ASIN 0x1600E //
+// CODE_CALC_ACOS 0x1600F //
+// CODE_CALC_ATAN 0x16010 //
+// CODE_CALC_LOG 0x16011 //
+// CODE_CALC_SQRT 0x16012 //
+// CODE_CALC_NEG 0x16013 //
+// CODE_CALC_RANDOM_FLOAT 0x1602A //
+// CODE_CALC_RANDOM_X_POS 0x1602B //
+// CODE_CALC_RANDOM_Y_POS 0x1602C //
+// CODE_CALC_RANDOM_COLOR 0x21602D //
+// CODE_CALC_FORMAT_NBR 0x21602E //
+// CODE_CALC_GET_TIME 0x21602F //
+// CODE_CALC_GET_DATE 0x216030 //
+// CODE_CALC_EXTRACT 0x216031 // test.
+// CODE_CALC_REPLACE 0x216032
+// CODE_CALC_FIND 0x16033 // test.
+// CODE_CALC_FIND_REV 0x16034 // test.
+// CODE_CALC_IGNORE_CASE 0x6035
+// CODE_CALC_APPEND 0x216036
+// CODE_CALC_SPLIT_TEXT 0x216037 // test.
+// CODE_CALC_LEN 0x16038 // test.
+// CODE_CALC_TRIM 0x216039 // test.
+// CODE_CALC_GET_DATETIME 0x21603A // test.
+// CODE_CALC_AS_NBR 0x1603B //
+// CODE_CALC_AS_TEXT 0x21603C //
+
+// CODE_DATA_SET_VAR 0x7001 //
+// CODE_DATA_ADD_ITEM 0x7002
+// CODE_DATA_ITEM 0x217003
+// CODE_DATA_CLEAR_VAR 0x7005
+// CODE_DATA_JOIN_LIST 0x217006 // test.
+// CODE_DATA_MAKE_TMP_VAR 0x7008 //
+// CODE_DATA_SHARE_TMP_VAR 0x7009 //
+// CODE_DATA_GET_TMP_VAR 0x21700A //
+// CODE_DATA_REMOVE_ITEM 0x7010
+// CODE_DATA_CHANGE_VAR 0x7012 //
+// CODE_DATA_SET_VAR_BG_COLOR 0x7013
+// CODE_DATA_SET_VAR_X 0x7014
+// CODE_DATA_SET_VAR_Y 0x7015
+// CODE_DATA_SET_VAR_TITLE_COLOR 0x7016
+// CODE_DATA_SET_VAR_TITLE_FONT_SIZE 0x7017
+// CODE_DATA_SET_VAR_TITLE_DIR 0x7018
+// CODE_DATA_SET_VAR_TITLE_VIS 0x7019
+// CODE_DATA_SET_VAR_TEXT_COLOR 0x701A
+// CODE_DATA_SET_VAR_TEXT_FONT_SIZE 0x701B
+// CODE_DATA_SET_VAR_BOX_COLOR 0x701C
+// CODE_DATA_WAIT_INPUT 0x701D //
+// CODE_DATA_SET_VAR_TITLE_ALIGN 0x701E
+// CODE_DATA_SET_VAR_TEXT_ALIGN 0x701F
+// CODE_DATA_SET_VAR_TEXT_SECRET 0x7020
+// CODE_DATA_MAKE_TMP_LIST 0x7021 //
+// CODE_DATA_SET_VAR_TITLE_FONT 0x7022
+// CODE_DATA_SET_VAR_TEXT_FONT 0x7023
+// CODE_DATA_SHOW_VAR 0x7024
+// CODE_DATA_HIDE_VAR 0x7025
+// CODE_DATA_ITEM_VALUE_INDEX 0x17026 // Item idx based on name.
+// CODE_DATA_SET_ITEM_NAME 0x7027
+// CODE_DATA_SET_ITEM_VALUE 0x7028
+// CODE_DATA_ITEM_NAME 0x217029
+// CODE_DATA_INSERT_ITEM 0x702A
+// CODE_DATA_ITEM_NAME_INDEX 0x1702B // Item idx based on name.
+// CODE_DATA_ITEM_BY_NAME 0x21702C
+// CODE_DATA_ADD_ITEM_BY_NAME 0x702D
+// CODE_DATA_GET_TMP_LIST 0x21702E //
+// CODE_DATA_CLEAR_LIST 0x702F
+// CODE_DATA_SET_VAR_W 0x7032
+// CODE_DATA_SET_VAR_H 0x7033
+

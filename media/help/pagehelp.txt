@@ -1,0 +1,1006 @@
+#0 Help Index
+<H 0>
+
+Welcome to Codey Codey, the programming tool. 
+Choose one of the help options below:
+
+<*> <L 13>
+<*> <L 14>
+
+#13 How to
+<H 13>
+
+<B>Projects</B>
+<*> <N 1> Create a project </N>
+<*> <N 3> Open a project </N>
+<*> <N 12> Rename a project </N>
+
+<B>Sprites</B>
+<*> <N 4> Create a sprite </N>
+<*> <N 6> Add a sprite </N>
+<*> <N 13> Add a frame to a sprite </N>
+<*> <N 8> Add commands </N>
+<*> <N 10> Edit command values </N>
+<*> <N 11> Add a command that returns a value </N>
+
+#14 Detailed help
+<H 14>
+The following sections explain all the elements of Codey Codey.
+
+<*> <L 1>
+<*> <L 2>
+<*> <L 3>
+<*> <L 4>
+<*> <L 5>
+<*> <L 6>
+<*> <L 7>
+<*> <L 8>
+<*> <L 9>
+<*> <L 10>
+<*> <L 11>
+<*> <L 12>
+
+#1 Things to know
+<H 1>
+Codey Codey is a full-fledged drag-n-drop programming tool, designed for mobile tablets such as the iPad. Programming tools are complex beasts, and require many features. This presents a challenge for a touch screen interface.
+ 
+<B>Example screen</B>
+<G help/cmds_tab_screen.png>
+ 
+The screen is divided into two sides:
+<*> The left side panel manages <L 2>, <L 4> and <L 5> as denoted by the three tabs at the top-left.
+<*> The right side panel manages <A 0> Help </A>, <L 6>, <L 3> and editing commands.
+
+<B>Interacting with the screen</B>
+Most things you see on the screen can be pressed (press and release), held (press and hold) or dragged (press, hold and move).
+ 
+<B>Tabs</B>
+There is much to see and use in Codey Codey. To keep the view simple, tabs are used to contain information into groups. The are many tabs!
+<G help/top_left_tabs.png>
+
+Pressing a tab switches to that tab's view. If you press and hold a tab, it will show a help tip about what the tab contains.
+<G help/proj_tab_tip.png>
+
+<B>Dragging and scrolling</B>
+If you press and hold a project or library item for a moment, it will highlight and then can be dragged. Why the delay you say? It's a trade-off between accidently dragging something, and scrolling through the items in the panel - this is more obvious on the <L 5> tab.
+If you press and hold for longer, a popup menu appears with actions you can apply to the item you're pressing.
+<G help/proj_open_popup.png>
+ 
+<B>Toolbar</B>
+At the top-right of the screen is the toolbar for switching between this view (the coding view), the <L 7> and the <L 8>.
+<G help/toolbar.png>
+ 
+The 'more' button is available in all three views, and is where you access settings for for the current view.
+
+The following settings are for the coding view:
+<G help/more_but_popup.png>
+
+<*> <B>naming</B> - controls whether new items, such as projects and sprites, are automatically named, e.g. Project 1. Or you need to enter a name for the item when you create it. The name of a item can always be changed at a later time.
+<*> <B>libraries</B> - controls whether you want to see library projects (see <L 3>). Library projects contain sprites, sounds and videos that can be included into your project from the library panel.
+<*> <B>cmds</B> - specifies the size (shown in parentheses) of commands to help visibility on different devices.
+<*> <B>help</B> - specifies the size (shown in parentheses) of the help text of the 'help' tab.
+<*> <B>title</B> - shows the initial title screen again. For those that really love it! :-)
+
+#2 Projects
+<H 2>
+A project is effectively a container for all the assets required for an app or game. The project has a name, and includes sprites with code and a layout, variables, and optionally sounds and videos.
+
+The project screen is visible when the <B>projects</B> tab (top-left) is selected.
+
+<G help/proj_tab_screen.png>
+
+The darker purple left panel shows open projects.
+The lighter purple 'library' tab panel on the right shows available projects and project folders.
+
+<B>Library projects</B>
+Select the project 'library' tab, and you'll be presented with a <B>"new project"</B> box, and several folders:
+<*> 'my projects' - this is where your projects will be.
+<*> 'examples' - the list of example projects that you'll see in the command help. 
+<*> 'libraries' - if the 'library' setting is on, you'll see library projects folder.
+
+Press the <B>"new project"</B> box, or press and hold on it until the popup menu appears, then select 'add'.
+
+<G help/proj_new_lib_popup.png>
+
+<B>Note</B>: You can also drag the <B>"new project"</B> box to the open projects panel to create a new project.
+
+<G help/proj_new_drag.png>
+
+Depending on whether 'naming' is on or off, you'll either be asked for a new project name, or it will be named automatically.
+
+<G help/proj_new_add.png>
+
+If you press and hold on a project in the library, the following popup menu will appear:
+
+<G help/proj_lib_popup.png>
+
+<*> <B>open</B> or <B>close</B> - if the project is open, then <B>close</B> is available, otherwise <B>open</B>.
+<*> <B>info</B> - provides infomation about the project. Note: This pops up as a help panel, just press in the bread crumb trail to go back.
+<*> <B>rename</B> - rename the project. Note: you can have projects with the same name, so remember what they are!
+<*> <B>duplicate</B> - make a copy of the project. Useful if you want to experiment, or if you have a good base project you like to start from.
+<*> <B>delete</B> - deletes the project, gone, nada!
+
+<B>Note</B>: You can also drag a project box from the library to the open projects panel to open it.
+
+<B>Open projects</B>
+Only open projects are listed in the open projects panel. The star on the project indicates it is open.
+If you press and hold on an open project (in the open projects panel), the following popup menu will appear:
+
+<G help/proj_open_popup.png>
+
+<*> <B>close</B> - close the project. It will be removed from the left panel. To re-open go to the appropriate folder in the library.
+<*> <B>make lib</B> - convert the project into a library project. The project will no longer be shown in the open projects panel (unless 'libraries' setting is on).
+<*> <B>rename</B> - same as above.
+<*> <B>duplicate</B> - same as above.
+<*> <B>delete</B> - same as above.
+
+#3 Libraries
+<H 3>
+Libraries are available for the <B>projects</B> tab, and all sub-tabs within the <B>things</B> tab, i.e. <B>sprites</B>, <B>variables</B>, <B>sounds</B> and <B>videos</B>.
+More detail about the content of each library can be found in the associated section: <L 2> and <L 4>.
+
+A library is actually a special type of project in the <B>libraries</B> folder (visible from the projects <B>library</B> tab if the <B>libraries</B> switch is on - see information about the more button in <L 1>).
+
+A library project (right now) can contain sprites, sounds and videos, which a presented in the 'library' tab for each of those things (see <L 4>).
+Codey Codey has a built-in 'library' project with a few images and sounds. You can import additional images or sounds and videos into this library. They will then be available to use in all of your real projects.
+<G help/sprite_import_but.png>
+
+You can also create your own library project. Just create a project and add things to it. Then select 'make lib' from open project menu, and the project will become a library.
+
+#4 Things
+<H 4>
+Things (as denoted by the <B>things</B> tab) is where sprites, variables, sounds and videos are managed, each within their own tab of the same name.
+
+<B>Sprites</B>
+A sprite is the most important thing in Codey Codey. You can't write code or run anything without a sprite.
+
+Go to the <B>sprites</B> tab (within <B>things</B>) and you'll see the green sprites panel, showing sprites used in the current project.
+<G help/sprites_tab.png>
+
+<B>Creating sprites</B>
+To create a sprite, go to the sprite image <B>library</B> tab, then either:
+<*> Drag the "new image" box over the <B>sprites</B> tab panel, and drop it. 
+<G help/spritenew_lib_drag.png>
+
+<*> Press the "new image" box.
+
+<*> Press and hold on the "new image" box, and the sprite popup menu will apppear. Click the <B>sprite</B> button (with the + icon).
+<G help/spritenew_lib_popup.png>
+
+<*> Drag a sprite box from the library to the <B>sprites</B> tab panel.
+<G help/sprite_lib_drag.png>
+
+Depending on whether <B>naming</B> is on or off, you'll either be asked for a new sprite name, or it will be named automatically.
+<G help/sprite_name.png>
+
+You should now see a sprite in the sprite tab panel.
+<G help/sprites_tab_panel.png>
+
+The sprite box will show the image for your sprite, the name of the sprite and an arrow.
+Now that you have a sprite in your project, even with no code, you can pressed the 'run' button to see what happens (see <L 8>).
+
+<B>Managing sprites</B>
+If you press and hold on a sprite, the sprite popup appears:
+<G help/sprites_tab_popup.png>
+
+The following buttons are available:
+<*> <B>edit</B> - open the image editor to edit the image of the currently selected frame of the sprite. See <L 11> below.
+<*> <B>library</B> - add the selected sprite to the library. This is helpful if you've edited a sprite, and want to make it available in the library for other projects.
+<*> <B>rename</B> - rename the selected sprite.
+<*> <B>duplicate</B> - make a copy of the sprite, and give it a new name. This is useful if you want to edit the sprite, say add an explosion.
+<*> <B>delete</B> - delete the sprite from the project. It is completely gone.
+
+<B>Creating frames</B>
+Now you have a sprite, let's talk about frames, the second (and actually more) important thing!
+On each sprite there is an arrow under the sprite name. This shows and hides the list of frames for the sprite. Try pressing it.
+You'll notice when you first create a sprite, it will have one frame, which has the same image as the sprite. You many also notice that there is a thick border around the frame, that indicates the selected frame, or the frame that the sprite is showing.
+
+Quite often when you write an app you need to able the change the image of a sprite, say from an alien to an explosion when the alien is destroyed. This is the purpose of frames. 
+You add all the frames you need for each sprite, then select the starting frame and use frame commands you can change the image of the sprite at runtime.
+
+Adding an frame is similar to adding a sprite. Go to the sprite image <B>library</B> tab, then either:
+<*> Drag any of the images over to the <B>sprite</B> tab panel, but this time, hover the image over a sprite or another frame. You will notice a black border with a little arrow, this indicates that the image will become a new frame of the sprite.
+<G help/frame_lib_drag.png>
+
+<*> Press and hold on a image and pressed the <B>frame</B> button (with the + icon). This will append the image as a new frame of the currently selected sprite.
+<G help/frame_lib_popup.png>
+
+Frame numbers indicate the order of frames when selecting a frame in a command, or using the [next frame] and [prev frame] commands.
+
+<B>Managing frames</B>
+If you press and hold on a frame, the frame popup appears:
+<G help/frame_popup.png>
+
+The following buttons are available (and very similar to the sprite popup):
+<*> <B>edit</B> - open the image editor to edit the image for the selected frame. See <L 11> below.
+<*> <B>library</B> - add the selected frame to the library. This is helpful if you've edited a frame, and want to make it available in the library for other projects.
+<*> <B>duplicate</B> - make a copy of the frame, and place it immediately under the selected frame. 
+<*> <B>delete</B> - delete the sprite from the project. It is completely gone.
+
+<B>Managing images in the library</B>
+Press and hold on an image in the library, and you'll see the image menu:
+<*> <B>sprite</B> - add this image as a sprite (on the <B>sprite</B> tab). The new sprite will be placed at the end of the sprite list.
+<*> <B>frame</B> - add the image as a new frame for the selected sprite. The frame is placed at the end of the frames list for the sprite.
+<*> <B>view</B> - open the image viewer to see the image in more details, zoom, etc. You cannot edit image in the library (only in a project).
+<*> <B>rename</B> - to rename the default name of the image in the library. This name is used to automatically name sprites.
+<*> <B>delete</B> - delete the image from the library. Note: this deletes the image from the library project and permanently from Codey Codey.
+
+#5 Commands
+<H 5>
+Commands are what you use to code. There are many command types for different purposes grouped into tabs:
+<G help/cmd_tabs.png>
+
+<*> <B>events</B> - commands that are triggered by some event and start executing code, e.g.
+<C 0x0003>
+When the <B>run</B> button is pressed, any code attached to this command will execute. See <L 6>.
+
+<*> <B>move</B> - commands that move a sprite, or provide information about the sprite's location, e.g.:
+<C 0x1003 S:change x by ,F:50>
+Moves the sprite by 50 in the x direction.
+
+<*> <B>look</B> - commands that change the look of a sprite, i.e. color, size, pen, flip, etc., or provide information about the sprite's look, e.g.:
+<C 0x2001>
+Sets the color of the sprite to black.
+
+<*> <B>flow</B> - commands that control the flow of the code, including loops, conditional (if) statements, etc, e.g.:
+<C 0x3001>
+Repeats the code within the loop 10 times.
+
+<*> <B>sense</B> - commands that sense input, e.g. presses, keyboard, collisions, etc., e.g.:
+<C 0x24003>
+Detects if the user presses on the sprite. Usually used within an <B>if</B> statement.
+
+<*> <B>output</B> - commands that outout non-sprite color (e.g. background), sound and video, e.g.:
+<C 0x5020 S:play sound ,U:explosion>
+Play the explosion sound.
+
+<*> <B>math</B> - commands for doing math such as addition, multiplication, random values and triginometry, e.g.:
+<C 0x16006 S:mult ,F:4,S:  x  ,F:6>
+Multiple 4 x 6, will result in 24.
+
+<*> <B>data</B> - commands that manipulate variables, setting them, creating lists, processing strings, etc., e.g.:
+<C 0x7001 S:set ,V:speed,S: to ,T:25>
+Set the value of the <B>speed</B> variable to the value of 25.
+
+If you press and hold on any command, a popup will be show, e.g.:
+<G help/cmd_popup.png>
+
+<*> <B>tip</B> - shows a snippet of help for the command.
+<*> <B>help</B> - opens the help panel showing detailed help about the command.
+
+#6 Coding
+<H 6>
+Coding (or programming) is the process of taking an idea for an app and making it a reality through the use of commands (also known as statements, operators, expressions, etc.), logic, graphics and soounds.
+Codey Codey is what's called a "block programming" tool, which simply means that you drag blocks (commands) of code and assembled them together, a bit like lego.
+The alternative, is typing it by hand, like writing a story. If you become proficient with coding in Codey Codey, or other block programming languages, that will be your next step.
+
+<B>Code panel</B>
+After create a project and adding one or more sprites, one of those sprites will be selected (the one with the darker green border). The image of that sprite will be visible on the tab just to the right of the <B>help</B>.
+<G help/cmd_panel.png>
+
+Press that tab, it shows the code panel that will conrain code for the selected sprite. Initially it will be blank, all ready to add code!
+
+<B>Dragging and snapping commands</B>
+To actually create code you need to drag commands from the <B>commands</B> tab to the code panel. We always need to start with an <B>event</B>, so make sure the <B>event</B> tab is open (it's the red tab with red commands).
+
+To ensure you don't accidently drag commands all over the place while scrolling through the list of commands, you need to press and hold a command for just a moment (to lift it as denoted by a shadow), before dragging. 
+If you hold it longer, the popup menu appears providing help about the command.
+It will take a little getting used to this slight delay, give it a try now. Drag the 
+<C 0x0003>
+command to the code panel.
+
+<G help/cmd_drop.png>
+
+Hold just for a just a moment, until you will see the command lift up (indicated by a shadow), then drag to the code panel and drop (release the press). The shadow will disappear indicating it is now on the panel.
+That's your first line of code!
+
+Let's see what happens when you run it - press the run button (with the triangle play icon). Wow, your sprite is shown in the middle of the screen!
+<G help/cmd_run.png>
+
+You are currently in the <B>runtime</B> view, where your code runs. We'll talk more about this later, for now press the <B>back</B> button to go back to the code panel.
+<G help/cmd_runtime.png>
+
+<*> <B>Note:</B> You don't need to worry about saving your code, as it is automatically saved everytime you make a change. So if you close Codey Codey and reopen later, all your projects, sprites and code will still be there.
+
+<*> <B>Tip:</B> Moving block code around can get a little tricky at times. Sometimes you just want to move one command. Well there's a shortcut for that, just double-press, and you'll select a single command, which you can then drag or hold (for the popup menu).
+
+Let's add another line of code. Switch to the <B>move</B> tab, and drag the
+<C 0x1003>
+command, but this time drag and hover it over the bottom of the
+<C 0x0003>
+command and you should see a black border indicating that the command will snap to the other command. Drop the command (release) and you'll see it snap.
+
+<G help/cmd_snap.png>
+
+Note: This is really important because commands must be snapped together to run in sequence, otherwise they are just sitting then on their own in the code panel. 
+Also, for commands to run, they must be part of a chain of command that has an <B>event</B> command snapped at the top (like what you've have just done).
+
+<B>Editing command values</B>
+If you ran you project now, it would just like before, because we have changed the sprite x position by 0 pixels, that won't have much effect!
+To change the value press on the box containing the value.
+<G help/cmd_part.png>
+
+This will open the value editor panel. There a number of editor panel variants depending on the type of the command value. In this example, the value is decimal value, so you see the decimal value editor.
+<G help/cmd_decimal.png>
+
+Enter a new value of 900 in the edit box. Press <B>accept</B> if you want to keep the value (otherwise press <B>cancel</B> to not apply the change).
+
+Now run your code again, you should see your sprite has moved over to the right of the screen.
+<G help/cmd_run_900.png>
+
+<B>Moving and removing commands</B>
+Just like press and hold in the <B>commands</B> panel, you can also do the same on the code panel.
+
+Press and hold on the
+<C 0x1003 S:change x by ,F:900>
+and drag it away.
+
+<G help/cmd_away.png>
+
+Now look in the <B>flow</B> commands tab and find the
+<C 0x3001>
+command, and snap it to the
+<C 0x0003>
+
+<G help/cmd_repeat.png>
+
+Now drag the
+<C 0x1003 S:change x by ,F:900>
+back to within the <B>repeat 10 times</B> statement, and edit the 900 and make it 90. 
+When you press <B>run</B>, this will loop 10 times and move the sprite 90 in the x direction every time.
+
+<G help/cmd_repeat2.png>
+
+To delete commands from your code, drag them from the code panel to outside the code panel. The easiest place to release them, is over any of the left panels (e.g. <B>projects</B>, <B>thing</B> or <B>commands</B>).
+
+<G help/cmd_delete.png>
+
+<B>Undo and redo</B>
+After any of the above commands, an undo entry is created than can be undone by pressing the <B>undo</B> button.
+
+<G help/cmd_undo.png>
+
+For example, to undo the the above delete, press <B>undo</B> (do it now). Your code should be restored back into the code panel.
+After an undo, the redo button becomes active. If you press <B>redo</B> (please don't, I need it in the next example :-) you will undo the undo, i.e. make it as if the undo was not done. Phew, what a mouthful! 
+
+<B>Cut, copy and paste</B>
+Press and hold on the <B>(change x by 90)</B> command in the code panel, a popup will appear:
+
+<G help/cmd_cut.png>
+
+Select <B>copy</B> to copy the code to the clipboard. Do it now!
+Alternatively, if you select the <B>cut</B> button, the code will be copied to the clipboard, and removed from the code panel. Selecting <B>delete</B> will do the same as dragging and dropping the code as you did before.
+
+<B>Paste, tidy and show all popup</B>
+After something has been added to the clipboard, you can paste that code. Press and hold on the code panel background, a popup will appear:
+
+<G help/cmd_paste.png>
+
+Select <B>paste</B> to paste to the code panel. After pasting to can drag the code and snap it into existing code on the code panel.
+
+The <B>tidy</B> button repositions all code in a single column. This also happens when you open your project, the code is tidied up.
+
+The <B>show all</B> button display a window of all code, so you can find it and bring it into view.
+
+<B>commands that return values</B>
+So far we've been using commands that have an immediate effect such as looping 10 times, or moving a sprite.
+There is another type of command that typically doesn't produce an effect, but instead performs a calculation and returns a value. These commands are often called <B>operators</B> or <B>expressions</B> in other programming langauges.
+Let's look at some examples. Go to the <B>math</B> tab and find the
+<C 0x16003>
+command, and drag it onto code panel over the bottom of the value in <B>change x by 90</B> command, then release. The command will snap into the value box.
+
+<G help/cmd_random.png>
+
+What just happened? 
+Firstly, you may have noticed the flat edges on this command compared to the curved edges of the commands we used earlier. This tells you that the command can be snapped into a command value, just like we did.
+Secondly, the <B>random 1 to 10</B> command returns a random value between 1 and 10 inclusive. 
+So, when the <B>change x by</B> command executes, it will first execute the <B>random</B> command to get a value to use.
+Just to make it similar to the distance we were moving before (90), press on the <B>10</B> value, and change it to 90.
+
+Press <B>run</B> and see what happens. Now try running a few more times (you can do this in the runtime view), to see the different distances the sprite will move.
+
+There is another type of command that returns a value, but it returns true or false (also called a <B>boolean value</B>).
+Look for
+<C 0x3003>
+in the <B>flow</B> tab.
+
+Drag it over to the code panel and drop it under the <B>repeat 10 times</B> command.
+
+<G help/cmd_if.png>
+
+Drag the <B>change x by</B> command into the <B>if < > then</B>.
+
+<G help/cmd_if2.png>
+
+Drag the <B>true</B> command (from the <B>flow</B> tab) into the hole within the <B>if < > then</B> command. You'll noticed the angled edges, and how they match. There are only certain values in commands that can accept one of these true or false commands.
+
+<G help/cmd_if3.png>
+
+When you've finished, it should look like this:
+
+<G help/cmd_if4.png>
+
+If it looks the same, trying running. It should do exactly the same thing as before, i.e. move randomly to the right.
+That's because code within an <B>if < > then</B> command only runs if the value in < > evaluates to true. 
+
+Now try deleting the <B>true</B> command (either drag it off the code panel), or press and hold, and select <B>delete</B>.
+
+Now drag the <B>false</B> command into the empty spot. Trying running now? See how it doesn't move anymore? 
+Placing the <B><false></B> into the if command, means it won't run the code within it.
+
+<*> <B>Tip:</B> Press and hold on any of the commands in the <B>commands</B> tab, to bring up the popup. Hover over the <B>tip</B> button for a brief description of the command. Select the <B>help</B> button to get detailed help and example code. Have fun!
+
+#7 Variables
+<H 7>
+There is only so far you can go with coding an app before you need variables. What are variables you ask? Well, let's explain with a simple example:
+
+You need to go to the supermarket to buy several items, you put $20 in your pocket.
+While there, you get milk at $4 and cereal at $5, you pocket $11 in change. You are now carrying milk in one hand and bread in the other. You walk passed the bakery and think, I need bread. You go in a buy two loaves at $3 each, you have $5 change, but how do you carry the loaves? (Yeah I know, shops sell bags, but let's assume they don't). If only you remembered all the things you needed, and a bag to carry them!
+
+In this example your pocket (and your brain) manages the money, this is like a value variable, that can hold a single value.
+Your hands (and a bag if you had one) would carry your products, this is like a list variable that can comtain many items.
+So what you say, how does that help my app?
+
+Now let's implement this in code, without variables. Well, you can't, because you have no way to represent a pocket holding money, or a bag holding items.
+Let's see what it would look like in Codey Codey.
+
+<B>Creating a variable</B>
+First we need to create two variables. Switch to the <B>variables</B> tab (within the <B>things</B> tab), and select the <B>library</B> tab on the right.
+
+<G help/var_tab.png>
+
+You'll see 3 boxes in the library:
+<*> <B>"new project var"</B> - drag to the <B>var</B> panel to create a variable that spans the whole project, and can be used by all sprites. This type of variable is used if multiple sprites need to access or change a variable. For example, the players score in a game might be a project variable, because the player sprite and enemy sprites might want to update the score.
+<*> <B>"new sprite var"</B> - drag to the <B>var</B> panel to create a sprite variable, which can only be used by a single sprite. It's good practice to start with a sprite variable, and if you need to, share it across the project (as a project variable). However, you can't do the opposite, i.e. project variable can't be changed back to a sprite variable.
+<*> <B>"new list item"</B> - if you convert a value variable to a list variable (we'll see how to do that in a minute), you can drag this over the list variable to add itemss to it.
+
+<B>Tip:</B> Variables can also be created, and items added to list variables, within your code. But they are only temporary while you code is running.
+
+You can also create variable by pressing and holding on one of the above library buttons, until you see the the popup with <B>add</B> button.
+
+Let's create a sprite variable. Drag the <B>"new sprite var"</B> item over the <B>var</B> panel and release. The variable naming panel comes up. You'll notice a message is showing giving you a hint as to how to name a variable correctly.
+
+<G help/var_create.png>
+
+Give the variable a name, e.g. pocket.
+
+Go to the sprite code panel and clear all code except the <B>(when > pressed)</B> command. Now select the <B>data</B> tab (within the <B>commands</B> tab on the left).
+
+Drag the
+<C 0x7001>
+command onto the code area and snap to the event.
+
+<G help/var_drop.png>
+
+The <B>(set var)</B> command require a variable and a value. You can set the variable in two ways:
+
+<*> <B>drag</B> the variable from the <B>var</B> panel over the <B>[var]</B> box.
+
+<G help/var_drag.png>
+
+<*> <B>press</B> the <B>[var]</B> box:
+
+<G help/var_part.png>
+
+to open the variable selector editor, where you can press on the variable you want (there is only one variable shown, because we've only created one!).
+
+<G help/var_select.png>
+
+<B>Tip</B>: There is a button name <B>auto</B> with a tick on it (that looks like accept, but has an on/off switch on it). By default it is turned off. But if you turn it on, then when you press the variable, it will automatically close. This is just a convenience if you want to use it.
+
+You code should look like this now:
+
+<G help/var_selected.png>
+
+Now we need to set the value. Press on the empty white box, and in the text editor, type a value of 20 (dollars).
+
+<G help/var_set.png>
+
+Here's the code for the supermarket example:
+
+<G help/var_ex.png>
+
+I know this looks a bit daunting (or maybe it doesn't?) Let's quickly go through it.
+
+<*> Set the value of money in our pocket to 20 (dollars).
+<*> Change the value in the pocket by -5, i.e. reduce it by 5 because we spent $5 on milk.
+<*> Change the value in the pocket by -4, because we spent $4 on milk.
+<*> Change the value in the pocket by -6, because we spent $3 each on two loaves of bread. This is a tricky one! Remember the [random] command from earlier? Well we used another command that returns a value, this one adds two numbers together and returns the result. In our case, -3 + -3 (I know that seems a bit weird, but we're trying to show that we spend $3 twice).
+<*> The last command is making the sprite "say" a $ and the value of the <B>pocket</B> variable. The <B>append</B> command is another command that returns a new value, by joining the two value passed in.
+
+<B>List variables</B>
+The other type of variable is called a list variable, or just a list. As you might imagine, a list contains multiple items, and is very handy when you need to work with more than just one simple value like the <B>pocket</B> variable.
+
+Let's create a list variable called "bag" (as in shopping bag). First you create a regular variable just like before, please do that.
+
+<G help/var_list.png>
+
+Now press and hold on the <B>bag</B> variable until the popup is displayed. Select the <B>make list</B> button.
+
+<G help/var_make_list.png>
+
+After that, is should look like this, with an arrow.
+
+<G help/var_list2.png>
+
+Now you get to try out the new <B>add list item</B> library button. Drag it over the <B>bag</B> variable, to create the first shopping item "milk".
+
+<G help/var_drag_item.png>
+
+Give the value a name "milk".
+
+Now see if it can complete the list until it looks like this. And, add a <B>[say]</B> command to display the value of the list.
+
+<G help/var_items.png>
+
+Run it, and see what you get?
+
+The <B>data</B> tab has many commands you can apply to variables to do just about anything - take a look.
+
+Clear all code except the <B>(when > pressed)</B> command. Now drag and snap a <B>(say [])</B> command (it's in the <B>look</B> tab if you can't remember).
+Now on the <B>data</B> tab, drag and snap the following commands into the <B>(say [hello])</B> command (over the white box that says <B>hello</B>).
+<C 0x217003>
+
+And place the <B>bag</B> variable into the white box of that commands. It should look like this:
+
+<G help/var_say_item.png>
+
+The <B>[item 1 ...]</B> in this command represents the first item in the <B>bag</B> list. There are 4 items in the list, try change it to 2, 3 or 4 and see what happens.
+If you tried a number that wasn't 1, 2, 3 or 4, it wouldn't show anything. That's because the <B>(say)</B> command doesn't show anything, if the value is blank.
+
+Lastly, let's add one more product to the bag, i.e. add one more item to the <B>bag</B> list.
+
+Drag and snap this command above the <B>(say)</B> command:
+<C 0x7002>
+
+Put a value into the blank white box, e.g. apples, and set the <B>[var]</B> to <B>bag</B>. 
+Now change the <B>[item ...]</B> command to get item 5 and see what you get.
+
+<B>Showing variables</B>
+You may have noticed a little box to the right of a variable's name. This is a checkbox, and if turned on (it shows an a tick) than makes the variable visible in the runtime.
+You might be thinking, why would I make a variable visible (other than just using the say command). Well there are a number of reasons.
+
+Most games have a player score, possibly a high score, timers, health, etc. Variables let you display these values. 
+Check the box and presto, it's displayed on thr screen. The advantage of using a variable, is that the value of the variable is always shown. If you change it in your code, the value on the screen changes.
+
+<B>Note</B>: The alternative to using a variable to display text is really hard. You need to create graphics for letters and digits (with the built-in image editor described in it's own section, or importing your own), and write code to display each digit as a word or number. Wow, that does soundshard, but strangely it is very common, especially if you don't have access to fonts (like was the case for many years).
+
+Let's try this out.
+
+Check the box on the <B>pocket</B> variable, and run. You should see a brown (the default color) box in the top-left of the screen with the name <B>pocket</B>. If you still have the code using the <B>pocket</B> variable from before, the value of the variable (in the white box) will be 5, just like what the sprite is saying.
+I know this doesn't look that great in brown, but later in the <L 9> section, you will learn how to change many things on a variable until it looks just right.
+
+<G help/var_run.png>
+
+What is even better, is you can use the layout tool (described below) to place the variable, resize it, change colors, fonts, etc. Or, even make these changes with commands lower down in the <B>data</B> section.
+
+<B>data entry</B>
+There is one other cool thing about showing a variable - the ability to let the user enter data, such as their name for their great high score!
+
+There is a command for this:
+<C 0x701D>
+
+It lets you specify a variable that can accept a value from a user typing it in.
+
+Add the command to the end of your code, and add the <B>pocket</B> variable. Run you code, and you'll see the value of <B>pocket</B> (should be 5), but you'll also see a flashing cursor allowing you to type a new value.
+
+<B>Tip</B>: Only one sprite can be accepting input into a variable. The first sprite to run the <B>(wait for input into [var])</B> command will take input, then if another sprite uses the command, it would take input, and so on.
+
+If you want to allow a user to select a variable, then accept input, you need to check out the:
+<C 0x000E>
+event command. This fires when a user presses on a variable. All you need to do is snap the <B>(wait for input into [var])</B> command to this event.
+
+<B>Tip</B>: If you tried the above, you might find it didn't work (unless you remembered something from the <B>runtime</B> section). The <B>(when > pressed)</B> command would have finished, and thus execution for the whole project would stop before you had a change to press on the variable. Snap a <B>(repeat forever)</B> at the end of the <B>(when > pressed)</B> sequence of commands, and it should work.
+
+<G help/var_input2.png>
+
+#8 Sound and video
+<H 8>
+If you're building a game, you usually need to add sounds to make it engaging. To create a sound, you go to the <B>sounds</B> tab (within the <B>things</B>) tab, then press the <B>library</B> tab.
+
+The built in library contains several sounds you can try out.
+
+Press, hold and drag a sound into the <B>sounds</B> tab panel. Give it a name, or accept the default name.
+
+<G help/sound_lib.png>
+
+In the code panel, clear all code except the <B>(when > pressed)</B> command.
+Go to the <B>outout</B> commands tab, and find the following commands and drag and snap them in the code panel one after another.
+
+<C 0x5033>
+<C 0x5037>
+
+<B>Note</B>: The reason you need to load a sound, rather than just play it, is that sounds can quite often be large and take a bit of time to load. If you just played it every time, then it would need to load each time you used it, causing a delay before the sound is played. This wouldn't be good for a game when you need the sound to play exactly when you need it. 
+By loading it first, the sound is ready to go and plays immediately. However, if you don't need a sound any more, make sure you unload it to free the memory it is using.
+
+Drag the sound you just added to the project over the white <B>[sound]</B> boxes in this new commands. Now run your code, and see if you hear it.
+
+<B>Tip</B>: There are two play sound commands, the one you used above, which plays the sound until it is finished. We used this command in this example because it plays the sound and waits until it finished. However, in a game you typically would not used this command, and use the alternative command:
+
+<C 0x5020>
+
+Why? Because this version doesn't wait until the sound finishes before running the next command in your sequence. This is important, because sounds play in the background, exactly where they should be, while you game continues to run.
+
+As soon as you play a sound, the [channel] command will hold a new value representing that play of the sound. You can play the same command many times, and the [channel] value will be different each time. However, as soon as the sound finishes playing, the channel value is no longer valid.
+<C 0x5025>
+
+If you want to change aspects of the sound such as volume, you can use the channel value to say set the volume with this command:
+<C 0x15036>
+
+The defaut volume (that sounds start with), can be set with the (set volume) sound. The number of times a sound loops, can also be set. By default it is just once:
+
+<C 0x5024>
+<C 0x5035>
+
+<B>Importing sounds and videos</B>
+
+You should see an <B>import</B> button with a plus (+) icon. If you press it, it will open the file selector to find a sound on your device.
+When you import a sound, it goes into you library. From there you can add it you your project. 
+
+<B>Tip</B>: If you press and hold on either a library item, or a sound in your project, you'll see a <B>play</B> button. This lets you hear the sound.
+
+<B>Video</B>
+
+Like sounds, a video can be added to the library and dragged into you project.
+
+There are load ans play video commands too:
+
+<C 0x503C>
+<C 0x5040>
+<C 0x5026>
+
+Videos work a little differently to sounds, you can only load and play one video at a time. This is a limitation to avoid huge amount of memory being consumed while you app or game is playing.
+
+There are many video commands, have a play.
+
+<B>Note</B>: Videos only work on mobile devices. If you have a version of Codey Codey for Windows or MacOS, videos won't work.
+
+#9 Layout
+<H 9>
+Quite often when building a new app or game, you need to create levels, or layout a screen in a certain way. While this can be done with code (as you've seen in previous sections), it is sometimes easier just to place them on the screen and have them already positioned as soon as your app starts.
+
+This is what the layout tool is used for. 
+
+Add a few sprites to your app and a variable too (e.g. score).
+
+Now (From the coding view) press the <B>layout</B> button at the top-right of the screen (next to the run button).
+
+You should see something like this.
+
+<G help/lay_first.png>
+
+Initially all sprites start in the middle of the screen (you saw this earlier in the Coding section). Variable start in the top-left corner. 
+
+The box in the bottom left is called the <B>pan</B> window, which just means if you click in that window and drag it around it quickly lets you go to a specific place in you layout. 
+Right now, this doesn't really do much because you can see the whole screen. However, if you place sprites off the screen you'll see the value of the <B>pan</B> window.
+The red and blue boxes represents variables and sprites respectively, so you can see where they are relative to each other.
+
+Let's adjust the position of a sprite. Click on the very top sprite. You'll notice that a box with many smaller boxes appear. Each small box is called a handle, you can grab it by pressing and holding, then drag to resize the sprite. The handle that is hanging out on a little stick, allows rotating the sprite.
+
+<G help/lay_press.png>
+
+If you press and hold on the sprite, you can also drag the sprite around. 
+
+<G help/lay_drag.png>
+
+Try resizing and rotating the sprite.
+
+<G help/lay_resize.png>
+
+If you press and hold on the sprite the sprite popup will appear.
+
+<G help/lay_popup.png>
+
+Press the <B>reset</B> button, the sprite will snap back to the original size and rotation.
+
+<B>Positioning sprites off screen</B>
+
+Sometimes a game requires a sprite to start off screen. For example enemies might start off screen and fly in from the top or right of the screen. 
+
+To achieve this, press and hold on the screen background (not on a sprite or variable) and drag. You should see the grey off screen area. If you place a sprite in that area, it won't be immediately visible when you run you app. Try it now - place a sprite off screen, and then press <B>run</B>.
+
+The sprite won't be visible. However, with code, e.g. (change x by []) command, you can move the sprite back into view. 
+
+Notice the <B>pan</B> window also shows that the sprite is off screen, and provides and easy way to find it.
+
+<B>more button</B>
+
+The <B>more</B> button offers a number of settings for the layout view.
+
+<G help/lay_more.png>
+
+<*> <B>grid</B> - show or hide the blue line grid.
+<*> <B>w</B> - the width of the grid in pixels.
+<*> <B>h</B> - the height of the grid in pixels.
+<*> <B>cols</B> - set the grid width by dividing the screen into a number of columns.
+<*> <B>rows</B> - set the grid height by dividing the screen into a number of rows.
+<*> <B>snap v</B> - snap to the vertical grid lines. Each press changes between: left, middle, and right.
+<*> <B>snap h</B> - snap to the horizontal grid lines. Each press changes between: top, middle and bottom.
+<*> <B>bg col</B> - the background color of the layout area (by default a light yellow color).
+<*> <B>names</B> - show the name of each sprite. Helps figure out which sprite you are working on.
+<*> <B>pan</B> - show or hide the pan window.
+<*> <B>reset</B> - convenient way to reset the position of the layout to show just the on screen area. You can alway scroll again by pressing and holding the screen background.
+
+<B>Variable layout</B>
+The same kind of control is available for variables, you can resize and move them, but you can't rotate them. However, you can also control many other aspects of a variable such as the background color, the font, and so forth. 
+
+Press and hold on the variable:
+
+<G help/lay_var_popup.png>
+
+<B>title settings</B>
+<*> <B>visible</B> - make the title (or name) of the variable visible.
+<*> <B>pos</B> - if the variable title is visible, specify which side of the variable it should be shown, i.e. top, left, bottom, right.
+<*> <B>title col</B> - set the color of the title (name). By default it is white.
+<*> <B>font name</B> - set the font style for the title. The name of the font is displayed on the button.
+<*> <B>font size</B> - set the font size for the title.
+<*> <B>text align</B> - set the title text alignments, i.e. left, middle, right.
+<*> <B>reset</B> - reset all settings for the variable back to default settings.
+
+<B>value settings</B>
+<*> <B>bg col</B> - set the color of the variable background By default it is brown, the standard variable color.
+<*> <B>box col</B> - set the color of the value box. By default is is white.
+<*> <B>value col</B> - set the color of the value text. By default it is black.
+<*> <B>font name</B> - set the font style for the value. The name of the font is displayed on the button.
+<*> <B>font size</B> - set the font size for the value.
+<*> <B>text align</B> - set the value text alignments, i.e. left, middle, right.
+<*> <B>secret</B> - turn on or off whether the value shouldn't show actual values, but instead show * for each letter of the value. Useful for passwords, or secret text.
+
+<B>Variable layout via code</B>
+All of the above settings can be changed in code too. The <B>data</B> tab (within <B>things</B>) has a list of commands for this. For example:
+<C 0x7014>
+<C 0x7013>
+<C 0x701A>
+<C 0x7024>
+
+#10 Runtime
+<H 10>
+The runtime is where your app runs and you can see what all your hard work has produced. 
+By default, your app runs immediately on pressing the <B>run</B> button from the coding view or layout view.
+While running the <B>run</B> button changes to a <B>stop</B> button. Pressing <B>stop</B> stops your app dead in its tracks. That is, where is was at the moment it was stopped, that how it will look.
+Don't worry though, because as soon as you press <B>run</B> again, the layout is restored and your app starts from the very start again.
+The <B>back</B> button also stops the runtime, and sends you back to wherever you came from. That is, if you pressed <B>run</B> from the coding view, you'll go back there. If you pressed <B>run</B> from the layout, then that's where you'll go back.
+
+<B>more menu</B>
+The <B>more</B> menu on the runtime view has several buttons as follows:
+
+<G help/run_more.png>
+
+<*> <B>pause</B> - pauses a long running app. Press <B>resume</B> (the <B>pause</B> button changes to resume) to continue.
+<*> <B>reset</B> - stops the app and puts it back to the start position, i.e. what it looks like in the layout, but before codes executes.
+<*> <B>snap icon</B> - take a snapshot of the app  screen as it currently looks while running (or paused) and set it as the project icon.
+<*> <B>auto run</B> - if this is turned on, then when you press <B>run</B> from the coding view or from the layout view, the app will immediately run. If this is turned off, then you will switch to the <B>runtime</B> view, but the app won't run, and you'll need to pressed the <B>run</B> button.
+<*> <B>menu pos</B> - select the location on the screen where this menu (<B>more, back, run</B> buttons) will be shown. This allows you to get them out of the way while you run your app. The arrow on the button indicates the corner where the buttons will be placed.
+
+<B>Technical details</B>
+The next section is quite detailed, and explains how Codey Codey executes code. If you get to a point where you create complex apps, you may come across situations where some of the following points may become relevant.
+
+<B>Event execution order</B>
+Sprite code must be attached to an <B>event</B> command to actually execute. When you press <B>run</B>, all
+<C 0x0003>
+commands for all sprite start running. 
+The order of the sprites in the <B>sprites</B> tab (within the <B>things</B> tab) determines the order in which <B>events</B> are executed. That is, <B>event</B> commands for the top sprite in the list are executed first, then the 2nd, then the 3rd, etc. 
+Then within each sprite's code panel, the <B>event</B> commands are executed from top-down. That is, if you have multiple of the same event - say two <B>(when > pressed)</B> commands - then the one closer to the top runs first, then the 2rd, and so on.
+
+<B>Tip</B> The order can sometimes be important. For example, if sprite 1 depends on the state of sprite 2, then you might put sprite 2 at the top of the "sprite" tab list, followed by sprite 1.
+
+<B>Other events</B>
+The are a number of events that execute code based on user input, or things that happen in your code. The following are a few examples:
+<C 0x000F>
+<C 0x000A>
+<C 0x0007>
+commands detect when a sprite is pressed, cloned or collides with another sprite, the code for that event will start executing.
+
+<B>Execution time</B>
+When a (red) event command triggers, code for that event in that sprite starts executing. However, as mention above, sprite code is executied in a particular order. 
+The code for the first sprite runs from a triggered event command through all attached commands until one of the following occurs:
+
+<*> a wait input command is executed:
+<C 0x701D>
+The sprite will stop executing code, and wait for keyboard input, and is the only sprite that can accept keyboard input until it is the user leaves the field, by pressing enter or closing the keyboard.
+
+<*> a wait time command is executed:
+<C 0x301E>
+The sprite will stop executing code, and wait until the time expires.
+
+<*> a call block command is executed.
+<C 0x3020>
+The sprite will stop executing code, until the called block is fully executed via a
+<C 0x0001>
+command. 
+
+<*> a play sound or video command is executed
+<C 0x5037>
+<C 0x5040>
+The sprite will stop executing code, the sound or video will play, only until after it finishes can the sprite be able to run code again.
+
+<*> a loop command is entered and has made one pass through the loop and hit the <B>end</B>:
+<C 0x3001>
+<C 0x3022>
+Sprites can only do one iteration of a loop before letting another sprite execute its code. This also applies to the <B>(exit loop)</B> and <B>(skip loop)</B> commands, the sprite will stop executing code to let another sprite run.
+
+<*> no more than 1/2 secord has passed while a particular sprite is executing a list of commands. This ensures that a single sprite (with many commands) cannot hog all the time for the app.
+
+<*> all commands for a particular event have been executed, and there are none left.
+<G help/cmd_dropoff.png>
+
+<B>Tip</B>: When all code for all events for all sprites is complete (i.e. there are no further commands to run), the program ends. Even if some event commands have not executed, e.g. (when sprite pressed) and (when sprite released).
+To ensure your program keeps running, and can receive events, add a (repeat forever) loop to one of the <B>(when > pressed)</B> commands.
+
+<G help/cmd_forever.png>
+
+#11 Image editor
+<H 11>
+
+The image editor is quite sophisticated, providing for quite a few features grouped within specific icons on the left of the screen.
+<G help/imged_tb.png>
+
+<*> <B>move</B> - zooming and scrolling the image around to see all of it if zoomed in.
+<*> <B>draw</B> - drawing of free hand dots and lines, with color, size and style choices.
+<*> <B>line</B> - drawing of straight lines, with colors, size and style choices.
+<*> <B>shape</B> - drawing of shapes, including rectangles, squares, ovals, circles, and polygons (3 to 20 sided shapes), with colors, size and style choices.
+<*> <B>fill</B> - fill an area of the screen with a color, or erase an area.
+<*> <B>text</B> - draw text with color, size and font choices.
+<*> <B>image</B> - paste an image from the library.
+<*> <B>select</B> - numerous select methods, rectangle, oval, free hand, line and fill selection tools. Cut, copy and paste.
+<*> <B>adjust</B> - resize or crop, flip and rotate the image or a selection.
+<*> <B>grid</B> - set the grid size and snap all drawing operations to the grid.
+
+If you press and hold on each button, a help tip will appear. However, some buttons need a bit more explanation below.
+
+<B>move</B>
+<G help/imged_move.png>
+
+<*> <B>zoom in</B> - make the image larger to a maximum size.
+<*> <B>zoom out</B> - make the image smaller to a minimum size.
+<*> <B>normal</B> - zoom the image to its actual size.
+<*> <B>fit screen</B> - zoom the image to fill the entire screen. Depending on the size of the image, this might mean it is zoomed in with large pixels, or zoomed out and smaller than normal, e.g. a full screen background image.
+
+<B>draw</B>
+<G help/imged_line.png>
+
+<*> <B>color</B> - select the color to draw free form. See the <B>Color panel</B> below.
+<*> <B>picker</B> - press it to turn it on, then select a point on the image to select that color.
+<*> <B>erase</B> - if erase is turned on, then free hand drawing will erase from the image. Press erase again to turn it off.
+<*> <B>size</B> - select the size of the drawing pen, from 1 to 10.
+<*> <B>round</B> - select the circular drawing pen.
+<*> <B>square</B> - select the square drawing pen.
+
+Note: erasing is slower than drawing, so if you have a large drawing size, move the pointer around a bit slower.
+
+<B>line</B>
+<G help/imged_line.png>
+
+<*> <B>color</B> - select the color to draw the line. See the <B>Color panel</B> below.
+<*> <B>picker</B> - press it to turn it on, then select a point on the image to select that color.
+<*> <B>erase</B> - if erase is turned on, then line drawing will erase from the image. Press erase again to turn it off.
+<*> <B>size</B> - select the size of the drawing pen, from 1 to 10.
+<*> <B>round</B> - select the circular drawing pen.
+<*> <B>square</B> - select the square drawing pen.
+
+<B>shape</B>
+<G help/imged_shape.png>
+
+<*> <B>color</B> - select the color to draw the shape. See the <B>Color panel</B> below.
+<*> <B>picker</B> - press it to turn it on, then select a point on the image to select that color.
+<*> <B>erase</B> - if erase is turned on, then shape drawing will erase from the image. Press erase again to turn it off.
+<*> <B>size</B> - select the size of the drawing pen, from 1 to 10.
+<*> <B>rect</B> - draw a rectangle.
+<*> <B>oval</B> - draw an oval.
+<*> <B>polygon</B> - draw a 3 (triangel) to 20 sided (nearly a circle) polygon.
+<*> <B>sides</B> - specify the number of sides for the polygon.
+<*> <B>w = h</B> - if turned on, the width and height of the shape a forced to be the same size. That is, a rectanle becomes a square, oval becomes a circle, and polygons are symmetrical.
+<G help/imged_shape_wh.png>
+<*> <B>filled</B> - if turned on, the shape in filled with the selected color.
+
+<B>fill</B>
+<G help/imged_fill.png>
+
+<*> <B>color</B> - select the color to fill. See the <B>Color panel</B> below.
+<*> <B>picker</B> - press it to turn it on, then select a point on the image to select that color.
+<*> <B>erase</B> - if erase is turned on, then fill will erase from the image. Press erase again to turn it off.
+
+<B>text</B>
+<G help/imged_text.png>
+
+<*> <B>color</B> - select the color to draw text. See the <B>Color panel</B> below.
+<*> <B>picker</B> - press it to turn it on, then select a point on the image to select that color.
+<*> <B>erase</B> - if erase is turned on, then free hand drawing will erase from image. Press erase again to turn it off.
+<*> <B>edit</B> - brings up the text editor to type what text you want to draw.
+<*> <B>font</B> - select the font for the text. There are a number of fonts built into Codey Codey.
+<*> <B>size</B> - select the size of the font from 24 to 100.
+<*> <B>place top</B> - turn on, then press on the screen, the top-left of the text will be pasted where you pressed.
+<*> <B>place mid</B> - turn on, then press on the screen, the middle of the text will be pasted where you pressed.
+
+<B>image</B>
+<G help/imged_image.png>
+
+<*> <B>library</B> - open the image library to select an image.
+<*> <B>place top</B> - turn on, then press on the screen, the top-left of the image will be pasted where you pressed.
+<*> <B>place mid</B> - turn on, then press on the screen, the middle of the image will be pasted where you pressed.
+
+<B>select</B>
+<G help/imged_select.png>
+
+<*> <B>rect sel</B> - press and drag to select a rectangular area of the image. Many image operations such as drawing will only affect the iamge in the selected area.
+<*> <B>oval sel</B> - press and drag to select a oval (or elliptical) area of the image.
+<*> <B>draw sel</B> - press and draw to select an area of the image. Release to complete the selection. A line between the start and end of the drawing area shows what the selection will be look like.
+<*> <B>line sel</B> - line selection is a bit tricky. First, pressing the line sel button turns on line selection. Now draw a line on the image from one point to another and release. You'll notice the <B>line sel</B> button is still active. Now press or press and hold to select the next part of the line. Keep doing this until you are happy with the complete line selection. Finally, press the <B>line sel</B> button to complete the line selection.
+<*> <B>fill sel</B> - wherever you press will fill (just the fill tool) will the selection color.
+<*> <B>deselect</B> - clear the selection. Note, you can also press on the image not in the selection to deselect (except if line sel is turned on).
+<*> <B>cut</B> - cut the selection, i.e. clear it. You can then paste it in a different place.
+<*> <B>copy</B> - copy the selection. You can paste it over and over again.
+<*> <B>paste</B> - press the <B>paste</B> button, it will turn on. Then press somewhere on the image to paste what has previously been cut or copied. The paste button will now turn off.
+
+<B>adjust</B>
+<G help/imged_adjust.png>
+
+<*> <B>resize</B> - shows the resize panel to allow resizing the image. See <B>Resize panel</B> below.
+<*> <B>crop</B> - only available if a there is selection active. Reduces the image size down to the current selection.
+<*> <B>flip x</B> - flip the screen along the x axis, i.e. top-to-bottom. If a selection is active, only the selection is flipped.
+<*> <B>flit y</B> - flip the screen along the y axis, i.e. left-to-right. If a selection is active, only the selection is flipped.
+<*> <B>rotate left 90</B> - rotate the screen 90 degrees counter-clockwise, i.e. to the left. If a selection is active, only the selection is rotated.
+<*> <B>rotate right 90</B> - rotate the screen 90 degrees clockwise, i.e. to the right. If a selection is active, only the selection is rotated.
+<*> <B>clear</B> - clear the screen, or if a selection is active, just clear the selection.
+
+<B>grid</B>
+<G help/imged_grid.png>
+
+<*> <B>snap</B> - turn on or off snapping to the grid. The left side of drawing operations will snap to the grid. For accuracy, double-lines indicate the pixel where the top-left snap will occur.
+<*> <B>w</B> - specify the width of the grid in pixels.
+<*> <B>h</B> - specify the height of the grid in pixels.
+<*> <B>cols</B> - specify the width of the grid in pixels, by dividing the width of the image into a number of columns. For example, if the image was 250 pixels width, and you specify 4 columns, then the grid width would become 255 / 4 = 75 pixels.
+<*> <B>rows</B> - specify the height of the grid in pixels, by dividing the height of the image into a number of rows.
+
+<B>top-right</B>
+<G help/imged_undo.png>
+
+<*> <B>undo</B> - if a drawing operation has occured, pressing <B>undo</B> will undo the last operation. Undo can be pressed over and over to undo until it is deactived, which means there are no further operations to undo.
+<*> <B>redo</B> - if undo was pressed, then the ability to redo that undo is saved. Pressing redo will redo the most recent undo. It can be pressed over and over until there are no further redos. Note: As soon as you perform a new drwing operation, the ability to redo is cleared.
+<*> <B>save</B> - saves the image and places it back into the frame that was being edited. The image editor is closed.
+<*> <B>cancel</B> - cancels the image editor, no chnage is applied to the original frame image.
+
+<B>Color panel</B>
+<G help/imged_color.png>
+
+Colors are made up of 4 parts, red, green, blue and visibility (also know as alpha).
+The box in the top-left corner of the color panel shows the current color. As you select or change values, this selected color will change.
+
+Press in the Red, Blue, Green or Visibility boxes, to enter a value for that part of the color.
+Press the left arrow for any box to descrease that value, press the right arrow to increase. The range for each is minimum of 0 to maximum of 255.
+
+Select one of the color boxes at the bottom to directly select that color.
+
+Press Accept when you're happy, otherwise cancel will not change the color.
+
+<B>Resize panel</B>
+<G help/imged_resize.png>
+
+Choose a new width and height. The image will resize and show how the new image size compares to the original one. 
+Click any of the arrows to align the image to that corner. Click the selected arrow, or click the image to deselect alignment, to reset back to the middle of the image.
+
+<G help/imged_resize1.png>
+
+Example of a resize to a smaller image, with align to left.
+
+<G help/imged_resize2.png>
+
+Example of a resize to a larger size, with the original image centred in the new size.
+
+Many settings in the image editor are saved, e.g. color, line size, shape, etc., so the next time you use the editor they will be preserved.
+
+Note: Because Codey Codey works with a Retina iPad display as the screen resolution (e.g. 2048 x 1536), editing large images can be slow, and should be avoided.
+
+#12 Credits
+<H 12>
+
+Codey Codey
+Copyright (c) 2020 - Paul Sagor
+
+Codey Codey is completely developed in AppGameKit Studio (tier 1).
+
+
+<G help/Made-With-AGK-250px.png>
+
+
+Give it a try: <L 1000>

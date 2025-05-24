@@ -1,0 +1,1839 @@
+Seq		Group	Sub Group	Doc	AGK	Codey	Tab Name	Tab Nbr	Ret Value	Man Ret Value	Open	Close	Show	Special	SpecCol1	SpecCol2	Help
+1	Language	Control				S:Control commands	Coding	0	0				T				
+2	Language	Control		onstart	S:function onstart(idx as integer)	S:on start	Coding	0	0			onstartend	S				Called at the very start after the sprite and variables are created.
+3	Language	Control		onstartend	S:endfunction	S:end	Coding	0	0		onstart						
+4	Language	Control		onupdate	S:function onupdate(idx as integer)	S:on update	Coding	0	0			onupdateend	U				Called every frame for the sprite and every clone. Use "is clone" to check.
+5	Language	Control		onupdateend	S:endfunction	S:end	Coding	0	0		onupdate						
+6	Language	Control		onmessage	S:function onmessage[,T:1,S:](idx as integer,S:,,S:m ref as Msg)	S:on message ,T:	Coding	0	0			onmessageend	M				Called when [send] cmd is used with a message of the same name
+7	Language	Control		onmessageend	S:endfunction	S:end	Coding	0	0		onmessage						
+8	Language	Control					Coding	0	0								
+9	Language	Control			S:_agkGetListItem(list,S:,,S:_agkFindListItemName(list,S:,,T:1,S:,,S:0))		Coding	0	0				X				
+10	Language	Control					Coding	0	0								
+12	Language	Control		function	S:function ,T:1:X:F,S:(idx as integer,S:,,S:list as integer)	S:function ,T:	Coding	0	0			endfunction	E				Called when [call] cmd is used with the name of this a function
+13	Language	Control		endfunction	S:endfunction	S:end	Coding	0	0		function						
+11	Language	Control			S:_agkGetListItem(list,S:,,N:1,S:)	S:param ,N:	Coding	0	3	3			F				Get the item in the parameter list sent to this [function] or [on message]
+15	Language	Control		goto	S:_agkGetList(list,S:)	S:param list	Coding	0	1	1			P				Get the parameter list for performing list cmds
+14	Language	Control		exitfunction	S:_agkGetListItem(list,S:,,N:1,S:)	S:param ,N:	Coding	0	1	1			X				
+16	Language	Control		gosub	T:1:Y:F,S:(0,S:,,S:idx,S:,,L:3,S:)	S:call ,T:,S: with ,L:	Coding	0	0								Call a function and pass a list of parameters
+18	Language	Control		end			Coding	0	0				X				
+19	Language	Control			S:_agkSendMsg(idx,S:,,T:1,S:,,L:3,S:,,N:5:J:to,S:)	S:send ,T:,S: with ,L:,S: to ,J:to|ANY	Coding	0	0								Send a message to sprites with a list of parameters; optionally wait for a response. Can reuse code in another sprite by running "AS ME"
+17	Language	Control		return	S:exitfunction	S:exit function	Coding	0	0								
+20	Language	Loops		do			Coding	0	1	1							
+21	Language	Loops		loop		S:Loop commands	Coding	0	1	1			T				
+22	Language	Loops		repeat	S:repeat	S:repeat	Coding	0	0			until					
+23	Language	Loops		until	S:until ,B:1	S:until ,B:	Coding	0	0		repeat						
+24	Language	Loops		while	S:while ,B:1	S:while ,B:	Coding	0	0			endwhile					
+25	Language	Loops		endwhile	S:endwhile	S:endwhile	Coding	0	0		while						
+26	Language	Loops		for	X:0:N,S::,S:for ,X:0,S: = ,N:3,S: to ,N:5,S: step ,N:7,S::,S:_agkSetVar(,V:1,S:,,S:str(,X:0,S:))	S:for ,V:,S: = ,N:1,S: to ,N:10,S: step ,N:1	Coding	0	0			next					
+27	Language	Loops		step			Coding	0	0				X				
+28	Language	Loops		next	S:next	S:next	Coding	0	0		for						
+29	Language	Loops		exit	S:exit	S:exit loop	Coding	0	0								
+30	Language	Loops		continue	S:continue	S:skip loop	Coding	0	0				X				
+31	Language	Conditionals				S:Conditional commands	Coding	0	0				T				
+32	Language	Conditionals			S:true	S:true	Coding	0	2	2							
+33	Language	Conditionals			S:false	S:false	Coding	0	2	2							
+34	Language	Conditionals		if	S:if ,B:1	S:if ,B:	Coding	0	0			endif					
+35	Language	Conditionals		else	S:else	S:else	Coding	0	0		if	endif					
+36	Language	Conditionals		elseif cond			Coding	0	0				X				
+37	Language	Conditionals		endif	S:endif	S:endif	Coding	0	0		if						
+38	Language	Conditionals		select			Coding	0	0				X				
+39	Language	Conditionals		case			Coding	0	0				X				
+40	Language	Conditionals		case default			Coding	0	0				X				
+41	Language	Conditionals		endcase			Coding	0	0				X				
+42	Language	Conditionals		endselect			Coding	0	0				X				
+43	Language	Arithmetic				S:Arithmetic commands	Coding	0	0				T				
+44	Language	Arithmetic		"+"	S:(,F:0,S: ,J:2,S: ,F:4,S:)	F:,S: ,J:math,S: ,F:	Coding	0	1	1				J:2	44	49	
+45	Language	Arithmetic		"-"			Coding	0	0				X				
+46	Language	Arithmetic		"*"			Coding	0	0				X				
+47	Language	Arithmetic		"/"			Coding	0	0				X				
+48	Language	Arithmetic		"%"	S:fmod(,F:0,S:,,F:4,S:)		Coding	0	1	1			X				
+49	Language	Arithmetic		"^"	S:pow(,F:0,S:,,F:4,S:)		Coding	0	1	1			X				
+50	Language	Relational				S:Relational commands	Coding	0	0				T				
+51	Language	Relational		"="	T:0,S: ,J:2,S: ,T:4	T:,S: ,J:compare,S: ,T:	Coding	0	2	2				J:2	51	56	
+52	Language	Relational		"<>"			Coding	0	0				X				
+53	Language	Relational		">"	F:0,S: ,J:2,S: ,F:4		Coding	0	0				X				
+54	Language	Relational		"<"	F:0,S: ,J:2,S: ,F:4		Coding	0	0				X				
+55	Language	Relational		">="	F:0,S: ,J:2,S: ,F:4		Coding	0	0				X				
+56	Language	Relational		"<="	F:0,S: ,J:2,S: ,F:4		Coding	0	0				X				
+57	Language	Boolean				S:Boolean commands	Coding	0	0				X				
+58	Language	Boolean		And	S:(,B:0,S: ,J:2,S: ,B:4,S:)	B:,S: ,J:logic,S: ,B:	Coding	0	2	2				J:2	58	59	
+59	Language	Boolean		Or			Coding	0	0				X				
+60	Language	Boolean		Not	S:not ,B:1	S:not ,B:	Coding	0	2	2							
+61	Language	Bitwise				S:Bitwise commands	Coding	0	0				T				
+62	Language	Bitwise		"<<"	S:(,N:0,S: ,J:2,S: ,N:4,S:)	N:,S: ,J:bits,S: ,N:	Coding	0	1	1				J:2	62	66	
+63	Language	Bitwise		">>"			Coding	0	0				X				
+64	Language	Bitwise		"&&"			Coding	0	0				X				
+65	Language	Bitwise		"||"			Coding	0	0				X				
+66	Language	Bitwise		"~~"			Coding	0	0				X				
+67	Language	Bitwise		"!"	S:!,N:1	S:not bits ,N:	Coding	0	1	1							
+68	Language	Bases				S:Base commands	Coding	0	0				T				
+69	Language	Bases		"%"	S:%,N:1	S:from bin ,N:0	Coding	0	1	1							
+70	Language	Bases		"0c"	S:0c,N:1	S:from oct ,N:0	Coding	0	1	1							
+71	Language	Bases		"0x"	S:0x,T:1	S:from hex ,T:0	Coding	0	1	1							
+72	Language	Remarks		//	S:// ,T:1	S:comment ,T:	Coding	0	0								
+73	Language	Variables				S:Variable commands	Coding	0	0				T				
+74	Language	Variables		Integer	S:_agkSetVar(,V:1,S:,,T:3,S:)	S:set ,V:,S: to ,T:	Coding	0	0								
+75	Language	Variables		Integer	S:_agkChangeVar(,V:1,S:,,T:3,S:)	S:change ,V:,S: by ,T:	Coding	0	0								
+76	Language	Variables		inc var	S:_agkIncVar(,V:1,S:)	S:inc ,V:	Coding	0	0								
+77	Language	Variables		dec var	S:_agkDecVar(,V:1,S:)	S:dec ,V:	Coding	0	0								
+78	Language	Variables			S:_agkMakeTempVar(idx,S:,,T:1,S:,,S:0)	S:make var ,T:	Coding	0	0								
+79	Language	Variables	Display	GetViewOffsetX()	S:_agkGetTempVar(idx,S:,,T:1,S:,,S:0)	S:var ,T:	Coding	0	1	1			V				
+80	Language	Variables			S:_agkEditVar(,A:1,S:)	S:wait for input into ,A:	Coding	0	0								
+81	Language	Variables				S:List commands	Coding	0	0				T				
+82	Language	Variables		Array	S:_agkInsertListItem(,L:3:L,S:,,T:1,S:,,N:5,S:)	S:insert ,T:,S: into ,L:,S: at ,N:-1	Coding	0	0								
+83	Language	Variables		Array	S:_agkSetListItem(,L:3:L,S:,,N:1,S:,,T:5,S:)	S:set item ,N:,S: on ,L:,S: to ,T:	Coding	0	0								
+84	Language	Variables		Array	S:_agkSetListItemName(,L:3:L,S:,,N:1,S:,,T:5,S:)	S:set item name ,N:,S: on ,L:,S: to ,T:	Coding	0	0								
+85	Language	Variables		Array	S:_agkGetListItem(,L:3:L,S:,,N:1,S:)	S:item at ,N:0,S: from ,L:	Coding	0	3	3							
+86	Language	Variables		Array	S:_agkGetListItemName(,L:3:L,S:,,N:1,S:)	S:item name at ,N:0,S: in ,L:	Coding	0	3	3							
+87	Language	Variables		Array	S:_agkRemoveListItem(,L:3:L,S:,,N:1,S:)	S:remove ,N:0,S: in ,L:	Coding	0	0								
+88	Language	Variables		Array	S:_agkFindListItem(,L:3:L,S:,,T:,S:,,N:5,S:)	S:find ,T:,S: in ,L:,S: start at ,N:0	Coding	0	1	1							
+89	Language	Variables		Array	S:_agkFindListItemName(,L:3:L,S:,,T:,S:,,N:5,S:)	S:find name ,T:,S: in ,L:,S: start at ,N:0	Coding	0	1	1							
+90	Language	Variables		Array	S:_agkGetListLen(,L:3:L,S:)	S:length ,L:	Coding	0	1	1							
+91	Language	Variables		Array	S:_agkSwapListItems(,L:5:L,S:,,N:1,S:,,N:3,S:)	S:swap ,N:,S: and ,N:,S: in ,L:	Coding	0	0								
+92	Language	Variables		Array	S:_agkSortList(,L:3:L,S:)	S:sort ,L:	Coding	0	0								
+93	Language	Variables		Array	S:_agkReverseList(,L:3:L,S:)	S:reverse ,L:	Coding	0	0								
+94	Language	Variables		Array	S:_agkJoinList(,L:3:L,S:,,T:,S:,,N:5:J:join,S:)	S:join ,L:,S: by ,T:,S: as ,J:join	Coding	0	3	3							
+95	Language	Variables		Array	S:_agkSplitToList(,L:5,S:,,T:1,S::,T:3,,S:,,N:7:J:join,S:)	S:split ,T:,S: by ,T:,S: to ,L:,S: as ,J:join	Coding	0	0								
+96	Language	Variables		Array	S:_agkClearList(,L:1:L,S:)	S:clear ,L:	Coding	0	0								
+125	Language	Variables			S:_agkAppendList(,L:3,S:,,L:1,S:)	S:append list ,L:,S: to ,L:	Coding	0	0								
+97	Language	Variables			S:_agkMakeTempVar(idx,S:,,T:1,S:,,S:1)	S:make list ,T:	Coding	0	0								
+98	Language	Variables		AGK CMD NOT USED	S:_agkGetTempVar(idx,S:,,T:1,S:,,S:1)	S:list ,T:	Coding	0	1	1			L				
+129	Language	Variables		AGK CMD NOT USED	S:_agkMakeQuickList1(idx,S:,,T:1,S:)	S:quick list ,T:	Coding	0	1	1			Q1				
+130	Language	Variables		AGK CMD NOT USED	S:_agkMakeQuickList2(idx,S:,,T:1,S:,,T:3,S:)	S:quick list ,T:,S: ,T:	Coding	0	1	1			Q2				
+131	Language	Variables		AGK CMD NOT USED	S:_agkMakeQuickList3(idx,S:,,T:1,S:,,T:3,S:,,T:5,S:)	S:quick list ,T:,S: ,T:,S: ,T:	Coding	0	1	1			Q3				
+132	Language	Variables		AGK CMD NOT USED	S:_agkMakeQuickList4(idx,S:,,T:1,S:,,T:3,S:,,T:5,S:,,T:7,S:)	S:quick list ,T:,S: ,T:,S: ,T:,S: ,T:	Coding	0	1	1			Q4				
+99	Language	Variables				S:Variable & List display commands	Coding	0	0				T				
+100	Language	Variables			S:_agkShowVar(,A:1,S:,,N:3:J:join,S:)	S:show ,A:,S: as ,J:join	Coding	0	0								
+101	Language	Variables			S:_agkHideVar(,A:1,S:)	S:hide ,A:	Coding	0	0								
+102	Language	Variables			S:_agkSetVarXY(,A:1,S:,,F3,S:,,F:5,S:)	S:set pos of ,A:,S: to x ,F:0,S: y ,F:0	Coding	0	0								
+103	Language	Variables			S:_agkSetVarWH(,A:1,S:,,F3,S:,,F:5,S:)	S:set size of ,A:,S: to w ,F:0,S: h ,F:0	Coding	0	0								
+104	Language	Variables			S:_agkSetVarTitleVis(,A:1,S:,,S:true)	S:show title of ,A:	Coding	0	0								
+105	Language	Variables			S:_agkSetVarTitleVis(,A:1,S:,,S:false)	S:hide title of ,A:	Coding	0	0								
+106	Language	Variables			S:_agkSetVarBgColor(,A:1,S:,,N:3,S:)	S:set title bgnd color of ,A:,S: to ,C:#5D4037	Coding	0	0								
+107	Language	Variables			S:_agkSetVarBgVis(,A:1,S:,,S:true)	S:show title bgnd of ,A:	Coding	0	0				X				
+108	Language	Variables			S:_agkSetVarBgVis(,A:1,S:,,S:false)	S:hide title bgnd of ,A:	Coding	0	0				X				
+109	Language	Variables			S:_agkSetVarTitleColor(,A:1,S:,,N:3,S:)	S:set title text color of ,A:,S: to ,C:#FFFFFF	Coding	0	0								
+110	Language	Variables			S:_agkSetVarTitleFont(,A:1,S:,,N:3:J:font,S:)	S:set title font of ,A:,S: to ,J:font	Coding	0	0								
+111	Language	Variables			S:_agkSetVarTitleFontSize(,A:1,S:,,N:3,S:)	S:set title font size of ,A:,S: to ,N:24	Coding	0	0								
+112	Language	Variables			S:_agkSetVarTitleAlign(,A:1,S:,,N:3:J:title align,S:)	S:set title align of ,A:,S: to ,J:title align	Coding	0	0								
+113	Language	Variables			S:_agkSetVarTitlePos(,A:1,S:,,N:3:J:edge,S:)	S:set title edge of ,A:,S: to ,J:edge	Coding	0	0								
+114	Language	Variables			S:_agkSetVarBoxVis(,A:1,S:,,S:true)	S:show value bgnd of ,A:	Coding	0	0				X				
+115	Language	Variables			S:_agkSetVarBoxVis(,A:1,S:,,S:false)	S:hide value bgnd of ,A:	Coding	0	0				X				
+116	Language	Variables			S:_agkSetVarBoxColor(,A:1,S:,,N:3,S:)	S:set value bgnd color of ,A:,S: to ,C:#FFFFFF	Coding	0	0								
+117	Language	Variables			S:_agkSetVarTextColor(,A:1,S:,,N:3,S:)	S:set value text color of ,A:,S: to ,C:#000000	Coding	0	0								
+118	Language	Variables			S:_agkSetVarTextFont(,A:1,S:,,N:3:J:font,S:)	S:set value font of ,A:,S: to ,J:font	Coding	0	0								
+119	Language	Variables			S:_agkSetVarTextFontSize(,A:1,S:,,N:3,S:)	S:set value font size of ,A:,S: to ,N:24	Coding	0	0								
+120	Language	Variables			S:_agkSetVarTextAlign(,A:1,S:,,N:3:J:value align,S:)	S:set value align of ,A:,S: to ,J:value align	Coding	0	0								
+121	Language	Variables			S:_agkSetVarTextPos(,A:1,S:,,N:3:J:edge,S:)	S:set value edge of ,A:,S: to ,J:edge	Coding	0	0								
+122	Language	Variables			S:_agkSetVarTextSecret(,A:1,S:,,B:3,S:)	S:set value secret of ,A:,S: to ,B:	Coding	0	0								
+123	Command	Core	Display	ClearDepthBuffer()		S:Display commands	Common	1	0				T				
+124	Command	Core	Display	ClearScreen()	S:clearscreen()	S:clear screen	Common	1	0								
+126	Command	Core	Display	EnableClearDepth( clear )			Common	1	0								
+127	Command	Core	Display	GetPaused()			Common	1	1								
+128	Command	Core	Display	GetResumed()			Common	1	2	2							
+133	Command	Core	Display	GetShadowPolygonsDrawn()			Common	1	1								
+134	Command	Core	Display	GetViewOffsetY()			Common	1	1								
+135	Command	Core	Display	GetViewZoom()			Common	1	1								
+137	Command	Core	Display	GetVirtualWidth()	S:(getvirtualwidth() - 1)	S:x max	Common	1	1	1							The right edge of the screen.
+136	Command	Core	Display	GetVirtualHeight()	S:(getvirtualheight() - 1)	S:y max	Common	1	1	1							The bottom edge of the screen.
+138	Command	Core	Display	GetWindowHeight()			Common	1	1								
+139	Command	Core	Display	GetWindowWidth()			Common	1	1								
+140	Command	Core	Display	IsSupportedDepthTexture()			Common	1	2	2							
+141	Command	Core	Display	MaximizeWindow()			Common	1	0								
+142	Command	Core	Display	MinimizeApp()			Common	1	0								
+143	Command	Core	Display	Render()			Common	1	0								
+144	Command	Core	Display	Render2DBack( )			Common	1	0								
+145	Command	Core	Display	Render2DFront( )			Common	1	0								
+146	Command	Core	Display	Render3D( )			Common	1	0								
+147	Command	Core	Display	RenderShadowMap( )			Common	1	0								
+148	Command	Core	Display	RestoreApp()			Common	1	0								
+149	Command	Core	Display	ScreenFPS()	S:screenfps()	S:fps	Common	1	1	1							
+150	Command	Core	Display	ScreenToWorldX( x )			Common	1	1	1							
+151	Command	Core	Display	ScreenToWorldY( y )			Common	1	1	1							
+152	Command	Core	Display	SetBorderColor( red, green, blue )			Common	1	0								
+153	Command	Core	Display	SetClearColor( red, green, blue )	S:cosetclearcolor(,N:1,S:)	S:set clear color ,C:	Common	1	0								
+154	Command	Core	Display	SetDisplayAspect( aspect )			Common	1	0								
+155	Command	Core	Display	SetImmersiveMode( mode )			Common	1	0								
+156	Command	Core	Display	SetIntendedDeviceSize( width, height )			Common	1	0								
+157	Command	Core	Display	SetOrientationAllowed( portrait, portrait2, landscape, landscape2 )			Common	1	0								
+158	Command	Core	Display	SetRenderToImage( colorImage, depthImage )			Common	1	0								
+159	Command	Core	Display	SetRenderToScreen()			Common	1	0								
+160	Command	Core	Display	SetResolutionMode( mode )			Common	1	0								
+161	Command	Core	Display	SetScissor( x, y, x2, y2 )	S:setscissor(,F:1,S:,,F:3,S:,,F:5,S:,,F:7,S:)	S:set scissor to x ,F:,S: y ,F:,S: x2 ,F:,S: y2 ,F:	Common	1	0								
+162	Command	Core	Display	SetScreenResolution( width, height )			Common	1	0								
+163	Command	Core	Display	SetSyncRate( fps, mode )	S:setsyncrate(,N:1,S:,,B:1,S:)	S:set frame rate to ,N:,S: accurate ,B:	Common	1	0								
+164	Command	Core	Display	SetTransitionMode( mode )			Common	1	0								
+165	Command	Core	Display	SetViewOffset( x, y )			Common	1	0								
+166	Command	Core	Display	SetViewZoom( zoom )			Common	1	0								
+167	Command	Core	Display	SetViewZoomMode( mode )			Common	1	0								
+168	Command	Core	Display	SetVirtualResolution( iWidth, iHeight )			Common	1	0								
+169	Command	Core	Display	SetVSync( mode )			Common	1	0								
+170	Command	Core	Display	SetWindowAllowResize( mode )			Common	1	0								
+171	Command	Core	Display	SetWindowPosition( x, y )			Common	1	0								
+172	Command	Core	Display	SetWindowSize( width, height, fullscreen, allowOverSized )			Common	1	0								
+173	Command	Core	Display	WorldToScreenX( x )			Common	1	1	1							
+174	Command	Core	Display	WorldToScreenY( y )			Common	1	1	1							
+175	Command	Core	Drawing			S:Drawing commands	Common	1	0				T				
+176	Command	Core	Drawing	DrawBox( x, y, x2, y2, color1, color2, color3, color4, filled )	S:DrawBox(,F:1,S:,,F:3,S:,,F:5,S:,,F:7,S:,,S:__col,S:,,S:__col,S:,,S:__col,S:,,S:__col,S:,,B:9,S:)	S:draw rect at x1 ,F:,S: y1 ,F:,S: x2 ,F:,S: y2 ,F:,S: fill ,B:	Common	1	0								
+177	Command	Core	Drawing	DrawEllipse( x, y, radiusx, radiusy, color1, color2, filled )	S:DrawEllipse(,F:1,S:,,F:3,S:,,F:5,S:,,F:7,S:,,S:__col,S:,,S:__col,S:,,B:9,S:)	S:draw ellipse at x ,F:,S: y ,F:,S: x with x radius ,F:,S: y radius ,F:,S: fill ,B:	Common	1	0								
+178	Command	Core	Drawing	DrawLine( x, y, x2, y2, red, green, blue )	S:DrawLine(,F:1,S:,,F:3,S:,,F:5,S:,,F:7,S:,,S:getcolorred(__col),S:,,S:getcolorgreen(__col),S:,,S:getcolorblue(__col),S:)	S:draw line from x1 ,F:,S: y1 ,F:,S: to x2 ,F:,S: y2 ,F:	Common	1	0								
+179	Command	Core	Drawing		S:__col = ,N:1	S:set drawing color to ,C:	Common	1	0								
+180	Command	Core	Drawing		S:__col = ,N:1	S:set drawing color value to ,N:	Common	1	0								
+181	Command	Core	Display	Sync()	S:__col	S:color	Common	1	1	1							
+182	Command	Core	Drawing	GetColorBlue( color )	S:getcolorblue(,N:1,S:)	S:blue color ,N:	Common	1	1	1							
+183	Command	Core	Drawing	GetColorGreen( color )	S:getcolorgreen(,N:1,S:)	S:green color ,N:	Common	1	1	1							
+184	Command	Core	Drawing	GetColorRed( color )	S:getcolorred(,T:1,S:)	S:red color ,N:	Common	1	1	1							
+185	Command	Core	Drawing	MakeColor( red, green, blue )	S:MakeColor(,N:1,S:,,N:3,S:,,N:5,S:,,N:7,S:)	S:make color from r ,N:0,S: g ,N:0,S: b ,N:0,S: a ,N:255	Common	1	1	1							
+186	Command	Core	External Apps			S:External app commands	Common	1	0				T				
+187	Command	Core	External Apps	GetAppRunning( appID )			Common	1	1								
+188	Command	Core	External Apps	RunApp( szFilename, szParameters )			Common	1	1	1							
+189	Command	Core	External Apps	ShareFile( szFilename )			Common	1	0								
+190	Command	Core	External Apps	ShareImage( szFilename )			Common	1	0								
+191	Command	Core	External Apps	ShareImageAndText( szFilename, szText )			Common	1	0								
+192	Command	Core	External Apps	ShareText( szText )			Common	1	0								
+193	Command	Core	External Apps	TerminateApp( appID )			Common	1	0								
+194	Command	Core	External Apps	ViewFile( szFilename )			Common	1	0								
+195	Command	Core	General			S:General commands	Common	1	0				T				
+196	Command	Core	General	StepPhysics( time )			Common	1	0								
+197	Command	Core	General	Update( time )			Common	1	0								
+198	Command	Core	General	Update2D( time )			Common	1	0								
+199	Command	Core	General	Update3D( time )			Common	1	0								
+200	Command	Core	Maths			S:Maths commands	Common	1	0				T				
+201	Command	Core	Maths	Abs( f )			Common	1	1	1							
+202	Command	Core	Maths	ACos( f )	S:acos(,F:1,S:)	S:acos ,F:	Common	1	1	1							
+203	Command	Core	Maths	ACosRad( f )			Common	1	1	1							
+204	Command	Core	Maths	ASin( f )	S:asin(,F:1,S:)	S:asin ,F:	Common	1	1	1							
+205	Command	Core	Maths	ASinRad( f )			Common	1	1	1							
+206	Command	Core	Maths	ATan( f )	S:atan(,F:1,S:)	S:atan ,F:	Common	1	1	1							
+207	Command	Core	Maths	ATan2( y, x )			Common	1	1	1							
+208	Command	Core	Maths	Cos( f )	S:cos(,F:1,S:)	S:cos ,F:	Common	1	1	1							
+209	Command	Core	Maths	Sin( a )	S:sin(,F:1,S:)	S:sin ,F:	Common	1	1	1							
+210	Command	Core	Maths	Tan( a )	S:tan(,F:1,S:)	S:tan ,F:	Common	1	1	1							
+211	Command	Core	Maths	ATan2Rad( y, x )			Common	1	1	1							
+212	Command	Core	Maths	ATanFull( x, y )	S:atanfull(,F:1,S:,,F:3,S:)	S:atan x ,F:,S: y ,F:	Common	1	1	1							
+213	Command	Core	Maths	ATanFullRad( x, y )			Common	1	1	1							
+214	Command	Core	Maths	ATanRad( f )			Common	1	1	1							
+215	Command	Core	Maths	Round( a )	S:round(,F:1,S:)	S:round ,F:	Common	1	1	1							
+216	Command	Core	Maths	Trunc( a )	S:trunc(,F:1,S:)	S:trunc ,F:	Common	1	1	1							
+217	Command	Core	Maths	Ceil( f )	S:ceil(,F:1,S:)	S:ceil ,F:	Common	1	1	1							
+218	Command	Core	Maths	CosRad( f )			Common	1	1	1							
+219	Command	Core	Maths	Floor( f )	S:floor(,F:1,S:)	s:floor ,F:	Common	1	1	1							
+220	Command	Core	Maths	FMod( f, f2 )			Common	1	1	1							
+221	Command	Core	Maths	Sqrt( a )	S:sqrt(,F:1,S:)	S:sqrt ,F:	Common	1	1	1							
+222	Command	Core	Maths	Log( a )	S:log(,F:1,S:)	S:log ,F:	Common	1	0								
+223	Command	Core	Maths	Pow( a, b )			Common	1	1	1			X				
+224	Command	Core	Maths	Random( )			Common	1	1	1							
+225	Command	Core	Maths	Random2( )	S:random2(,N:1,S:,,N:3,S:)	S:random ,N:1,S: to ,N:100	Common	1	1	1							
+226	Command	Core	Maths	RandomSign( value )			Common	1	1	1							
+227	Command	Core	Maths	SetRandomSeed( seed )			Common	1	0								
+228	Command	Core	Maths	SetRandomSeed2( seed )	S:setrandomseed2(,N:1,S:)	S:set random seed to ,N:	Common	1	0								
+229	Command	Core	Maths	SinRad( a )			Common	1	1	1							
+230	Command	Core	Maths	TanRad( a )			Common	1	1	1							
+231	Command	Core	Misc			S:Miscelaneous commands	Common	1	0				T				
+232	Command	Core	Misc	ClearURLSchemeText()			Common	1	0								
+233	Command	Core	Misc	DownloadExpansionFile()			Common	1	0								
+234	Command	Core	Misc	GetAppName( )			Common	1	1								
+235	Command	Core	Misc	GetAppPackageName()			Common	1	1								
+236	Command	Core	Misc	GetDeviceBaseName()			Common	1	1								
+237	Command	Core	Misc	GetDeviceID()			Common	1	1								
+238	Command	Core	Misc	GetDeviceLanguage( )			Common	1	1								
+239	Command	Core	Misc	GetDeviceName( )			Common	1	1								
+240	Command	Core	Misc	GetDeviceNetworkType()			Common	1	1								
+241	Command	Core	Misc	GetDevicePlatform()			Common	1	1								
+242	Command	Core	Misc	GetDeviceType()			Common	1	1								
+243	Command	Core	Misc	GetExpansionFileError()			Common	1	1								
+244	Command	Core	Misc	GetExpansionFileProgress()			Common	1	1								
+245	Command	Core	Misc	GetExpansionFileState()			Common	1	1								
+246	Command	Core	Misc	GetFrameTime()			Common	1	1								
+247	Command	Core	Misc	GetMilliseconds()	S:getmilliseconds()	S:millis	Common	1	1	1							
+248	Command	Core	Misc	GetNumProcessors()			Common	1	1								
+249	Command	Core	Misc	GetSeconds()			Common	1	1								
+250	Command	Core	Misc	GetStorageRemaining( str )			Common	1	1								
+251	Command	Core	Misc	GetStorageTotal( str )			Common	1	1								
+252	Command	Core	Misc	GetURLSchemeText()			Common	1	1								
+253	Command	Core	Misc	Message( msg )	S:message(,T:1,S:)	S:message ,T:	Common	1	0				X				
+254	Command	Core	Misc				Common	1	0								
+255	Command	Core	Misc	Print( szString )	S:print(,T:1,S:)	S:print ,T:	Common	1	0								
+256	Command	Core	Misc	SetPrintColor( iRed, iGreen, iBlue )	X:0:C,S::,S:_agkSetColorStr(,C:1,S:,,X:0,S:),S::,S:setprintcolor(,X:0,S:.r,S:,,X:0,S:.g,S:,,X:0,S:.b,S:)	S:set print color to ,C:	Common	1	0								
+257	Command	Core	Misc	SetPrintFont( fontID )			Common	1	0								
+258	Command	Core	Misc	SetPrintSize( fSize )	S:setprintsize(,N:1,S:)	S:set print size ,N:	Common	1	0								
+259	Command	Core	Misc	SetAntialiasMode( mode )			Common	1	0								
+260	Command	Core	Misc	SetDefaultMagFilter( filter )			Common	1	0								
+261	Command	Core	Misc	SetDefaultMinFilter( filter )			Common	1	0								
+262	Command	Core	Misc	SetDefaultWrapU( mode )			Common	1	0								
+263	Command	Core	Misc	SetDefaultWrapV( mode )			Common	1	0								
+264	Command	Core	Misc	SetExpansionFileKey( key )			Common	1	0								
+265	Command	Core	Misc	SetExpansionFileVersion(int version)			Common	1	0								
+266	Command	Core	Misc	SetGenerateMipmaps( generate )			Common	1	0								
+267	Command	Core	Misc	SetSleepMode( mode )			Common	1	0								
+268	Command	Core	Misc	SetSortCreated( sort )			Common	1	0								
+269	Command	Core	Misc	SetSortDepth( sort )			Common	1	0								
+270	Command	Core	Misc	SetSortTextures( sort )			Common	1	0								
+271	Command	Core	Misc	SetSortTransparentDepth( sort )			Common	1	0								
+272	Command	Core	Misc	SetWindowTitle( szTitle )			Common	1	0								
+273	Command	Core	Misc	Sha1( str )			Common	1	1	1							
+274	Command	Core	Misc	Sha256( str )			Common	1	1	1							
+275	Command	Core	Misc	ResetTimer()	S:resettimer()	S:reset timer	Common	1	0								
+276	Command	Core	Misc	Timer()	S:timer()	S:timer	Common	1	1	1							
+277	Command	Core	Misc	Sleep( milliseconds )	S:sleep(,N:1,S:)	S:sleep ,N:	Common	1	0								
+278	Command	Core	Strings			S:String commands	Common	1	0				T				
+279	Command	Core	Strings	Bin( i )	S:bin(,N:1,S:)	S:to bin ,N:	Common	1	3	3							
+280	Command	Core	Strings	ByteLen( str )			Common	1	1	1							
+281	Command	Core	Strings	Chr( uni )	S:chr(,N:1,S:)	S:chr ,N:	Common	1	3	3							
+282	Command	Core	Strings	CompareString( str, str )			Common	1	1	1							
+283	Command	Core	Strings	Asc( str )	S:asc(,N:1,S:)	S:asc ,T:	Common	1	1	1							
+284	Command	Core	Strings	CountStringToken( str, str )			Common	1	1	1							
+285	Command	Core	Strings	CountStringToken2( str, str )	S:countstringtokens2(,T:1,S:,,T:3,S:)	S:count tokens in ,T:,S: split by ,T:	Common	1	1	1							
+286	Command	Core	Strings	FindString( str, findStr, ignoreCase, start )	S:findstring(,T:3,S:,,T:1,S:,,B:7,S:,,N:5,S:)	S:find ,T:,S: in ,T:,S: start at ,N:1,S: case ,B:	Common	1	1	1							
+287	Command	Core	Strings	FindStringCount( str, str )			Common	1	1	1							
+288	Command	Core	Strings	FindStringReverse( str, str, ignoreCase, start )	S:findstringreverse(,T:3,S:,,T:1,S:,,B:7,S:,,N:5,S:)	S:find rev ,T:,S: in ,T:,S: start at ,N:1,S: case ,B:	Common	1	1	1							
+289	Command	Core	Strings	GetStringToken( str, str, str )			Common	1	1								
+290	Command	Core	Strings	GetStringToken2( str, str, str )	S:getstringtokens2(,T:3,S:,,T:5,S:,,N:1,S:)	S:token ,N:,S: in ,T:,S: split by ,T:	Common	1	3	3							
+291	Command	Core	Strings	Hex( i )	S:hex(,N:1,S:)	S:to hex ,N:	Common	1	3	3							
+292	Command	Core	Strings	HexToBase64( input )			Common	1	1	1							
+293	Command	Core	Strings	Left( strin, count )	S:left(,T:3,S:,,N:1,S:)	S:left ,N:,S: of ,T:	Common	1	3	3							
+294	Command	Core	Strings	Len( strin )	S:len(,T:1,S:)	S:len ,T:	Common	1	1	1							
+295	Command	Core	Strings	Lower( strin )	S:lower(,T:1,S:)	S:lower ,T:	Common	1	3	3							
+296	Command	Core	Strings	Mid( strin, position, length )	S:mid(,T:5,S:,,N:1,S:,,N:3,S:)	S:mid at ,N:,S: for ,N:,S: in ,T:	Common	1	1	1							
+297	Command	Core	Strings	ReplaceString( str, str, str, a )	S:replacestring(,T:5,S:,,T:1,S:,,T:3,S:,,N:7,S:)	S:replace ,T:,S: with ,T:,S: in ,T:,S: count ,N:	Common	1	3	3							
+298	Command	Core	Strings	Right( strin, count )	S:right(,T:3,S:,,N:1,S:)	S:right ,N:,S: of ,T:	Common	1	3	3							
+299	Command	Core	Strings	Spaces( length )			Common	1	1	1							
+300	Command	Core	Strings	Str( valueFloat )	S:_agkBoolToStr(,B:1,S:)	S:bool ,B:	Common	1	3	3							
+301	Command	Core	Strings	StringToBase64( input )			Common	1	1	1							
+302	Command	Core	Strings	StripString( str, chars )	S:stripstring(,T:3,S:,,T:1,S:)	S:strip ,T:,S: from ,T:	Common	1	3	3							
+303	Command	Core	Strings	TrimString( str, chars )	S:trimstring(,T:3,S:,,T:1,S:)	S:trim ,T:,S: from ,T:	Common	1	3	3							
+304	Command	Core	Strings	TruncateString( str, character )			Common	1	1	1							
+305	Command	Core	Strings	Upper( strin )	S:upper(,T:1,S:)	S:upper ,T:	Common	1	3	3							
+306	Command	Core	Strings	Val( str )	T:1,S:+,T:3	S:concat ,T:,S:  ,T:	Common	1	3	3							
+307	Command	Sprites		AddSpriteAnimationFrame( iSpriteIndex, iImageIndex )			2D	2	0								
+308	Command	Sprites		AddSpriteShapeBox( iSpriteIndex, x, y, x2, y2, angle )			2D	2	0								
+309	Command	Sprites		AddSpriteShapeChain( iSpriteIndex, numPoints, index, loop, x, y )			2D	2	0								
+310	Command	Sprites		AddSpriteShapeCircle( iSpriteIndex, x, y, radius )			2D	2	0								
+311	Command	Sprites		AddSpriteShapePolygon( iSpriteIndex, numPoints, index, x, y )			2D	2	0								
+312	Command	Sprites		CalculateSpritePhysicsCOM( iSpriteIndex )			2D	2	0								
+313	Command	Sprites		ClearSpriteAnimationFrames( iSpriteIndex )			2D	2	0								
+314	Command	Sprites		ClearSpriteShapes( iSpriteIndex )			2D	2	0								
+319	Command	Sprites					2D	2	0								
+320	Command	Sprites					2D	2	0								
+315	Command	Sprites		CloneSprite( iSpriteIndex, iOtherSprite )	S:_agkCloneSprite(idx,S:,,T:1,S:)	S:create clone with name ,T:	2D	2	0								Clones the sprite and gives it a name for later setting.
+316	Command	Sprites		CreateDummySprite( iSpriteIndex )	S:_agkIsClone(idx)	S:is clone	2D	2	2	2							Returns true if executing code for a clone.
+317	Command	Sprites		CreateSprite( iImageIndex )	S:idx = _agkSetClone(_h.entryIdx,S:,,S:idx,S:,,T:1,S:)	S:set active clone to ,T:	2D	2	0								Set the active clone to name, all cmds will affect that clone.
+318	Command	Sprites			S:_agkGetClone(idx)	S:active clone	2D	2	3	3							Returns the name of the clone set with "set active clone name".
+321	Command	Sprites		DeleteSprite( iSpriteIndex )	S:_agkDeleteClone(idx)	S:delete clone	2D	2	0								Deletes the active clone.
+322	Command	Sprites		DrawSprite( iSpriteIndex )	S:_agkChangeCloneName(idx,S:,,T:1,S:)	S:change clone name to ,T:	2D	2	0								
+323	Command	Sprites		FixSpriteToScreen( iSpriteIndex, mode )			2D	2	0								
+324	Command	Sprites		GetPhysicsCollision( iSprite1, iSprite2 )			2D	2	1								
+325	Command	Sprites		GetPhysicsCollisionWorldX( )			2D	2	1								
+326	Command	Sprites		GetPhysicsCollisionWorldY( )			2D	2	1								
+327	Command	Sprites		GetPhysicsCollisionX( )			2D	2	1								
+328	Command	Sprites		GetPhysicsCollisionY( )			2D	2	1								
+329	Command	Sprites		GetSpriteActive( iSpriteIndex )			2D	2	1								
+330	Command	Sprites					2D	2	0								
+331	Command	Sprites		GetSpriteAngleRad( iSpriteIndex )			2D	2	1								
+332	Command	Sprites		GetSpriteAngleRad( iSpriteIndex )			2D	2	1								
+333	Command	Sprites		GetSpriteColorAlpha( iSpriteIndex )			2D	2	1								
+334	Command	Sprites		GetSpriteColorBlue( iSpriteIndex )			2D	2	1								
+335	Command	Sprites		GetSpriteColorGreen( iSpriteIndex )			2D	2	1								
+336	Command	Sprites		GetSpriteColorRed( iSpriteIndex )			2D	2	1								
+337	Command	Sprites		GetSpriteCurrentFrame( iSpriteIndex )			2D	2	1								
+338	Command	Sprites		GetSpriteNumShapes( iSpriteIndex )			2D	2	1								
+339	Command	Sprites		GetSpriteOffsetX( iSpriteIndex )			2D	2	1								
+340	Command	Sprites		GetSpriteOffsetY( iSpriteIndex )			2D	2	1								
+341	Command	Sprites		GetSpritePhysicsAngularVelocity( iSpriteIndex )			2D	2	1								
+342	Command	Sprites		GetSpritePhysicsCOMX( iSpriteIndex )			2D	2	1								
+343	Command	Sprites		GetSpritePhysicsCOMY( iSpriteIndex )			2D	2	1								
+344	Command	Sprites		GetSpritePhysicsMass( iSpriteIndex )			2D	2	1								
+345	Command	Sprites		GetSpritePhysicsVelocityX( iSpriteIndex )			2D	2	1								
+346	Command	Sprites		GetSpritePhysicsVelocityY( iSpriteIndex )			2D	2	1								
+347	Command	Sprites		GetSpritePixelFromX( iSpriteIndex, x )			2D	2	1								
+348	Command	Sprites		GetSpritePixelFromY( iSpriteIndex, y )			2D	2	1								
+349	Command	Sprites		GetSpritePlaying( iSpriteIndex )			2D	2	1								
+350	Command	Sprites		GetSpriteShapeNumVertices( iSpriteIndex, shapeID )			2D	2	1								
+351	Command	Sprites		GetSpriteShapeVertexX( iSpriteIndex, shapeID, vertex )			2D	2	1								
+352	Command	Sprites		GetSpriteShapeVertexY( iSpriteIndex, shapeID, vertex )			2D	2	1								
+353	Command	Sprites		GetSpriteTransparency( iSpriteIndex )			2D	2	1								
+354	Command	Sprites		SetSpriteVisible( iSpriteIndex, bVisible )	S:setspritevisible(__sprs[idx].spr,S:,,S:true)	S:show	2D	2	0								
+355	Command	Sprites		SetSpriteVisible( iSpriteIndex, bVisible )	S:setspritevisible(__sprs[idx].spr,S:,,S:false)	S:hide	2D	2	0								
+356	Command	Sprites		GetSpriteVisible( iSpriteIndex )	S:getspritevisible(__sprs[idx].spr)	S:is visible	2D	2	1								
+357	Command	Sprites					2D	2	1								
+358	Command	Sprites	Properties	SetSpritePositionByOffset( iSpriteIndex, fX, fY )	S:setspritepositionbyoffset(__sprs[idx].spr,S:,,F:1,S:,,F:3,S:)	S:set pos to x ,F:0,S: y ,F:0	2D	2	0								
+359	Command	Sprites		GetSpriteXByOffset( iSpriteIndex )	S:getspritexbyoffset(__sprs[idx].spr)	S:x pos	2D	2	1								
+360	Command	Sprites		GetSpriteXFromPixel( iSpriteIndex, x )	S:getspriteybyoffset(__sprs[idx].spr)	S:y pos	2D	2	1								
+363	Command	Sprites		GetSpriteWidth( iSpriteIndex )	S:getspritewidth(__sprs[idx].spr)	S:width	2D	2	1	1							
+364	Command	Sprites	Properties	GetSpriteHeight( iSpriteIndex )	S:getspriteheight(__sprs[idx].spr)	S:height	2D	2	1	1							
+361	Command	Sprites			X:0:F,S::,X:1:F,S::,X:0,S: = getspritexbyoffset(__sprs[idx].spr),S::,X:1,S: = getspriteybyoffset(__sprs[idx].spr),S::,S:setspritepositionbyoffset(__sprs[idx].spr,S:,,S:_agkDeltaAdd(,X:0,S:,,F:1,S:),S:,,S:_agkDeltaAdd(,X:1,S:,,F:3,S:))	S:change pos to x ,F:0,S: y ,F:0	2D	2	0								
+362	Command	Sprites			S:_agkMoveSprite(idx,S:,,F:1,S:)	S:move forward by ,F:0	2D	2	0								
+365	Command	Sprites		SetSpriteScale( iSpriteIndex, x, y )	S:setspritescalebyoffset(__sprs[idx].spr,S:,,F:1:F,S:,,F:3:F,S:)	S:set scale to x ,F:0,S: y ,F:0	2D	2	0								
+366	Command	Sprites			S:_h.x = getspritescalex(__sprs[idx].spr),S::,S:_h.y = getspritescaley(__sprs[idx].spr),S::,S:setspritescale(__sprs[idx].spr,S:,,S:_agkDeltaAdd(_h.x,S:,,F:1,S:),S:,,S:_agkDeltaAdd(_h.y,S:,,F:3,S:))	S:change scale by x ,F:0,S: y ,F:0	2D	2	0								
+367	Command	Sprites		GetSpriteScaleX( iSpriteIndex )	S:getspritescalex(__sprs[idx].spr)	S:x scale	2D	2	1								
+368	Command	Sprites		GetSpriteScaleY( iSpriteIndex )	S:getspritescaley(__sprs[idx].spr)	S:y scale	2D	2	1								
+369	Command	Sprites		SetSpriteAngle( iSpriteIndex, fAng )	S:setspriteangle(__sprs[idx].spr,S:,,F:1:F,S:)	S:set angle to ,F:	2D	2	0								
+370	Command	Sprites		SetSpriteAngleRad( iSpriteIndex, fAng )	S:_h.x = getspriteangle(__sprs[idx].spr),S::,S:setspriteangle(__sprs[idx].spr,S:,,S:_h.x + ,F:1:F,S:)	S:change angle by ,F:	2D	2	0								
+371	Command	Sprites		GetSpriteAngle( iSpriteIndex )	S:getspriteangle(__sprs[idx].spr)	S:angle	2D	2	1								
+372	Command	Sprites		SetSpriteDepth( iSpriteIndex, iDepth )	S:setspritedepth(__sprs[idx].spr,S:,,N:1,S:)	S:set depth to ,N:	2D	2	0								
+373	Command	Sprites		GetSpriteDepth( iSpriteIndex )	S:getspritedepth(__sprs[idx].spr)	S:depth	2D	2	1								
+374	Command	Sprites		GetSpriteYFromPixel( iSpriteIndex, y )			2D	2	1								
+375	Command	Sprites		GetSpriteYFromWorld( iSpriteIndex, x, y )			2D	2	1								
+376	Command	Sprites		GetWorldXFromSprite( iSpriteIndex, x, y )			2D	2	1								
+377	Command	Sprites		GetWorldYFromSprite( iSpriteIndex, x, y )			2D	2	1								
+378	Command	Sprites		PlaySprite( iSpriteIndex )			2D	2	0								
+379	Command	Sprites		ResetSpriteUV( iSpriteIndex )			2D	2	0								
+380	Command	Sprites		ResumeSprite( iSpriteIndex )			2D	2	0								
+381	Command	Sprites		SetSpriteActive( iSpriteIndex, bActive )			2D	2	0								
+382	Command	Sprites		SetSpriteAdditionalImage( iSpriteIndex, iImageIndex, iStage )			2D	2	0								
+383	Command	Sprites		SetSpriteImage( iSpriteIndex, iImageIndex, bUpdateShape )	S:_agkSetSpriteImage(idx,S:,,N:1,S:)	S:set image to ,N:1	2D	2	0								
+384	Command	Sprites			S:_agkGetSpriteImage(idx)	S:image	2D	2	1	1							
+385	Command	Sprites		SetSpriteAnimation( iSpriteIndex, iFrameWidth, iFrameHeight, iFrameCount )	S:_agkSetSpriteAnimation(idx,S:,,F:1,S:,,F:3,S:,,N:5,S:)	S:set animation to w ,F:,S: h ,F:,S: count ,N:	2D	2	0								
+386	Command	Sprites		SetSpriteCategoryBit( iSpriteIndex, category, flag )			2D	2	0								
+387	Command	Sprites		SetSpriteCategoryBits( iSpriteIndex, categories, shapeID )			2D	2	0								
+388	Command	Sprites		SetSpriteCollideBit( iSpriteIndex, category, flag, shapeID )			2D	2	0								
+389	Command	Sprites		SetSpriteCollideBits( iSpriteIndex, mask )			2D	2	0								
+390	Command	Sprites		SetSpriteColor( iSpriteIndex, iRed, iGreen, iBlue, iAlpha )	S:cosetspritecolor(__sprs[idx].spr,S:,,N:1,S:)	S:set sprite color to ,C:	2D	2	0								
+391	Command	Sprites		SetSpriteColor( iSpriteIndex, iRed, iGreen, iBlue, iAlpha )	S:cosetspritecolor(__sprs[idx].spr,S:,,N:1,S:)	S:set sprite color to ,N:	2D	2	0								
+392	Command	Sprites		SetSpriteColorAlpha( iSpriteIndex, iAlpha )	S:_agkGetSpriteColor(idx)	S:sprite color	2D	2	1	1							
+393	Command	Sprites		SetSpriteColorGreen( iSpriteIndex, iGreen )			2D	2	0								
+394	Command	Sprites		SetSpriteColorRed( iSpriteIndex, iRed )			2D	2	0								
+395	Command	Sprites					2D	2	0								
+396	Command	Sprites		SetSpriteFrame( iSpriteIndex, iFrame )	S:_agkSetSpriteFrame(idx,S:,,N:1,S:)	S:set frame to ,N:1	2D	2	0								
+397	Command	Sprites			S:_agkGetSpriteFrame(idx)	S:frame	2D	2	1	1							
+398	Command	Sprites			S:setspritefliphoriz(__sprs[idx].spr,S:,,B:1,S:)	S:flip horiz ,B:	2D	2	0								
+401	Command	Sprites			S:setspriteflipvert(__sprs[idx].spr,S:,,B:1,S:)	S:flip vert ,B:	2D	2	0								
+399	Command	Sprites		GetSpriteFlippedH( iSpriteIndex )	S:getspritefilledh(__sprs[idx].spr,S:)	S:is flipped horiz	2D	2	2	2							
+400	Command	Sprites		GetSpriteFlippedV( iSpriteIndex )	S:getspritefilledv(__sprs[idx].spr,S:)	S:is flipped vert	2D	2	2	2							
+402	Command	Sprites		SetSpriteShape( iSpriteIndex, shape, shapeID )	S:setspriteshape(__sprs[idx].spr,S:,,N:1:J:shape,S:)	S:set hit shape to ,J:shape	2D	2	0								
+403	Command	Sprites		SetSpriteScissor( iSpriteIndex, x, y, x2, y2 )	S:setspritescissors(__sprs[idx].spr,S:,,F:1,S:,,F:3,S:,,F:5,S:,,F:7,S:)	S:set scissors at x1 ,F:,S: y1 ,F:,S: x2 ,F:,S: y2 ,F:	2D	2	0								
+404	Command	Sprites		SetSpriteShapeBox( iSpriteIndex, x, y, x2, y2, angle, shapeID )			2D	2	0								
+405	Command	Sprites		SetSpriteShapeCircle( iSpriteIndex, x, y, radius )			2D	2	0								
+406	Command	Sprites		SetSpriteShapePolygon( iSpriteIndex, numPoints, index, x, y )			2D	2	2	2							
+407	Command	Sprites		GetSpriteCollision( iSprite1, iSprite2 )	S:_agkGetSpriteNameCollision(idx,S:,,T:1,S:)	S:has hit sprite ,T:	2D	2	2	2							
+408	Command	Sprites			S:_agkGetCloneNameCollision(idx,S:,,T:1,S:,,T:3,S:)	S:has hit clone ,T:,S: of sprite ,T:	2D	2	2	2							
+409	Command	Sprites		GetSpriteHitTest( iSpriteIndex, x, y )	S:getspritehittest(__sprs[idx].spr,S:,,F:,S:,,F:,S:)	S:is point x ,F:,S: y ,F:,S: in sprite	2D	2	2	2							
+410	Command	Sprites		GetSpriteInBox( iSprite, x1, y1, x2, y2 )	S:getspriteinbox(__sprs[idx].spr,S:,,F:1,S:,,F:3,S:,,F:5,S:,,F:7,S:)	S:has hit box at x1 ,F:,S: y1 ,F:,S: x2 ,F:,S: y2 ,F:	2D	2	2	2							
+411	Command	Sprites		GetSpriteInCircle( iSprite, x1, y1, radius )	S:getspriteincircle(__sprs[idx].spr,S:,,F:1,S:,,F:3,S:,,F:5,S:)	S:has hit circle at x ,F:,S: y ,F:,S: rad ,F:0	2D	2	2	2							
+412	Command	Sprites		GetSpriteInScreen( iSpriteIndex )	S:getspriteinscreen(__sprs[idx].spr,S:)	S:in screen	2D	2	2	2							
+413	Command	Sprites		GetSpriteDistance( iSprite1, iSprite2 )	S:_agkgetspritenamedistance(__sprs[idx].spr,S:,,T:1,S:)	S:distance to ,T:	2D	2	1	1							
+414	Command	Sprites		GetSpriteDistancePoint1X( )	S:getdistancepoint1x()	S:distance x1	2D	2	1	1							
+415	Command	Sprites		GetSpriteDistancePoint1Y( )	S:getdistancepoint1y()	S:distance y1	2D	2	1	1							
+416	Command	Sprites		GetSpriteDistancePoint2X( )	S:getdistancepoint2x()	S:distance x2	2D	2	1	1							
+417	Command	Sprites		GetSpriteDistancePoint2Y( )	S:getdistancepoint2y()	S:distance y2	2D	2	1	1							
+418	Command	Sprites		GetSpriteFrameCount( iSpriteIndex )			2D	2	1								
+419	Command	Sprites		GetSpriteGroup( iSpriteIndex )			2D	2	1								
+420	Command	Sprites					2D	2	1								
+421	Command	Sprites		GetSpriteHitCategory( categories, x, y )			2D	2	1								
+422	Command	Sprites		GetSpriteHitGroup( group, x, y )			2D	2	1								
+423	Command	Sprites		GetSpriteImageID( iSpriteIndex )			2D	2	1								
+424	Command	Sprites		SetSpritePhysicsAngularDamping( iSpriteIndex, damp )			2D	2	0								
+425	Command	Sprites		SetSpritePhysicsAngularImpulse( iSpriteIndex, impulse )			2D	2	0								
+426	Command	Sprites		SetSpritePhysicsAngularVelocity( iSpriteIndex, va )			2D	2	0								
+427	Command	Sprites		SetSpritePhysicsCanRotate( iSpriteIndex, rotate )			2D	2	0								
+428	Command	Sprites		SetSpritePhysicsCOM( iSpriteIndex, x, y )			2D	2	0								
+429	Command	Sprites		SetSpritePhysicsDamping( iSpriteIndex, damp )			2D	2	0								
+430	Command	Sprites		SetSpritePhysicsDelete( iSpriteIndex )			2D	2	0								
+431	Command	Sprites		SetSpritePhysicsDensity( iSpriteIndex, density, shapeID )			2D	2	0								
+432	Command	Sprites		SetSpritePhysicsForce( iSpriteIndex, x, y, vx, vy )			2D	2	0								
+433	Command	Sprites		SetSpritePhysicsFriction( iSpriteIndex, friction )			2D	2	0								
+434	Command	Sprites		SetSpritePhysicsImpulse( iSpriteIndex, x, y, vx, vy )			2D	2	0								
+435	Command	Sprites		SetSpritePhysicsIsBullet( iSpriteIndex, bullet )			2D	2	0								
+436	Command	Sprites		SetSpritePhysicsIsSensor( iSpriteIndex, sensor )			2D	2	0								
+437	Command	Sprites		SetSpritePhysicsMass( iSpriteIndex, mass )			2D	2	0								
+438	Command	Sprites		SetSpritePhysicsOff( iSpriteIndex )			2D	2	0								
+439	Command	Sprites		SetSpritePhysicsOn( iSpriteIndex, mode )			2D	2	0								
+440	Command	Sprites		SetSpritePhysicsRestitution( iSpriteIndex, restitution )			2D	2	0								
+441	Command	Sprites		SetSpritePhysicsTorque( iSpriteIndex, torque )			2D	2	0								
+442	Command	Sprites		SetSpritePhysicsVelocity( iSpriteIndex, vx, vy )			2D	2	0								
+443	Command	Sprites		SetSpriteScaleByOffset( iSpriteIndex, x, y )			2D	2	0								
+444	Command	Sprites		SetSpriteShader( spriteID, shaderID )			2D	2	0								
+445	Command	Sprites		SetSpriteShapeChain( iSpriteIndex, numPoints, index, loop, x, y, shapeID )			2D	2	0								
+446	Command	Sprites		SetSpriteX( iSpriteIndex, fX )			2D	2	0								
+447	Command	Sprites		SetSpriteY( iSpriteIndex, fY )			2D	2	0								
+448	Command	Sprites		StopSprite( iSpriteIndex )			2D	2	0								
+449	Command	Sprites		SetSpriteSize( iSpriteIndex, width, height )			2D	2	0								
+450	Command	Sprites		SetSpriteSnap( iSpriteIndex, snap )			2D	2	0								
+451	Command	Sprites		SetSpriteSpeed( iSpriteIndex, fFps )			2D	2	0								
+452	Command	Sprites		SetSpriteTransparency( iSpriteIndex, mode )			2D	2	0								
+453	Command	Sprites		SetSpriteUV( iSpriteIndex, u1, v1, u2, v2, u3, v3, u4, v4 )			2D	2	0								
+454	Command	Sprites		SetSpriteUVBorder( iSpriteIndex, border )			2D	2	0								
+455	Command	Sprites		SetSpriteUVOffset( iSpriteIndex, u, v )			2D	2	0								
+456	Command	Sprites		SetSpriteUVScale( iSpriteIndex, scaleU, scaleV )			2D	2	0								
+457	Command	Sprites		SetSpriteVisible( iSpriteIndex, bVisible )			2D	2	0								
+458	Command	Sprites		SetSpriteX( iSpriteIndex, fX )			2D	2	0								
+459	Command	Sprites		SetSpriteY( iSpriteIndex, fY )			2D	2	0								
+460	Command	Sprites		StopSprite( iSpriteIndex )			2D	2	0								
+461	Command	Images		CopyImage( newImage, fromImage, x, y, width, height )			2D	2	1	1							
+462	Command	Images		CreateImageColor( imageID, red, green, blue, alpha )			2D	2	1	1							
+463	Command	Images		CreateRenderImage( width, height, format, mipmap )			2D	2	1	1							
+464	Command	Images		DecodeQRCode( image )			2D	2	0								
+465	Command	Images		DeleteAllImages()			2D	2	0								
+466	Command	Images		DeleteImage( iImageIndex )			2D	2	0								
+467	Command	Images		EncodeQRCode( text, errormode )			2D	2	0								
+468	Command	Images		GetCapturedImage()			2D	2	1								
+469	Command	Images		GetChosenImage()			2D	2	1								
+470	Command	Images		GetDeviceCameraType( cameraID )			2D	2	1								
+471	Command	Images		GetImage( imageID, x, y, width, height )			2D	2	1								
+472	Command	Images		GetImageExists( iImageIndex )			2D	2	1								
+473	Command	Images		GetImageFilename( imageID )			2D	2	1								
+474	Command	Images		GetImageHeight( iImageIndex )			2D	2	1								
+475	Command	Images		GetImageSizeFromFile( filename )			2D	2	1								
+476	Command	Images		GetImageWidth( iImageIndex )			2D	2	1								
+477	Command	Images		GetNumDeviceCameras()			2D	2	1								
+478	Command	Images		IsCapturingImage()			2D	2	2	2							
+479	Command	Images		IsChoosingImage()			2D	2	2	2							
+480	Command	Images	General	LoadImage( sImageFilename, bBlackToAlpha )			2D	2	1	1							
+481	Command	Images		LoadImageResized( iImageID, szFilename, scaleX, scaleY, cache )			2D	2	1	1							
+482	Command	Images		LoadSubImage( iImageIndex, iParentIndex, sImageFilename )			2D	2	1	1							
+483	Command	Images		PrintImage( image, size )			2D	2	0								
+484	Command	Images		ResizeImage( imageID, width, height )			2D	2	0								
+485	Command	Images		SaveImage( iImageIndex, filename )			2D	2	1	1							
+486	Command	Images		SetDeviceCameraToImage( cameraID, imageID )			2D	2	0								
+487	Command	Images		SetImageMagFilter( iImageIndex, mode )			2D	2	0								
+488	Command	Images		SetImageMask( iDstImage, iSrcImage, dst, src, x, y )			2D	2	0								
+489	Command	Images		SetImageMinFilter( iImageIndex, mode )			2D	2	0								
+490	Command	Images		SetImageTransparentColor( iImage, r, g, b )			2D	2	0								
+491	Command	Images		SetImageWrapU( iImageIndex, mode )			2D	2	0								
+492	Command	Images		SetImageWrapV( iImageIndex, mode )			2D	2	0								
+493	Command	Images		ShowChooseImageScreen()			2D	2	1	1							
+494	Command	Images		ShowImageCaptureScreen()			2D	2	1	1							
+495	Command	2D Physics	Joint	CreateDistanceJoint( iJointIndex, iSpriteIndex1, iSpriteIndex2, x, y, x2, y2, colConnected )			2D	2	1	1							
+496	Command	2D Physics	Joint	CreateGearJoint( iJoint1, iJoint2, ratio )			2D	2	1	1							
+497	Command	2D Physics	Joint	CreateLineJoint( iSpriteIndex1, iSpriteIndex2, x, y, vx, vy, colConnected )			2D	2	1	1							
+498	Command	2D Physics	Joint	CreateMouseJoint( iJointIndex, iSpriteIndex, x, y, maxForce )			2D	2	1	1							
+499	Command	2D Physics	Forces	CreatePhysicsForce( x, y, power, limit, range, fade )			2D	2	1	1							
+500	Command	2D Physics	Joint	CreatePrismaticJoint( iSpriteIndex1, iSpriteIndex2, x, y, vx, vy, colConnected )			2D	2	1	1							
+501	Command	2D Physics	Joint	CreatePulleyJoint( iJointIndex, iSpriteIndex1, iSpriteIndex2, gnd1x, gnd1y, gnd2x, gnd2y, a1x, a1y, a2x, a2y, ratio, colConnected )			2D	2	1	1							
+502	Command	2D Physics	Joint	CreatePulleyJoint2( iSpriteIndex1, iSpriteIndex2, ratio, colConnected )			2D	2	1	1							
+503	Command	2D Physics	Joint	CreateRevoluteJoint( iSpriteIndex1, iSpriteIndex2, x, y, colConnected )			2D	2	1	1							
+504	Command	2D Physics	Joint	CreateRopeJoint( iSpriteIndex1, iSpriteIndex2, x, y, x2, y2, maxLength, colConnected )			2D	2	1	1							
+505	Command	2D Physics	Joint	CreateWeldJoint( iJointIndex, iSpriteIndex1, iSpriteIndex2, x, y, colConnected )			2D	2	1	1							
+506	Command	2D Physics	Joint	DeleteJoint( iJointIndex )			2D	2	0								
+507	Command	2D Physics	Forces	DeletePhysicsForce( iForceIndex )			2D	2	0								
+508	Command	2D Physics	Joint	FinishPulleyJoint( gnd1x, gnd1y, gnd2x, gnd2y, a1x, a1y, a2x, a2y )			2D	2	0								
+509	Command	2D Physics	Contacts	GetContactSpriteID1()			2D	2	1								
+510	Command	2D Physics	Contacts	GetContactSpriteID2()			2D	2	1								
+511	Command	2D Physics	Contacts	GetContactWorldX()			2D	2	1								
+512	Command	2D Physics	Contacts	GetContactWorldY()			2D	2	1								
+513	Command	2D Physics	Contacts	GetFirstContact()			2D	2	1								
+514	Command	2D Physics	Joint	GetJointExists( iJointIndex )			2D	2	1								
+515	Command	2D Physics	Joint	GetJointReactionForceX( iJointIndex )			2D	2	1								
+516	Command	2D Physics	Joint	GetJointReactionForceY( iJointIndex )			2D	2	1								
+517	Command	2D Physics	Joint	GetJointReactionTorque( iJointIndex )			2D	2	1								
+518	Command	2D Physics	Contacts	GetNextContact()			2D	2	1								
+519	Command	2D Physics	Debug	GetPhysicsIslandCount()			2D	2	1								
+520	Command	2D Physics	Debug	GetPhysicsSolveTime()			2D	2	1								
+521	Command	2D Physics	Raycast	GetRayCastFraction()			2D	2	1								
+522	Command	2D Physics	Raycast	GetRayCastNormalX()			2D	2	1								
+523	Command	2D Physics	Raycast	GetRayCastNormalY()			2D	2	1								
+524	Command	2D Physics	Raycast	GetRayCastSpriteID( )			2D	2	1								
+525	Command	2D Physics	Raycast	GetRayCastX()			2D	2	1								
+526	Command	2D Physics	Raycast	GetRayCastY()			2D	2	1								
+527	Command	2D Physics	Contacts	GetSpriteContactSpriteID2( )			2D	2	1								
+528	Command	2D Physics	Contacts	GetSpriteContactWorldX( )			2D	2	1								
+529	Command	2D Physics	Contacts	GetSpriteContactWorldY( )			2D	2	1								
+530	Command	2D Physics	Contacts	GetSpriteFirstContact( iSprite1 )			2D	2	1								
+531	Command	2D Physics	Contacts	GetSpriteNextContact( )			2D	2	1								
+532	Command	2D Physics	Raycast	PhysicsRayCast( x, y, x2, y2 )			2D	2	0								
+533	Command	2D Physics	Raycast	PhysicsRayCastCategory( category, x, y, x2, y2 )			2D	2	0								
+534	Command	2D Physics	Raycast	PhysicsRayCastGroup( group, x, y, x2, y2 )			2D	2	0								
+535	Command	2D Physics	Joint	SetJointDamping( iJointIndex, dampingRatio, frequency )			2D	2	0								
+536	Command	2D Physics	Joint	SetJointLimitOff( iJointIndex )			2D	2	0								
+537	Command	2D Physics	Joint	SetJointLimitOn( iJointIndex, lowerLimit, upperLimit )			2D	2	0								
+538	Command	2D Physics	Joint	SetJointMotorOff( iJointIndex )			2D	2	0								
+539	Command	2D Physics	Joint	SetJointMotorOn( iJointIndex, speed, maxForce )			2D	2	0								
+540	Command	2D Physics	Joint	SetJointMouseMaxForce( iJointIndex, maxForce )			2D	2	0								
+541	Command	2D Physics	Joint	SetJointMouseTarget( iJointIndex, x, y )			2D	2	0								
+542	Command	2D Physics	Debug	SetPhysicsCCD( mode )			2D	2	0								
+543	Command	2D Physics	Debug	SetPhysicsDebugOff()			2D	2	0								
+544	Command	2D Physics	Debug	SetPhysicsDebugOn()			2D	2	0								
+545	Command	2D Physics	Forces	SetPhysicsForcePosition( iForceIndex, x, y )			2D	2	0								
+546	Command	2D Physics	Forces	SetPhysicsForcePower( iForceIndex, power )			2D	2	0								
+547	Command	2D Physics	Forces	SetPhysicsForceRange( iForceIndex, range )			2D	2	0								
+548	Command	2D Physics	General	SetPhysicsGravity( x, y )			2D	2	0								
+549	Command	2D Physics	General	SetPhysicsMaxPolygonPoints( points )			2D	2	0								
+550	Command	2D Physics	General	SetPhysicsScale( scale )			2D	2	0								
+551	Command	2D Physics	Debug	SetPhysicsSleeping( mode )			2D	2	0								
+552	Command	2D Physics	Debug	SetPhysicsThreading( threads )			2D	2	0								
+553	Command	2D Physics	General	SetPhysicsWallBottom( mode )			2D	2	0								
+554	Command	2D Physics	General	SetPhysicsWallLeft( mode )			2D	2	0								
+555	Command	2D Physics	General	SetPhysicsWallRight( mode )			2D	2	0								
+556	Command	2D Physics	General	SetPhysicsWallTop( mode )			2D	2	0								
+557	Command	2D Physics	Raycast	SpriteRayCast( x, y, x2, y2 )			2D	2	0								
+558	Command	2D Physics	Raycast	SpriteRayCastCategory( category, x, y, x2, y2 )			2D	2	0								
+559	Command	2D Physics	Raycast	SpriteRayCastGroup( group, x, y, x2, y2 )			2D	2	0								
+560	Command	2D Physics	Raycast	SpriteRayCastSingle( sprite, x, y, x2, y2 )			2D	2	0								
+561	Command	Skeletons		CreateSkeleton2D()			2D	2	0								
+562	Command	Skeletons		DeleteSkeleton2D( iSkeleton )			2D	2	0								
+563	Command	Skeletons		FixSkeleton2DToScreen( iSkeleton, mode )			2D	2	0								
+564	Command	Skeletons		FixSpriteToSkeleton2D( spriteID, iSkeletonID, bone, zorder )			2D	2	0								
+565	Command	Skeletons		GetSkeleton2DAngle( iSkeleton )			2D	2	1								
+566	Command	Skeletons		GetSkeleton2DAnimationTime( iSkeleton, anim )			2D	2	1								
+567	Command	Skeletons		GetSkeleton2DBone( iSkeleton, name )			2D	2	1								
+568	Command	Skeletons		GetSkeleton2DBoneAngle( iSkeleton, bone )			2D	2	1								
+569	Command	Skeletons		GetSkeleton2DBoneCurrAngle( iSkeleton, bone )			2D	2	1								
+570	Command	Skeletons		GetSkeleton2DBoneCurrX( iSkeleton, bone )			2D	2	1								
+571	Command	Skeletons		GetSkeleton2DBoneCurrY( iSkeleton, bone )			2D	2	1								
+572	Command	Skeletons		GetSkeleton2DBoneParent( iSkeleton, bone )			2D	2	1								
+573	Command	Skeletons		GetSkeleton2DBoneX( iSkeleton, bone )			2D	2	1								
+574	Command	Skeletons		GetSkeleton2DBoneY( iSkeleton, bone )			2D	2	1								
+575	Command	Skeletons		GetSkeleton2DCurrentTime( iSkeleton )			2D	2	1								
+576	Command	Skeletons		GetSkeleton2DDepth(UINT iSkeleton)			2D	2	1								
+577	Command	Skeletons		GetSkeleton2DExists( iSkeleton )			2D	2	1								
+578	Command	Skeletons		GetSkeleton2DIsAnimating( iSkeleton )			2D	2	1								
+579	Command	Skeletons		GetSkeleton2DIsTweening( iSkeleton )			2D	2	1								
+580	Command	Skeletons		GetSkeleton2DX( iSkeleton )			2D	2	1								
+581	Command	Skeletons		GetSkeleton2DY( iSkeleton )			2D	2	1								
+582	Command	Skeletons		LoadSkeleton2DFromSpineFile( filename, scale, atlasImage, loadAnim )			2D	2	1	1							
+583	Command	Skeletons		LoadSkeleton2DFromSpriterFile( filename, scale, atlasImage )			2D	2	1	1							
+584	Command	Skeletons		PlaySkeleton2DAnimation( iSkeleton, anim, starttime, loop, tweentime )			2D	2	0								
+585	Command	Skeletons		SetSkeleton2DAnimationFrame( iSkeleton, anim, time, tweentime )			2D	2	0								
+586	Command	Skeletons		SetSkeleton2DAnimationSpeed( iSkeleton, speed )			2D	2	0								
+587	Command	Skeletons		SetSkeleton2DBoneAngle( iSkeleton, bone, r )			2D	2	0								
+588	Command	Skeletons		SetSkeleton2DBoneMode( iSkeleton, bone, mode )			2D	2	0								
+589	Command	Skeletons		SetSkeleton2DBonePosition( iSkeleton, bone, x, y )			2D	2	0								
+590	Command	Skeletons		SetSkeleton2DBoneScale( iSkeleton, bone, sx, sy )			2D	2	0								
+591	Command	Skeletons		SetSkeleton2DDepth( iSkeleton, depth )			2D	2	0								
+592	Command	Skeletons		SetSkeleton2DFlip( iSkeleton, flipH, flipV )			2D	2	0								
+593	Command	Skeletons		SetSkeleton2DPosition( iSkeleton, x, y )			2D	2	0								
+594	Command	Skeletons		SetSkeleton2DRotation( iSkeleton, r )			2D	2	0								
+595	Command	Skeletons		SetSkeleton2DVisible( iSkeleton, mode )			2D	2	0								
+596	Command	Skeletons		StopSkeleton2DAnimation( iSkeleton )			2D	2	0								
+597	Command	Tweening		AddTweenChainCamera( chainID, tweenID, cameraID, delay )			2D	2	0								
+598	Command	Tweening		AddTweenChainChar( chainID, tweenID, textID, charID, delay )			2D	2	0								
+599	Command	Tweening		AddTweenChainCustom( chainID, tweenID, delay )			2D	2	0								
+600	Command	Tweening		AddTweenChainObject( chainID, tweenID, objectID, delay )			2D	2	0								
+601	Command	Tweening		AddTweenChainSprite( chainID, tweenID, spriteID, delay )			2D	2	0								
+602	Command	Tweening		AddTweenChainText( chainID, tweenID, textID, delay )			2D	2	0								
+603	Command	Tweening		ClearTweenChain( chainID )			2D	2	0								
+604	Command	Tweening		CreateTweenCamera( duration )			2D	2	0								
+605	Command	Tweening		CreateTweenChain()			2D	2	0								
+606	Command	Tweening		CreateTweenChar( duration )			2D	2	0								
+607	Command	Tweening		CreateTweenCustom( duration )			2D	2	0								
+608	Command	Tweening		CreateTweenObject( duration )			2D	2	0								
+609	Command	Tweening		CreateTweenSprite( duration )			2D	2	0								
+610	Command	Tweening		CreateTweenText( duration )			2D	2	0								
+611	Command	Tweening		DeleteTween( tweenID )			2D	2	0								
+612	Command	Tweening		DeleteTweenChain( chainID )			2D	2	0								
+613	Command	Tweening		GetTweenCameraExists( tweenID )			2D	2	1								
+614	Command	Tweening		GetTweenCameraPlaying( tweenID, cameraID )			2D	2	1								
+615	Command	Tweening		GetTweenChainEndTime( chainID )			2D	2	1								
+616	Command	Tweening		GetTweenChainPlaying( chainID )			2D	2	1								
+617	Command	Tweening		GetTweenCharExists( tweenID )			2D	2	1								
+618	Command	Tweening		GetTweenCharPlaying( tweenID, textID, charID )			2D	2	1								
+619	Command	Tweening		GetTweenCustomExists( tweenID )			2D	2	1								
+620	Command	Tweening		GetTweenCustomFloat1( tweenID )			2D	2	1								
+621	Command	Tweening		GetTweenCustomFloat2( tweenID )			2D	2	1								
+622	Command	Tweening		GetTweenCustomFloat3( tweenID )			2D	2	1								
+623	Command	Tweening		GetTweenCustomFloat4( tweenID )			2D	2	1								
+624	Command	Tweening		GetTweenCustomInteger1( tweenID )			2D	2	1								
+625	Command	Tweening		GetTweenCustomInteger2( tweenID )			2D	2	1								
+626	Command	Tweening		GetTweenCustomInteger3( tweenID )			2D	2	1								
+627	Command	Tweening		GetTweenCustomInteger4( tweenID )			2D	2	1								
+628	Command	Tweening		GetTweenCustomPlaying( tweenID )			2D	2	1								
+629	Command	Tweening		GetTweenExists( tweenID )			2D	2	2	2							
+630	Command	Tweening		GetTweenObjectExists( tweenID )			2D	2	2	2							
+631	Command	Tweening		GetTweenObjectPlaying( tweenID, objectID )			2D	2	2	2							
+632	Command	Tweening		GetTweenSpriteExists( tweenID )			2D	2	2	2							
+633	Command	Tweening		GetTweenSpritePlaying( tweenID, spriteID )			2D	2	2	2							
+634	Command	Tweening		GetTweenTextExists( tweenID )			2D	2	2	2							
+635	Command	Tweening		GetTweenTextPlaying( tweenID, textID )			2D	2	2	2							
+636	Command	Tweening		PauseTweenCamera( tweenID, cameraID )			2D	2	0								
+637	Command	Tweening		PauseTweenChain( chainID )			2D	2	0								
+638	Command	Tweening		PauseTweenChar( tweenID, textID, charID )			2D	2	0								
+639	Command	Tweening		PauseTweenCustom( tweenID )			2D	2	0								
+640	Command	Tweening		PauseTweenObject( tweenID, objectID )			2D	2	0								
+641	Command	Tweening		PauseTweenSprite( tweenID, spriteID )			2D	2	0								
+642	Command	Tweening		PauseTweenText( tweenID, textID )			2D	2	0								
+643	Command	Tweening		PlayTweenCamera( tweenID, cameraID, delay )			2D	2	0								
+644	Command	Tweening		PlayTweenChain( chainID )			2D	2	0								
+645	Command	Tweening		PlayTweenChar( tweenID, textID, charID, delay )			2D	2	0								
+646	Command	Tweening		PlayTweenCustom( tweenID, delay )			2D	2	0								
+647	Command	Tweening		PlayTweenObject( tweenID, objectID, delay )			2D	2	0								
+648	Command	Tweening		PlayTweenSprite( tweenID, spriteID, delay )			2D	2	0								
+649	Command	Tweening		PlayTweenText( tweenID, textID, delay )			2D	2	0								
+650	Command	Tweening		ResumeTweenCamera( tweenID, cameraID )			2D	2	0								
+651	Command	Tweening		ResumeTweenChar( tweenID, textID, charID )			2D	2	0								
+652	Command	Tweening		ResumeTweenCustom( tweenID )			2D	2	0								
+653	Command	Tweening		ResumeTweenObject( tweenID, objectID )			2D	2	0								
+654	Command	Tweening		ResumeTweenSprite( tweenID, spriteID )			2D	2	0								
+655	Command	Tweening		ResumeTweenText( tweenID, textID )			2D	2	0								
+656	Command	Tweening		SetTweenCameraAngleX( tweenID, beginAX, endAX, interpolation )			2D	2	0								
+657	Command	Tweening		SetTweenCameraAngleY( tweenID, beginAY, endAY, interpolation )			2D	2	0								
+658	Command	Tweening		SetTweenCameraAngleZ( tweenID, beginAZ, endAZ, interpolation )			2D	2	0								
+659	Command	Tweening		SetTweenCameraFOV( tweenID, beginF, endF, interpolation )			2D	2	0								
+660	Command	Tweening		SetTweenCameraX( tweenID, beginX, endX, interpolation )			2D	2	0								
+661	Command	Tweening		SetTweenCameraY( tweenID, beginY, endY, interpolation )			2D	2	0								
+662	Command	Tweening		SetTweenCameraZ( tweenID, beginZ, endZ, interpolation )			2D	2	0								
+663	Command	Tweening		SetTweenChainTime( chainID, time )			2D	2	0								
+664	Command	Tweening		SetTweenCharAlpha( tweenID, beginA, endA, interpolation )			2D	2	0								
+665	Command	Tweening		SetTweenCharAngle( tweenID, beginA, endA, interpolation )			2D	2	0								
+666	Command	Tweening		SetTweenCharBlue( tweenID, beginB, endB, interpolation )			2D	2	0								
+667	Command	Tweening		SetTweenCharGreen( tweenID, beginG, endG, interpolation )			2D	2	0								
+668	Command	Tweening		SetTweenCharRed( tweenID, beginR, endR, interpolation )			2D	2	0								
+669	Command	Tweening		SetTweenCharX( tweenID, beginX, endX, interpolation )			2D	2	0								
+670	Command	Tweening		SetTweenCharY( tweenID, beginY, endY, interpolation )			2D	2	0								
+671	Command	Tweening		SetTweenCustomFloat1( tweenID, begin, end, interpolation )			2D	2	0								
+672	Command	Tweening		SetTweenCustomFloat2( tweenID, begin, end, interpolation )			2D	2	0								
+673	Command	Tweening		SetTweenCustomFloat3( tweenID, begin, end, interpolation )			2D	2	0								
+674	Command	Tweening		SetTweenCustomFloat4( tweenID, begin, end, interpolation )			2D	2	0								
+675	Command	Tweening		SetTweenCustomInteger1( tweenID, begin, end, interpolation )			2D	2	0								
+676	Command	Tweening		SetTweenCustomInteger2( tweenID, begin, end, interpolation )			2D	2	0								
+677	Command	Tweening		SetTweenCustomInteger3( tweenID, begin, end, interpolation )			2D	2	0								
+678	Command	Tweening		SetTweenCustomInteger4( tweenID, begin, end, interpolation )			2D	2	0								
+679	Command	Tweening		SetTweenDuration( tweenID, duration )			2D	2	0								
+680	Command	Tweening		SetTweenObjectAlpha( tweenID, beginA, endA, interpolation )			2D	2	0								
+681	Command	Tweening		SetTweenObjectAngleX( tweenID, beginAX, endAX, interpolation )			2D	2	0								
+682	Command	Tweening		SetTweenObjectAngleY( tweenID, beginAY, endAY, interpolation )			2D	2	0								
+683	Command	Tweening		SetTweenObjectAngleZ( tweenID, beginAZ, endAZ, interpolation )			2D	2	0								
+684	Command	Tweening		SetTweenObjectBlue( tweenID, beginB, endB, interpolation )			2D	2	0								
+685	Command	Tweening		SetTweenObjectGreen( tweenID, beginG, endG, interpolation )			2D	2	0								
+686	Command	Tweening		SetTweenObjectRed( tweenID, beginR, endR, interpolation )			2D	2	0								
+687	Command	Tweening		SetTweenObjectScaleX( tweenID, beginSX, endSX, interpolation )			2D	2	0								
+688	Command	Tweening		SetTweenObjectScaleY( tweenID, beginSY, endSY, interpolation )			2D	2	0								
+689	Command	Tweening		SetTweenObjectScaleZ( tweenID, beginSZ, endSZ, interpolation )			2D	2	0								
+690	Command	Tweening		SetTweenObjectX( tweenID, beginX, endX, interpolation )			2D	2	0								
+691	Command	Tweening		SetTweenObjectY( tweenID, beginY, endY, interpolation )			2D	2	0								
+692	Command	Tweening		SetTweenObjectZ( tweenID, beginZ, endZ, interpolation )			2D	2	0								
+693	Command	Tweening		SetTweenSpriteAlpha( tweenID, beginA, endA, interpolation )			2D	2	0								
+694	Command	Tweening		SetTweenSpriteAngle( tweenID, beginA, endA, interpolation )			2D	2	0								
+695	Command	Tweening		SetTweenSpriteBlue( tweenID, beginB, endB, interpolation )			2D	2	0								
+696	Command	Tweening		SetTweenSpriteGreen( tweenID, beginG, endG, interpolation )			2D	2	0								
+697	Command	Tweening		SetTweenSpriteRed( tweenID, beginR, endR, interpolation )			2D	2	0								
+698	Command	Tweening		SetTweenSpriteSizeX( tweenID, beginSX, endSX, interpolation )			2D	2	0								
+699	Command	Tweening		SetTweenSpriteSizeY( tweenID, beginSY, endSY, interpolation )			2D	2	0								
+700	Command	Tweening		SetTweenSpriteX( tweenID, beginX, endX, interpolation )			2D	2	0								
+701	Command	Tweening		SetTweenSpriteXByOffset( tweenID, beginX, endX, interpolation )			2D	2	0								
+702	Command	Tweening		SetTweenSpriteY( tweenID, beginY, endY, interpolation )			2D	2	0								
+703	Command	Tweening		SetTweenSpriteYByOffset( tweenID, beginY, endY, interpolation )			2D	2	0								
+704	Command	Tweening		SetTweenTextAlpha( tweenID, beginA, endA, interpolation )			2D	2	0								
+705	Command	Tweening		SetTweenTextAngle( tweenID, beginA, endA, interpolation )			2D	2	0								
+706	Command	Tweening		SetTweenTextBlue( tweenID, beginB, endB, interpolation )			2D	2	0								
+707	Command	Tweening		SetTweenTextGreen( tweenID, beginG, endG, interpolation )			2D	2	0								
+708	Command	Tweening		SetTweenTextLineSpacing( tweenID, beginLSP, endLSP, interpolation )			2D	2	0								
+709	Command	Tweening		SetTweenTextRed( tweenID, beginR, endR, interpolation )			2D	2	0								
+710	Command	Tweening		SetTweenTextSize( tweenID, beginS, endS, interpolation )			2D	2	0								
+711	Command	Tweening		SetTweenTextSpacing( tweenID, beginSP, endSP, interpolation )			2D	2	0								
+712	Command	Tweening		SetTweenTextX( tweenID, beginX, endX, interpolation )			2D	2	0								
+713	Command	Tweening		SetTweenTextY( tweenID, beginY, endY, interpolation )			2D	2	0								
+714	Command	Tweening		StopTweenCamera( tweenID, cameraID )			2D	2	0								
+715	Command	Tweening		StopTweenChain( chainID )			2D	2	0								
+716	Command	Tweening		StopTweenChar( tweenID, textID, charID )			2D	2	0								
+717	Command	Tweening		StopTweenCustom( tweenID )			2D	2	0								
+718	Command	Tweening		StopTweenObject( tweenID, objectID )			2D	2	0								
+719	Command	Tweening		StopTweenSprite( tweenID, spriteID )			2D	2	0								
+720	Command	Tweening		StopTweenText( tweenID, textID )			2D	2	0								
+721	Command	Tweening		TweenBounce()			2D	2	0								
+722	Command	Tweening		TweenEaseIn1()			2D	2	0								
+723	Command	Tweening		TweenEaseIn2()			2D	2	0								
+724	Command	Tweening		TweenEaseOut1()			2D	2	0								
+725	Command	Tweening		TweenEaseOut2()			2D	2	0								
+726	Command	Tweening		TweenLinear()			2D	2	0								
+727	Command	Tweening		TweenOvershoot()			2D	2	0								
+728	Command	Tweening		TweenSmooth1()			2D	2	0								
+729	Command	Tweening		TweenSmooth2()			2D	2	0								
+730	Command	Tweening		UpdateAllTweens( fTime )			2D	2	0								
+731	Command	Tweening		UpdateTweenCamera( tweenID, cameraID, fTime )			2D	2	0								
+732	Command	Tweening		UpdateTweenChain( chainID, fTime )			2D	2	0								
+733	Command	Tweening		UpdateTweenChar( tweenID, textID, charID, fTime )			2D	2	0								
+734	Command	Tweening		UpdateTweenCustom( tweenID, fTime )			2D	2	0								
+735	Command	Tweening		UpdateTweenObject( tweenID, objectID, fTime )			2D	2	0								
+736	Command	Tweening		UpdateTweenSprite( tweenID, spriteID, fTime )			2D	2	0								
+737	Command	Tweening		UpdateTweenText( tweenID, textID, fTime )			2D	2	0								
+738	Command	Particles		AddParticlesColorKeyFrame( ID, time, red, green, blue, alpha )			2D	2	0								
+739	Command	Particles		AddParticlesForce( ID, starttime, endtime, x, y )			2D	2	0								
+740	Command	Particles		AddParticlesScaleKeyFrame( ID, time, scale )			2D	2	0								
+741	Command	Particles		ClearParticlesColors( ID )			2D	2	0								
+742	Command	Particles		ClearParticlesForces( ID )			2D	2	0								
+743	Command	Particles		ClearParticlesScales( ID )			2D	2	0								
+744	Command	Particles		CreateParticles( x, y )			2D	2	1	1							
+745	Command	Particles		DeleteParticles( ID )			2D	2	0								
+746	Command	Particles		DrawParticles( ID )			2D	2	0								
+747	Command	Particles		FixParticlesToScreen( ID, mode )			2D	2	0								
+748	Command	Particles		GetParticlesActive( ID )			2D	2	1								
+749	Command	Particles		GetParticlesAngle( ID )			2D	2	1								
+750	Command	Particles		GetParticlesAngleRad( ID )			2D	2	1								
+751	Command	Particles		GetParticlesDepth( ID )			2D	2	1								
+752	Command	Particles		GetParticlesDirectionX( ID )			2D	2	1								
+753	Command	Particles		GetParticlesDirectionY( ID )			2D	2	1								
+754	Command	Particles		GetParticlesExists( ID )			2D	2	2	2							
+755	Command	Particles		GetParticlesFrequency( ID )			2D	2	1								
+756	Command	Particles		GetParticlesLife( ID )			2D	2	1								
+757	Command	Particles		GetParticlesMaxReached( ID )			2D	2	1								
+758	Command	Particles		GetParticlesSize( ID )			2D	2	1								
+759	Command	Particles		GetParticlesVisible( ID )			2D	2	1								
+760	Command	Particles		GetParticlesX( ID )			2D	2	1								
+761	Command	Particles		GetParticlesY( ID )			2D	2	1								
+762	Command	Particles		OffsetParticles( ID, x, y )			2D	2	0								
+763	Command	Particles		ResetParticleCount( ID )			2D	2	0								
+764	Command	Particles		SetParticlesActive( ID, active )			2D	2	0								
+765	Command	Particles		SetParticlesAngle( ID, angle )			2D	2	0								
+766	Command	Particles		SetParticlesAngleRad( ID, angle )			2D	2	0								
+767	Command	Particles		SetParticlesColorInterpolation( ID, mode )			2D	2	0								
+768	Command	Particles		SetParticlesDepth( ID, depth )			2D	2	0								
+769	Command	Particles		SetParticlesDirection( ID, vx, vy )			2D	2	0								
+770	Command	Particles		SetParticlesFaceDirection( ID, mode )			2D	2	0								
+771	Command	Particles		SetParticlesFrequency( ID, freq )			2D	2	0								
+772	Command	Particles		SetParticlesImage( ID, imageID )			2D	2	0								
+773	Command	Particles		SetParticlesLife( ID, time )			2D	2	0								
+774	Command	Particles		SetParticlesMax( ID, max )			2D	2	0								
+775	Command	Particles		SetParticlesPosition( ID, x, y )			2D	2	0								
+776	Command	Particles		SetParticlesRotationRange( ID, angle1, angle2 )			2D	2	0								
+777	Command	Particles		SetParticlesRotationRangeRad( ID, angle1, angle2 )			2D	2	0								
+778	Command	Particles		SetParticlesSize( ID, size )			2D	2	0								
+779	Command	Particles		SetParticlesStartZone( ID, x1, y1, x2, y2 )			2D	2	0								
+780	Command	Particles		SetParticlesTransparency( ID, mode )			2D	2	0								
+781	Command	Particles		SetParticlesVelocityRange( ID, v1, v2 )			2D	2	0								
+782	Command	Particles		SetParticlesVisible( ID, visible )			2D	2	0								
+783	Command	Particles		UpdateParticles( ID, time ) 			2D	2	0								
+784	Command	3D		ClearPointLights()			3D	3	0								
+785	Command	3D		CloneObject( objID )			3D	3	1	1							
+786	Command	3D		CreateObjectBox( width, height, length )			3D	3	1	1							
+787	Command	3D		CreateObjectCapsule( diameter, height, axis )			3D	3	1	1							
+788	Command	3D		CreateObjectCone( objID, height, diameter, segments )			3D	3	1	1							
+789	Command	3D		CreateObjectCylinder( height, diameter, segments )			3D	3	1	1							
+790	Command	3D		CreateObjectFromHeightMap( objID, szImageFile, width, height, length, smoothing, split )			3D	3	1	1							
+791	Command	3D		CreateObjectFromObjectMesh( fromObjID, meshIndex )			3D	3	1	1							
+792	Command	3D		CreateObjectFromRawHeightMap( szFilename, width, height, length, smoothing, split, rawWidth, rawHeight)			3D	3	1	1							
+793	Command	3D		CreateObjectPlane( width, height )			3D	3	1	1							
+794	Command	3D		CreateObjectQuad( objID )			3D	3	1	1							
+795	Command	3D		CreateObjectSphere( objID, diameter, rows, columns )			3D	3	1	1							
+796	Command	3D		CreatePointLight( lightID, x, y, z, radius, red, green, blue )			3D	3	1	1							
+797	Command	3D		DeleteAllObjects()			3D	3	0								
+798	Command	3D		DeleteObject( objID )			3D	3	0								
+799	Command	3D		DeleteObjectTree( objID )			3D	3	0								
+800	Command	3D		DeleteObjectWithChildren( objID )			3D	3	0								
+801	Command	3D		DeletePointLight( lightID )			3D	3	0								
+802	Command	3D		DeleteShader( shaderID )			3D	3	0								
+803	Command	3D		DrawObject( objID )			3D	3	0								
+804	Command	3D		FixObjectPivot( objID )			3D	3	0								
+805	Command	3D		FixObjectToBone( objID, toObjID, toBoneIndex )			3D	3	0								
+806	Command	3D		FixObjectToObject( objID, toObjID )			3D	3	0								
+807	Command	3D		Get3DVectorXFromScreen( x, y )			3D	3	1								
+808	Command	3D		Get3DVectorYFromScreen( x, y )			3D	3	1								
+809	Command	3D		Get3DVectorZFromScreen( x, y )			3D	3	1								
+810	Command	3D		GetCameraAngleX( cameraID )			3D	3	1								
+811	Command	3D		GetCameraAngleY( cameraID )			3D	3	1								
+812	Command	3D		GetCameraAngleZ( cameraID )			3D	3	1								
+813	Command	3D		GetCameraFOV( cameraID )			3D	3	1								
+814	Command	3D		GetCameraQuatW( cameraID )			3D	3	1								
+815	Command	3D		GetCameraQuatX( cameraID )			3D	3	1								
+816	Command	3D		GetCameraQuatY( cameraID )			3D	3	1								
+817	Command	3D		GetCameraQuatZ( cameraID )			3D	3	1								
+818	Command	3D		GetCameraX( cameraID )			3D	3	1								
+819	Command	3D		GetCameraY( cameraID )			3D	3	1								
+820	Command	3D		GetCameraZ( cameraID )			3D	3	1								
+821	Command	3D		GetFogMode()			3D	3	1								
+822	Command	3D		GetObjectAlpha( objID )			3D	3	1								
+823	Command	3D		GetObjectAngleX( objID )			3D	3	1								
+824	Command	3D		GetObjectAngleY( objID )			3D	3	1								
+825	Command	3D		GetObjectAngleZ( objID )			3D	3	1								
+826	Command	3D		GetObjectAnimationDuration( objID, animName )			3D	3	1								
+827	Command	3D		GetObjectAnimationName( objID, index )			3D	3	1								
+828	Command	3D		GetObjectAnimationTime( objID )			3D	3	1								
+829	Command	3D		GetObjectBoneAngleX( objID, boneIndex )			3D	3	1								
+830	Command	3D		GetObjectBoneAngleY( objID, boneIndex )			3D	3	1								
+831	Command	3D		GetObjectBoneAngleZ( objID, boneIndex )			3D	3	1								
+832	Command	3D		GetObjectBoneByName( objID, name )			3D	3	1								
+833	Command	3D		GetObjectBoneName( objID, boneIndex )			3D	3	1								
+834	Command	3D		GetObjectBoneQuatW( objID, boneIndex )			3D	3	1								
+835	Command	3D		GetObjectBoneQuatX( objID, boneIndex )			3D	3	1								
+836	Command	3D		GetObjectBoneQuatY( objID, boneIndex )			3D	3	1								
+837	Command	3D		GetObjectBoneQuatZ( objID, boneIndex )			3D	3	1								
+838	Command	3D		GetObjectBoneWorldAngleX( objID, boneIndex )			3D	3	1								
+839	Command	3D		GetObjectBoneWorldAngleY( objID, boneIndex )			3D	3	1								
+840	Command	3D		GetObjectBoneWorldAngleZ( objID, boneIndex )			3D	3	1								
+841	Command	3D		GetObjectBoneWorldQuatW( objID, boneIndex )			3D	3	1								
+842	Command	3D		GetObjectBoneWorldQuatX( objID, boneIndex )			3D	3	1								
+843	Command	3D		GetObjectBoneWorldQuatY( objID, boneIndex )			3D	3	1								
+844	Command	3D		GetObjectBoneWorldQuatZ( objID, boneIndex )			3D	3	1								
+845	Command	3D		GetObjectBoneWorldX( objID, boneIndex )			3D	3	1								
+846	Command	3D		GetObjectBoneWorldY( objID, boneIndex )			3D	3	1								
+847	Command	3D		GetObjectBoneWorldZ( objID, boneIndex )			3D	3	1								
+848	Command	3D		GetObjectBoneX( objID, boneIndex )			3D	3	1								
+849	Command	3D		GetObjectBoneY( objID, boneIndex )			3D	3	1								
+850	Command	3D		GetObjectBoneZ( objID, boneIndex )			3D	3	1								
+851	Command	3D		GetObjectCastShadowMode( objID )			3D	3	1								
+852	Command	3D		GetObjectChildID( objID, childIndex )			3D	3	1								
+853	Command	3D		GetObjectColorBlue( objID )			3D	3	1								
+854	Command	3D		GetObjectColorGreen( objID )			3D	3	1								
+855	Command	3D		GetObjectColorRed( objID )			3D	3	1								
+856	Command	3D		GetObjectCullMode( objID )			3D	3	1								
+857	Command	3D		GetObjectDepthBias( objID )			3D	3	1								
+858	Command	3D		GetObjectDepthReadMode( objID )			3D	3	1								
+859	Command	3D		GetObjectDepthWrite( objID )			3D	3	1								
+860	Command	3D		GetObjectExists( objID )			3D	3	2	2							
+861	Command	3D		GetObjectHeightMapHeight( objID, x, z )			3D	3	1								
+862	Command	3D		GetObjectInScreen( objID )			3D	3	1								
+863	Command	3D		GetObjectIsAnimating( objID )			3D	3	2	2							
+864	Command	3D		GetObjectIsTweening( objID )			3D	3	2	2							
+865	Command	3D		GetObjectMeshName( objID, meshIndex )			3D	3	1								
+866	Command	3D		GetObjectMeshPSSource( objID, meshIndex )			3D	3	1								
+867	Command	3D		GetObjectMeshSizeMaxX( objID, meshIndex )			3D	3	1								
+868	Command	3D		GetObjectMeshSizeMaxY( objID, meshIndex )			3D	3	1								
+869	Command	3D		GetObjectMeshSizeMaxZ( objID, meshIndex )			3D	3	1								
+870	Command	3D		GetObjectMeshSizeMinX( objID, meshIndex )			3D	3	1								
+871	Command	3D		GetObjectMeshSizeMinY( objID, meshIndex )			3D	3	1								
+872	Command	3D		GetObjectMeshSizeMinZ( objID, meshIndex )			3D	3	1								
+873	Command	3D		GetObjectMeshVSSource( objID, meshIndex )			3D	3	1								
+874	Command	3D		GetObjectName( objID )			3D	3	1								
+875	Command	3D		GetObjectNumAnimations( objID )			3D	3	1								
+876	Command	3D		GetObjectNumBones( objID )			3D	3	1								
+877	Command	3D		GetObjectNumChildren( objID )			3D	3	1								
+878	Command	3D		GetObjectNumMeshes( objID )			3D	3	1								
+879	Command	3D		GetObjectNumTextures(UINT objID)			3D	3	1								
+880	Command	3D		GetObjectQuatW( objID )			3D	3	1								
+881	Command	3D		GetObjectQuatX( objID )			3D	3	1								
+882	Command	3D		GetObjectQuatY( objID )			3D	3	1								
+883	Command	3D		GetObjectQuatZ( objID )			3D	3	1								
+884	Command	3D		GetObjectRayCastBounceX( index )			3D	3	1								
+885	Command	3D		GetObjectRayCastBounceY( index )			3D	3	1								
+886	Command	3D		GetObjectRayCastBounceZ( index )			3D	3	1								
+887	Command	3D		GetObjectRayCastDistance( index )			3D	3	1								
+888	Command	3D		GetObjectRayCastHitID( index )			3D	3	1								
+889	Command	3D		GetObjectRayCastNormalX( index )			3D	3	1								
+890	Command	3D		GetObjectRayCastNormalY( index )			3D	3	1								
+891	Command	3D		GetObjectRayCastNormalZ( index )			3D	3	1								
+892	Command	3D		GetObjectRayCastNumHits()			3D	3	1								
+893	Command	3D		GetObjectRayCastSlideX( index )			3D	3	1								
+894	Command	3D		GetObjectRayCastSlideY( index )			3D	3	1								
+895	Command	3D		GetObjectRayCastSlideZ( index )			3D	3	1								
+896	Command	3D		GetObjectRayCastX( index )			3D	3	1								
+897	Command	3D		GetObjectRayCastY( index )			3D	3	1								
+898	Command	3D		GetObjectRayCastZ( index )			3D	3	1								
+899	Command	3D		GetObjectReceiveShadowMode( objID )			3D	3	1								
+900	Command	3D		GetObjectSizeMaxX( objID )			3D	3	1								
+901	Command	3D		GetObjectSizeMaxY( objID )			3D	3	1								
+902	Command	3D		GetObjectSizeMaxZ( objID )			3D	3	1								
+903	Command	3D		GetObjectSizeMinX( objID )			3D	3	1								
+904	Command	3D		GetObjectSizeMinY( objID )			3D	3	1								
+905	Command	3D		GetObjectSizeMinZ( objID )			3D	3	1								
+906	Command	3D		GetObjectTextureName(UINT objID, textureIndex)			3D	3	1								
+907	Command	3D		GetObjectTransparency( objID )			3D	3	1								
+908	Command	3D		GetObjectVisible( objID )			3D	3	2	2							
+909	Command	3D		GetObjectWorldAngleX( objID )			3D	3	1								
+910	Command	3D		GetObjectWorldAngleY( objID )			3D	3	1								
+911	Command	3D		GetObjectWorldAngleZ( objID )			3D	3	1								
+912	Command	3D		GetObjectWorldQuatW( objID )			3D	3	1								
+913	Command	3D		GetObjectWorldQuatX( objID )			3D	3	1								
+914	Command	3D		GetObjectWorldQuatY( objID )			3D	3	1								
+915	Command	3D		GetObjectWorldQuatZ( objID )			3D	3	1								
+916	Command	3D		GetObjectWorldX( objID )			3D	3	1								
+917	Command	3D		GetObjectWorldY( objID )			3D	3	1								
+918	Command	3D		GetObjectWorldZ( objID )			3D	3	1								
+919	Command	3D		GetObjectX( objID )			3D	3	1								
+920	Command	3D		GetObjectY( objID )			3D	3	1								
+921	Command	3D		GetObjectZ( objID )			3D	3	1								
+922	Command	3D		GetPointLightExists( lightID )			3D	3	2	2							
+923	Command	3D		GetScreenXFrom3D( x, y, z )			3D	3	1								
+924	Command	3D		GetScreenYFrom3D( x, y, z )			3D	3	1								
+925	Command	3D		GetShaderExists( shaderID )			3D	3	2	2							
+926	Command	3D		GetShadowMappingMode()			3D	3	1								
+927	Command	3D		GetShadowMappingSupported()			3D	3	1								
+928	Command	3D		GetSupportedShaderVaryings()			3D	3	1								
+929	Command	3D		InstanceObject( objID )			3D	3	1	1							
+930	Command	3D		LoadFullScreenShader( szPixelFile )			3D	3	1	1							
+931	Command	3D		LoadObject( szFilename, height )			3D	3	1	1							
+932	Command	3D		LoadObjectWithChildren( objID, szFilename )			3D	3	1	1							
+933	Command	3D		LoadShader( shaderID, szVertexFile, szPixelFile )			3D	3	1	1							
+934	Command	3D		LoadShaderFromString( shaderID, szVertexSource, szPixelSource)			3D	3	1	1							
+935	Command	3D Physics		Add3DPhysicsRagDollBone( startBoneID, endBoneID, diameter, collisionGroup, collisionMask )			3D	3	0								
+936	Command	3D Physics		Add3DPhysicsRagDollHingeJoint( boneAID, boneBID, objBoneID, jointRotationVec3, minLimit, maxLimit )			3D	3	0								
+937	Command	3D Physics		Add3DPhysicsRagDollTwistJoint( boneAID, boneBID, objBoneID, jointRotationVec3, limitsVec3 )			3D	3	0								
+938	Command	3D Physics		AddObjectShapeBox( objID, positionVec3, rotationVec3, sizeVec3 )			3D	3	0								
+939	Command	3D Physics		AddObjectShapeCapsule( objID, positionVec3, rotationVec3, sizeVec3, axis )			3D	3	0								
+940	Command	3D Physics		AddObjectShapeCone( objID, positionVec3, rotationVec3, sizeVec3, axis)			3D	3	0								
+941	Command	3D Physics		AddObjectShapeCylinder( objID, positionVec3, rotationVec3, sizeVec3, axis)			3D	3	0								
+942	Command	3D Physics		AddObjectShapeSphere( objID, positionVec3, diameter )			3D	3	0								
+943	Command	3D Physics		AssignTo3DPhysicsRagDollBoneObjectBone( ragdollBoneID, objBoneID )			3D	3	0								
+944	Command	3D Physics		Create3DPhysics6DOFJoint( objA, objB, positionVec3, rotationVec3 )			3D	3	1	1							
+945	Command	3D Physics		Create3DPhysicsCharacterController( objID, axis, objOffsetVec3, objOrientationVec3, crouchScale )			3D	3	1	1							
+946	Command	3D Physics		Create3DPhysicsConeTwistJoint( objA, objB, positionVec3, rotationVec3, disableCollisions )			3D	3	1	1							
+947	Command	3D Physics		Create3DPhysicsDynamicBody( objID )			3D	3	1	1							
+948	Command	3D Physics		Create3DPhysicsFixedJoint( objA, objB, positionVec3 )			3D	3	1	1							
+949	Command	3D Physics		Create3DPhysicsHingeJoint( objA, objB, positionVec3, rotationVec3, disableCollisions )			3D	3	1	1							
+950	Command	3D Physics		Create3DPhysicsKinematicBody( objID )			3D	3	1	1							
+951	Command	3D Physics		Create3DPhysicsPickJoint( objID, positionVec3 )			3D	3	1	1							
+952	Command	3D Physics		Create3DPhysicsRagDoll( objID, objTotalWeight )			3D	3	1	1							
+953	Command	3D Physics		Create3DPhysicsRay()			3D	3	1	1							
+954	Command	3D Physics		Create3DPhysicsSliderJoint( objA, objB, positionVec3, rotationVec3)			3D	3	1	1							
+955	Command	3D Physics		Create3DPhysicsStaticBody( objID )			3D	3	1	1							
+956	Command	3D Physics		Create3DPhysicsStaticPlane( normalX, normalY, normalZ, offsetPosition )			3D	3	1	1							
+957	Command	3D Physics		Create3DPhysicsWorld( scaleFactor )			3D	3	1	1							
+958	Command	3D Physics		Crouch3DPhysicsCharacterController( objID )			3D	3	0								
+959	Command	3D Physics		Debug3DPhysicsCharacterController( objID, isDebug )			3D	3	0								
+960	Command	3D Physics		Debug3DPhysicsWorld()			3D	3	0								
+961	Command	3D Physics		Delete3DPhysicsBody( objID )			3D	3	0								
+962	Command	3D Physics		Delete3DPhysicsCharacterController( objID )			3D	3	0								
+963	Command	3D Physics		Delete3DPhysicsJoint( jointID )			3D	3	0								
+964	Command	3D Physics		Delete3DPhysicsPickJoint( jointID )			3D	3	0								
+965	Command	3D Physics		Delete3DPhysicsRagdoll( objID )			3D	3	0								
+966	Command	3D Physics		Delete3DPhysicsRay( rayID )			3D	3	0								
+967	Command	3D Physics		Delete3DPhysicsStaticPlane( planeID )			3D	3	0								
+968	Command	3D Physics		Delete3DPhysicsWorld()			3D	3	0								
+969	Command	3D Physics		Finalize3DPhysicsRagDoll()			3D	3	0								
+970	Command	3D Physics		Get3DPhysicsActiveObjects()			3D	3	1								
+971	Command	3D Physics		Get3DPhysicsCharacterControllerExists( objID )			3D	3	1								
+972	Command	3D Physics		Get3DPhysicsCharacterControllerGravity( objID )			3D	3	1								
+973	Command	3D Physics		Get3DPhysicsCharacterControllerMaxSlope( objID )			3D	3	1								
+974	Command	3D Physics		Get3DPhysicsJointEnabled( jointID )			3D	3	2	2							
+975	Command	3D Physics		Get3DPhysicsJointPositionVector( jointID )			3D	3	1								
+976	Command	3D Physics		Get3DPhysicsJointRotationVector( jointID )			3D	3	1								
+977	Command	3D Physics		Get3DPhysicsRagdollExist( objID )			3D	3	2	2							
+978	Command	3D Physics		Get3DPhysicsRagdollFromBoneObject( objID )			3D	3	1								
+979	Command	3D Physics		Get3DPhysicsRayCastClosestContactPosition( rayID, outVec3ID )			3D	3	1								
+980	Command	3D Physics		Get3DPhysicsRayCastClosestObjectHit( rayID )			3D	3	2	2							
+981	Command	3D Physics		Get3DPhysicsRayCastContactPosition( rayID, fractionIndex, outVec3ID )			3D	3	1								
+982	Command	3D Physics		Get3DPhysicsRayCastFraction( rayID )			3D	3	1								
+983	Command	3D Physics		Get3DPhysicsRayCastNormalVector( rayID, returnVec3ID )			3D	3	1								
+984	Command	3D Physics		Get3DPhysicsRayCastNumHits( rayID )			3D	3	1								
+985	Command	3D Physics		Get3DPhysicsRayCastObjectHit( rayID, fractionIndex )			3D	3	2	2							
+986	Command	3D Physics		Get3DPhysicsTotalJoints()			3D	3	1								
+987	Command	3D Physics		Get3DPhysicsTotalObjects()			3D	3	1								
+988	Command	3D Physics		GetObject3DPhysicsAngularDamp( objID )			3D	3	1								
+989	Command	3D Physics		GetObject3DPhysicsAngularSleepingThreshold( objID )			3D	3	1								
+990	Command	3D Physics		GetObject3DPhysicsAngularVelocityX( objID )			3D	3	1								
+991	Command	3D Physics		GetObject3DPhysicsAngularVelocityY( objID )			3D	3	1								
+992	Command	3D Physics		GetObject3DPhysicsAngularVelocityZ( objID )			3D	3	1								
+993	Command	3D Physics		GetObject3DPhysicsContactObjectB()			3D	3	1								
+994	Command	3D Physics		GetObject3DPhysicsContactVector(int outPosVec3)			3D	3	1								
+995	Command	3D Physics		GetObject3DPhysicsContactX()			3D	3	1								
+996	Command	3D Physics		GetObject3DPhysicsContactY()			3D	3	1								
+997	Command	3D Physics		GetObject3DPhysicsContactZ()			3D	3	1								
+998	Command	3D Physics		GetObject3DPhysicsFirstContact( objID )			3D	3	1								
+999	Command	3D Physics		GetObject3DPhysicsFriction( objID )			3D	3	1								
+1000	Command	3D Physics		GetObject3DPhysicsGroup( objID )			3D	3	1								
+1001	Command	3D Physics		GetObject3DPhysicsLinearDamp( objID )			3D	3	1								
+1002	Command	3D Physics		GetObject3DPhysicsLinearSleepingThreshold( objID )			3D	3	1								
+1003	Command	3D Physics		GetObject3DPhysicsLinearVelocityX( objID )			3D	3	1								
+1004	Command	3D Physics		GetObject3DPhysicsLinearVelocityY( objID )			3D	3	1								
+1005	Command	3D Physics		GetObject3DPhysicsLinearVelocityZ( objID )			3D	3	1								
+1006	Command	3D Physics		GetObject3DPhysicsMask( objID )			3D	3	1								
+1007	Command	3D Physics		GetObject3DPhysicsMass( objID )			3D	3	1								
+1008	Command	3D Physics		GetObject3DPhysicsNextContact()			3D	3	1								
+1009	Command	3D Physics		GetObject3DPhysicsRestitution( objID )			3D	3	1								
+1010	Command	3D Physics		GetObject3DPhysicsRollingFriction( objID )			3D	3	1								
+1011	Command	3D Physics		GetObjects3DPhysicsContactPositionVector( objA, objB, outPosVec3 )			3D	3	1								
+1012	Command	3D Physics		Is3dPhysicsRagdollStatic( objID )			3D	3	1	1							
+1013	Command	3D Physics		Jump3DPhysicsCharacterController( objID )			3D	3	0								
+1014	Command	3D Physics		LoadObjectShape( objID, fileName )			3D	3	1	1							
+1015	Command	3D Physics		Move3DPhysicsCharacterController( objID, x, z, velocity )			3D	3	0								
+1016	Command	3D Physics		Ray3DPhysicsExist( rayID )			3D	3	2	2							
+1017	Command	3D Physics		RayCast3DPhysics( rayID, fromVec3ID, toVec3ID,  allOrClosest ) 			3D	3	0								
+1018	Command	3D Physics		RayCast3DPhysicsObject( objID, rayID, fromVec3ID, toVec3ID, allOrClosest )			3D	3	0								
+1019	Command	3D Physics		Reset3DPhysicsWorld()			3D	3	0								
+1020	Command	3D Physics		Rotate3DPhysicsCharacterController( objID, angle )			3D	3	0								
+1021	Command	3D Physics		SaveObjectShape( objID, fileName )			3D	3	0								
+1022	Command	3D Physics		Set3DPhysicsCharacterControllerFallSpeed( objID, fallSpeed )			3D	3	0								
+1023	Command	3D Physics		Set3DPhysicsCharacterControllerGravity( objID, gravity )			3D	3	0								
+1024	Command	3D Physics		Set3DPhysicsCharacterControllerJumpSpeed( objID, jumpSpeed )			3D	3	0								
+1025	Command	3D Physics		Set3DPhysicsCharacterControllerMaxSlope( objID, maxSlopeDegress )			3D	3	0								
+1026	Command	3D Physics		Set3DPhysicsCharacterControllerPosition( objID, posX, posY, posZ )			3D	3	0								
+1027	Command	3D Physics		Set3DPhysicsCharacterControllerStepHeight( objID, stepHeight )			3D	3	0								
+1028	Command	3D Physics		Set3DPhysicsGravity( x, y, z )			3D	3	0								
+1029	Command	3D Physics		Set3DPhysicsHingeJointMaxMotorImpulse( jointID, maxImpulse )			3D	3	0								
+1030	Command	3D Physics		Set3DPhysicsHingeJointMotorIsEnabled( jointID, isEnabled )			3D	3	0								
+1031	Command	3D Physics		Set3DPhysicsHingeJointMotorVelocity( jointID, targetVelocity )			3D	3	0								
+1032	Command	3D Physics		Set3DPhysicsJointBreakingThreshold( jointID, breakThreshold )			3D	3	0								
+1033	Command	3D Physics		Set3DPhysicsJointConeTwistLimits( jointID, swingSpan1, swingSpan2, twistSpan )			3D	3	0								
+1034	Command	3D Physics		Set3DPhysicsJointEnabled( jointID, isEnabled )			3D	3	0								
+1035	Command	3D Physics		Set3DPhysicsJointHingeLimits( jointID, minAng, maxAng )			3D	3	0								
+1036	Command	3D Physics		Set3DPhysicsJointSliderAngularLimits( jointID, lowerLimit, upperLimit )			3D	3	0								
+1037	Command	3D Physics		Set3DPhysicsJointSliderLinearLimits( jointID, lowerLimit, upperLimit )			3D	3	0								
+1038	Command	3D Physics		Set3DPhysicsRagdollBonesVisible( objID, isVisible )			3D	3	0								
+1039	Command	3D Physics		Set3DPhysicsRagdollDamping( linear, angular )			3D	3	0								
+1040	Command	3D Physics		Set3DPhysicsRagdollDeactivation( objID, isDisabled )			3D	3	0								
+1041	Command	3D Physics		Set3DPhysicsRagdollDeactivationTime( time )			3D	3	0								
+1042	Command	3D Physics		Set3DPhysicsRagdollSleepingThresholds( linear, angular )			3D	3	0								
+1043	Command	3D Physics		Set3DphysicsRagdollStatic( objID, isStatic )			3D	3	0								
+1044	Command	3D Physics		Set3DPhysicsSliderJointMaxLinearMotorForce( jointID, maxLinearForce )			3D	3	0								
+1045	Command	3D Physics		Set3DPhysicsSliderJointPoweredLinearMotorIsEnabled( jointID, isEnabled )			3D	3	0								
+1046	Command	3D Physics		Set3DPhysicsSliderJointTargetLinearMotorVelocity( jointID, linearMotorVelocity )			3D	3	0								
+1047	Command	3D Physics		Set3DPhysicsStaticPlanePosition( planeID, posX, posY, posZ )			3D	3	0								
+1048	Command	3D Physics		Set3DPhysicsStaticPlaneRotation( planeID, angX, angY, angZ )			3D	3	0								
+1049	Command	3D Physics		Set3DPhysicsTwistJointMaxMotorImpulse( jointID, maxImpulse )			3D	3	0								
+1050	Command	3D Physics		Set3DPhysicsTwistJointMotorIsEnabled( jointID, isEnabled )			3D	3	0								
+1051	Command	3D Physics		Set3DPhysicsTwistJointMotorRotationTarget( jointID, rotationVec3ID )			3D	3	0								
+1052	Command	3D Physics		SetObject3DPhysicsAngularVelocity( objID, angX, angY, angZ, initialSpeed )			3D	3	0								
+1053	Command	3D Physics		SetObject3DPhysicsAnisotropicFriction( objID, type )			3D	3	0								
+1054	Command	3D Physics		SetObject3DPhysicsCanSleep( objID, canSleep )			3D	3	0								
+1055	Command	3D Physics		SetObject3DPhysicsDamping( objID, linearDamp, angularDamp )			3D	3	0								
+1056	Command	3D Physics		SetObject3DPhysicsDeactivationTime( objID, time )			3D	3	0								
+1057	Command	3D Physics		SetObject3DPhysicsFriction( objID, friction )			3D	3	0								
+1058	Command	3D Physics		SetObject3DPhysicsGroupAndMask( objID, group, mask )			3D	3	0								
+1059	Command	3D Physics		SetObject3DPhysicsLinearVelocity( objID, dirX, dirY, dirZ, initialSpeed )			3D	3	0								
+1060	Command	3D Physics		SetObject3DPhysicsMass( objID, mass )			3D	3	0								
+1061	Command	3D Physics		SetObject3DPhysicsMaxLinearVelocity( objID, maxLinearVelocity )			3D	3	0								
+1062	Command	3D Physics		SetObject3DPhysicsRestitution( objID, friction)			3D	3	0								
+1063	Command	3D Physics		SetObject3DPhysicsRollingFriction( objID, friction )			3D	3	0								
+1064	Command	3D Physics		SetObject3DPhysicsSleepingThreshold( objID, angular, linear )			3D	3	0								
+1065	Command	3D Physics		SetObjectShapeBox( objID, sizeX, sizeY, sizeZ )			3D	3	0								
+1066	Command	3D Physics		SetObjectShapeCapsule( objID, axis, sizeX, sizeY, sizeZ )			3D	3	0								
+1067	Command	3D Physics		SetObjectShapeCompound( objID )			3D	3	0								
+1068	Command	3D Physics		SetObjectShapeCone( objID, axis, height, diameter )			3D	3	0								
+1069	Command	3D Physics		SetObjectShapeConvexHull( objID )			3D	3	0								
+1070	Command	3D Physics		SetObjectShapeCylinder( objID, axis )			3D	3	0								
+1071	Command	3D Physics		SetObjectShapeSphere( objID )			3D	3	0								
+1072	Command	3D Physics		SetObjectShapeStaticPolygon( objID )			3D	3	0								
+1073	Command	3D Physics		SphereCast3DPhysics( rayID, fromVec3ID, toVec3ID, radius )			3D	3	0								
+1074	Command	3D Physics		SphereCast3DPhysicsObject( objID, rayID, fromVec3ID, toVec3ID, radius )			3D	3	0								
+1075	Command	3D Physics		Stand3DPhysicsCharacterController( objID )			3D	3	0								
+1076	Command	3D Physics		Step3DPhysicsWorld()			3D	3	0								
+1077	Command	3D Physics		Update3DPhysicsPickJoint( jointID, positionVec3 )			3D	3	0								
+1078	Command	3D Particles		Add3DParticlesColorKeyFrame( ID, time, red, green, blue, alpha )			3D	3	0								
+1079	Command	3D Particles		Add3DParticlesForce( ID, starttime, endtime, x, y, z )			3D	3	0								
+1080	Command	3D Particles		Add3DParticlesScaleKeyFrame( ID, time, scale )			3D	3	0								
+1081	Command	3D Particles		Clear3DParticlesColors( ID )			3D	3	0								
+1082	Command	3D Particles		Clear3DParticlesForces( ID )			3D	3	0								
+1083	Command	3D Particles		Clear3DParticlesScales( ID )			3D	3	0								
+1084	Command	3D Particles		Create3DParticles( x, y, z )			3D	3	1	1							
+1085	Command	3D Particles		Delete3DParticles( ID )			3D	3	0								
+1086	Command	3D Particles		Draw3DParticles( ID )			3D	3	0								
+1087	Command	3D Particles		Get3DParticlesActive( ID )			3D	3	1								
+1088	Command	3D Particles		Get3DParticlesDirectionRange1( ID )			3D	3	1								
+1089	Command	3D Particles		Get3DParticlesDirectionRange2( ID )			3D	3	1								
+1090	Command	3D Particles		Get3DParticlesDirectionX( ID )			3D	3	1								
+1091	Command	3D Particles		Get3DParticlesDirectionY( ID )			3D	3	1								
+1092	Command	3D Particles		Get3DParticlesDirectionZ( ID )			3D	3	1								
+1093	Command	3D Particles		Get3DParticlesExists( ID )			3D	3	1								
+1094	Command	3D Particles		Get3DParticlesFrequency( ID )			3D	3	1								
+1095	Command	3D Particles		Get3DParticlesLife( ID )			3D	3	1								
+1096	Command	3D Particles		Get3DParticlesMaxReached( ID )			3D	3	1								
+1097	Command	3D Particles		Get3DParticlesSize( ID )			3D	3	1								
+1098	Command	3D Particles		Get3DParticlesVisible( ID )			3D	3	1								
+1099	Command	3D Particles		Get3DParticlesX( ID )			3D	3	1								
+1100	Command	3D Particles		Get3DParticlesY( ID )			3D	3	1								
+1101	Command	3D Particles		Get3DParticlesZ( ID )			3D	3	1								
+1102	Command	3D Particles		Offset3DParticles( ID, x, y, z )			3D	3	0								
+1103	Command	3D Particles		Reset3DParticleCount( ID )			3D	3	0								
+1104	Command	3D Particles		Set3DParticlesActive( ID, active )			3D	3	0								
+1105	Command	3D Particles		Set3DParticlesColorInterpolation( ID, mode )			3D	3	0								
+1106	Command	3D Particles		Set3DParticlesDirection( ID, vx, vy, vz, roll )			3D	3	0								
+1107	Command	3D Particles		Set3DParticlesDirectionRange( ID, angle1, angle2 )			3D	3	0								
+1108	Command	3D Particles		Set3DParticlesFrequency( ID, freq )			3D	3	0								
+1109	Command	3D Particles		Set3DParticlesImage( ID, imageID )			3D	3	0								
+1110	Command	3D Particles		Set3DParticlesLife( ID, time )			3D	3	0								
+1111	Command	3D Particles		Set3DParticlesMax( ID, max )			3D	3	0								
+1112	Command	3D Particles		Set3DParticlesPosition( ID, x, y, z )			3D	3	0								
+1113	Command	3D Particles		Set3DParticlesSize( ID, size )			3D	3	0								
+1114	Command	3D Particles		Set3DParticlesStartZone( ID, x1, y1, z1, x2, y2, z2 )			3D	3	0								
+1115	Command	3D Particles		Set3DParticlesTransparency( ID, mode )			3D	3	0								
+1116	Command	3D Particles		Set3DParticlesVelocityRange( ID, v1, v2 )			3D	3	0								
+1117	Command	3D Particles		Set3DParticlesVisible( ID, visible )			3D	3	0								
+1118	Command	3D Particles		Update3DParticles( ID, time ) 			3D	3	0								
+1119	Command	Maths		CreateVector3( x, y, z )			3D	3	1	1							
+1120	Command	Maths		DeleteVector3( vectorID )			3D	3	0								
+1121	Command	Maths		GetVector3Add( resultVec, addVec )			3D	3	1								
+1122	Command	Maths		GetVector3Cross( resultVec, vectorU, vectorV )			3D	3	1								
+1123	Command	Maths		GetVector3Distance( vectorU, vectorV )			3D	3	1								
+1124	Command	Maths		GetVector3Dot( vectorU, vectorV )			3D	3	1								
+1125	Command	Maths		GetVector3Length( vectorID )			3D	3	1								
+1126	Command	Maths		GetVector3Multiply( resultVec, multiplier )			3D	3	1								
+1127	Command	Maths		GetVector3X( vectorID )			3D	3	1								
+1128	Command	Maths		GetVector3Y( vectorID )			3D	3	1								
+1129	Command	Maths		GetVector3Z( vectorID )			3D	3	1								
+1130	Command	Maths		SetVector3( vectorID, x, y, z )			3D	3	0								
+1131	Command	Text		CreateText( string )			Text	4	1	1							
+1132	Command	Text		DeleteText( iTextIndex )			Text	4	0								
+1133	Command	Text		DrawText( iTextIndex )			Text	4	0								
+1134	Command	Text		FixTextToScreen( iTextIndex, mode )			Text	4	0								
+1135	Command	Text		GetTextAlignment( iTextIndex )			Text	4	1								
+1136	Command	Text		GetTextCharAngle( iTextIndex, iCharIndex )			Text	4	1								
+1137	Command	Text		GetTextCharAngleRad( iTextIndex, iCharIndex )			Text	4	1								
+1138	Command	Text		GetTextCharColorAlpha( iTextIndex, iCharIndex )			Text	4	1								
+1139	Command	Text		GetTextCharColorBlue( iTextIndex, iCharIndex )			Text	4	1								
+1140	Command	Text		GetTextCharColorGreen( iTextIndex, iCharIndex )			Text	4	1								
+1141	Command	Text		GetTextCharColorRed( iTextIndex, iCharIndex )			Text	4	1								
+1142	Command	Text		GetTextCharX( iTextIndex, iCharIndex )			Text	4	1								
+1143	Command	Text		GetTextCharY( iTextIndex, iCharIndex )			Text	4	1								
+1144	Command	Text		GetTextColorAlpha( iTextIndex )			Text	4	1								
+1145	Command	Text		GetTextColorBlue( iTextIndex )			Text	4	1								
+1146	Command	Text		GetTextColorGreen( iTextIndex )			Text	4	1								
+1147	Command	Text		GetTextColorRed( iTextIndex )			Text	4	1								
+1148	Command	Text		GetTextDepth( iTextIndex )			Text	4	1								
+1149	Command	Text		GetTextExists( iTextIndex )			Text	4	2	2							
+1150	Command	Text		GetTextHitTest( iTextIndex, x, y )			Text	4	2	2							
+1151	Command	Text		GetTextLength( iTextIndex )			Text	4	1								
+1152	Command	Text		GetTextLineSpacing( iTextIndex )			Text	4	1								
+1153	Command	Text		GetTextSize( iTextIndex )			Text	4	1								
+1154	Command	Text		GetTextSpacing( iTextIndex )			Text	4	1								
+1155	Command	Text		GetTextString( iTextIndex )			Text	4	1								
+1156	Command	Text		GetTextTotalHeight( iTextIndex )			Text	4	1								
+1157	Command	Text		GetTextTotalWidth( iTextIndex )			Text	4	1								
+1158	Command	Text		GetTextVisible( iTextIndex )			Text	4	2	2							
+1159	Command	Text		GetTextX( iTextIndex )			Text	4	1								
+1160	Command	Text		GetTextY( iTextIndex )			Text	4	1								
+1161	Command	Text		Print( i )			Text	4	0				X				
+1162	Command	Text		SetPrintSpacing( fSpacing )			Text	4	0								
+1163	Command	Text		SetTextAlignment( iTextIndex, iMode )			Text	4	0								
+1164	Command	Text		SetTextAngle( iTextIndex, fAngle )			Text	4	0								
+1165	Command	Text		SetTextAngleRad( iTextIndex, fAngleRad )			Text	4	0								
+1166	Command	Text		SetTextBold( iTextIndex, bold )			Text	4	0								
+1167	Command	Text		SetTextCharAngle( iTextIndex, iCharIndex, angle )			Text	4	0								
+1168	Command	Text		SetTextCharAngleRad( iTextIndex, iCharIndex, angle )			Text	4	0								
+1169	Command	Text		SetTextCharBold( iTextIndex, iCharIndex, bold )			Text	4	0								
+1170	Command	Text		SetTextCharColor( iTextIndex, iCharIndex, red, green, blue, alpha )			Text	4	0								
+1171	Command	Text		SetTextCharColorAlpha( iTextIndex, iCharIndex, alpha )			Text	4	0								
+1172	Command	Text		SetTextCharColorBlue( iTextIndex, iCharIndex, blue )			Text	4	0								
+1173	Command	Text		SetTextCharColorGreen( iTextIndex, iCharIndex, green )			Text	4	0								
+1174	Command	Text		SetTextCharColorRed( iTextIndex, iCharIndex, red )			Text	4	0								
+1175	Command	Text		SetTextCharPosition( iTextIndex, iCharIndex, x, y )			Text	4	0								
+1176	Command	Text		SetTextCharX( iTextIndex, iCharIndex, x )			Text	4	0								
+1177	Command	Text		SetTextCharY( iTextIndex, iCharIndex, y )			Text	4	0								
+1178	Command	Text		SetTextColor( iTextIndex, iRed, iGreen, iBlue, iAlpha )			Text	4	0								
+1179	Command	Text		SetTextColorAlpha( iTextIndex, iAlpha )			Text	4	0								
+1180	Command	Text		SetTextColorBlue( iTextIndex, iBlue )			Text	4	0								
+1181	Command	Text		SetTextColorGreen( iTextIndex, iGreen )			Text	4	0								
+1182	Command	Text		SetTextColorRed( iTextIndex, iRed )			Text	4	0								
+1183	Command	Text		SetTextDefaultExtendedFontImage( iImageID )			Text	4	0								
+1184	Command	Text		SetTextDefaultFontImage( iImageID )			Text	4	0								
+1185	Command	Text		SetTextDefaultMagFilter( mode )			Text	4	0								
+1186	Command	Text		SetTextDefaultMinFilter( mode )			Text	4	0								
+1187	Command	Text		SetTextDepth( iTextIndex, iDepth )			Text	4	0								
+1188	Command	Text		SetTextExtendedFontImage( iTextIndex, iImageID )			Text	4	0								
+1189	Command	Text		SetTextFont( iTextIndex, iFontID )			Text	4	0								
+1190	Command	Text		SetTextFontImage( iTextIndex, iImageID )			Text	4	0								
+1191	Command	Text		SetTextLineSpacing( iTextIndex, fSpacing )			Text	4	0								
+1192	Command	Text		SetTextMaxWidth( iTextIndex, width )			Text	4	0								
+1193	Command	Text		SetTextPosition( iTextIndex, fX, fY )			Text	4	0								
+1194	Command	Text		SetTextScissor( iTextIndex, x, y, x2, y2 )			Text	4	0								
+1195	Command	Text		SetTextSize( iTextIndex, fSize )			Text	4	0								
+1196	Command	Text		SetTextSpacing( iTextIndex, fSpacing )			Text	4	0								
+1197	Command	Text		SetTextString( iTextIndex, string )			Text	4	0								
+1198	Command	Text		SetTextTransparency( iTextIndex, mode )			Text	4	0								
+1199	Command	Text		SetTextVisible( iTextIndex, bVisible )			Text	4	0								
+1200	Command	Text		SetTextX( iTextIndex, fX )			Text	4	0								
+1201	Command	Text		SetTextY( iTextIndex, fY )			Text	4	0								
+1202	Command	Text		UseNewDefaultFonts( mode )			Text	4	0								
+1203	Command	Fonts		DeleteFont( iFontID )			Text	4	0								
+1204	Command	Fonts		GetFontExists( iFontID )			Text	4	1								
+1205	Command	Fonts		GetSystemFontExists( szFontFile )			Text	4	1								
+1206	Command	Fonts		LoadFont( iFontID, szFontFile )			Text	4	1	1							
+1207	Command	Input		AddVirtualButton( index, x, y, size )			Input	5	0								
+1208	Command	Input		AddVirtualJoystick( index, x, y, size )			Input	5	0								
+1209	Command	Input		CreateEditBox()			Input	5	1	1							
+1210	Command	Input		DeleteEditBox( index )			Input	5	0								
+1211	Command	Input		DeleteVirtualButton( index )			Input	5	0								
+1212	Command	Input		DeleteVirtualJoystick( index )			Input	5	0								
+1213	Command	Input		FixEditBoxToScreen( index, fix )			Input	5	0								
+1214	Command	Input		GetButtonPressed( index )			Input	5	1								
+1215	Command	Input		GetButtonReleased( index )			Input	5	1								
+1216	Command	Input		GetButtonState( index )			Input	5	1								
+1217	Command	Input		GetCurrentEditBox()			Input	5	1								
+1218	Command	Input		GetDirectionAngle()			Input	5	1								
+1219	Command	Input		GetDirectionSpeed()			Input	5	1								
+1220	Command	Input		GetDirectionX()			Input	5	1								
+1221	Command	Input		GetDirectionY()			Input	5	1								
+1222	Command	Input		GetEditBoxActive( index )			Input	5	2	2							
+1223	Command	Input		GetEditBoxChanged( index )			Input	5	2	2							
+1224	Command	Input		GetEditBoxCursorPosition( index )			Input	5	1								
+1225	Command	Input		GetEditBoxDepth(UINT index)			Input	5	1								
+1226	Command	Input		GetEditBoxExists( index )			Input	5	2	2							
+1227	Command	Input		GetEditBoxHasFocus( index )			Input	5	2	2							
+1228	Command	Input		GetEditBoxHeight( index )			Input	5	1								
+1229	Command	Input		GetEditBoxLines( index )			Input	5	1								
+1230	Command	Input		GetEditBoxText( index )			Input	5	1								
+1231	Command	Input		GetEditBoxVisible( index )			Input	5	2	2							
+1232	Command	Input		GetEditBoxWidth( index )			Input	5	1								
+1233	Command	Input		GetEditBoxX( index )			Input	5	1								
+1234	Command	Input		GetEditBoxY( index )			Input	5	1								
+1235	Command	Input		GetJoystickX()			Input	5	1								
+1236	Command	Input		GetJoystickY()			Input	5	1								
+1237	Command	Input					Input	5	0								
+1238	Command	Input		GetPointerPressed()	S:in.ptrPressed	S:ptr pressed	Input	5	2	2							
+1239	Command	Input		GetPointerReleased()	S:in.ptrReleased	S:ptr released	Input	5	2	2							
+1240	Command	Input		GetPointerState()	S:in.ptrHeld	S:ptr held	Input	5	2	2							
+1241	Command	Input		GetPointerX()	S:in.ptrX	S:ptr x	Input	5	1								
+1242	Command	Input		GetPointerY()	S:in.ptrY	S:ptr y	Input	5	1								
+1243	Command	Input		GetTextInput()	S:_agkGetVarPressed(,N:1,S:)	S:var pressed ,V:	Input	5	2	2							
+1244	Command	Input		GetTextInputCancelled()	S:_agkGetVarHeld(,N:1,S:)	S:var held ,V:	Input	5	2	2							
+1245	Command	Input		GetTextInputCompleted()	S:_agkGetVarReleased(,N:1,S:)	S:var released ,V:	Input	5	1								
+1246	Command	Input		GetTextInputState()			Input	5	1								
+1247	Command	Input		GetVirtualButtonExists( index )			Input	5	2	2							
+1248	Command	Input		GetVirtualButtonPressed( index )			Input	5	2	2							
+1249	Command	Input		GetVirtualButtonReleased( index )			Input	5	2	2							
+1250	Command	Input		GetVirtualButtonState( index )			Input	5	1								
+1251	Command	Input		GetVirtualJoystickExists( index )			Input	5	1								
+1252	Command	Input		GetVirtualJoystickX( index )			Input	5	1								
+1253	Command	Input		GetVirtualJoystickY( index )			Input	5	1								
+1254	Command	Input		SetButtonScreenPosition( index, x, y, size )			Input	5	0								
+1255	Command	Input		SetCursorBlinkTime( seconds )			Input	5	0								
+1256	Command	Input		SetEditBoxActive( index, active )			Input	5	0								
+1257	Command	Input		SetEditBoxBackgroundColor( index, red, green, blue, alpha )			Input	5	0								
+1258	Command	Input		SetEditBoxBackgroundImage( index, image )			Input	5	0								
+1259	Command	Input		SetEditBoxBorderColor( index, red, green, blue, alpha )			Input	5	0								
+1260	Command	Input		SetEditBoxBorderImage( index, image )			Input	5	0								
+1261	Command	Input		SetEditBoxBorderSize( index, size )			Input	5	0								
+1262	Command	Input		SetEditBoxCursorBlinkTime( index, time )			Input	5	0								
+1263	Command	Input		SetEditBoxCursorColor( index, red, green, blue )			Input	5	0								
+1264	Command	Input		SetEditBoxCursorPosition( index, pos )			Input	5	0								
+1265	Command	Input		SetEditBoxCursorWidth( index, width )			Input	5	0								
+1266	Command	Input		SetEditBoxDepth( index, depth )			Input	5	0								
+1267	Command	Input		SetEditBoxExtendedFontImage( index, image )			Input	5	0								
+1268	Command	Input		SetEditBoxFocus( index, focus )			Input	5	0								
+1269	Command	Input		SetEditBoxFont( index, fontID )			Input	5	0								
+1270	Command	Input		SetEditBoxFontImage( index, image )			Input	5	0								
+1271	Command	Input		SetEditBoxInputType( index, inputType )			Input	5	0								
+1272	Command	Input		SetEditBoxMaxChars( index, max )			Input	5	0								
+1273	Command	Input		SetEditBoxMaxLines( index, max )			Input	5	0								
+1274	Command	Input		SetEditBoxMultiLine( index, multiline )			Input	5	0								
+1275	Command	Input		SetEditBoxPasswordMode( index, mode )			Input	5	0								
+1276	Command	Input		SetEditBoxPosition( index, x, y )			Input	5	0								
+1277	Command	Input		SetEditBoxScissor( index, x, y, x2, y2 )			Input	5	0								
+1278	Command	Input		SetEditBoxSize( index, width, height )			Input	5	0								
+1279	Command	Input		SetEditBoxText( index, str )			Input	5	0								
+1280	Command	Input		SetEditBoxTextColor( index, red, green, blue )			Input	5	0								
+1281	Command	Input		SetEditBoxTextSize( index, size )			Input	5	0								
+1282	Command	Input		SetEditBoxUseAlternateInput( index, mode )			Input	5	0								
+1283	Command	Input		SetEditBoxVisible( index, visible )			Input	5	0								
+1284	Command	Input		SetEditBoxWrapMode( index, mode )			Input	5	0								
+1285	Command	Input		SetJoystickDeadZone( threshold )			Input	5	0								
+1286	Command	Input		SetJoystickScreenPosition( x, y, size )			Input	5	0								
+1287	Command	Input		SetTextInputMaxChars( max )			Input	5	0								
+1288	Command	Input		SetVirtualButtonActive( index, active )			Input	5	0								
+1289	Command	Input		SetVirtualButtonAlpha( index, alpha )			Input	5	0								
+1290	Command	Input		SetVirtualButtonColor( index, red, green, blue )			Input	5	0								
+1291	Command	Input		SetVirtualButtonImageDown( index, imageID )			Input	5	0								
+1292	Command	Input		SetVirtualButtonImageUp( index, imageID )			Input	5	0								
+1293	Command	Input		SetVirtualButtonPosition( index, x, y )			Input	5	0								
+1294	Command	Input		SetVirtualButtonSize( index, sizeX, sizeY )			Input	5	0								
+1295	Command	Input		SetVirtualButtonText( index, str )			Input	5	0								
+1296	Command	Input		SetVirtualButtonVisible( index, visible )			Input	5	0								
+1297	Command	Input		SetVirtualJoystickActive( index, active )			Input	5	0								
+1298	Command	Input		SetVirtualJoystickAlpha( index, alpha1, alpha2 )			Input	5	0								
+1299	Command	Input		SetVirtualJoystickDeadZone( threshold )			Input	5	0								
+1300	Command	Input		SetVirtualJoystickImageInner( index, imageID )			Input	5	0								
+1301	Command	Input		SetVirtualJoystickImageOuter( index, imageID )			Input	5	0								
+1302	Command	Input		SetVirtualJoystickPosition( index, x, y )			Input	5	0								
+1303	Command	Input		SetVirtualJoystickSize( index, size )			Input	5	0								
+1304	Command	Input		SetVirtualJoystickVisible( index, visible )			Input	5	0								
+1305	Command	Input		StartTextInput( initial )			Input	5	0								
+1306	Command	Input		StopTextInput( )			Input	5	0								
+1307	Command	Input Raw		CompleteRawJoystickDetection()			Input	5	0								
+1308	Command	Input Raw		GetAccelerometerExists()			Input	5	2	2							
+1309	Command	Input Raw		GetCameraExists()			Input	5	2	2							
+1310	Command	Input Raw		GetCharBuffer()			Input	5	1								
+1311	Command	Input Raw		GetCharBufferLength()			Input	5	1								
+1312	Command	Input Raw		GetGPSSensorExists()			Input	5	2	2							
+1313	Command	Input Raw		GetGyroSensorExists()			Input	5	2	2							
+1314	Command	Input Raw		GetJoystickExists()			Input	5	2	2							
+1315	Command	Input Raw		GetKeyboardExists()			Input	5	2	2							
+1316	Command	Input Raw		GetLightSensorExists()			Input	5	2	2							
+1317	Command	Input Raw		GetMagneticSensorExists()			Input	5	2	2							
+1318	Command	Input Raw		GetMouseExists()			Input	5	2	2							
+1319	Command	Input Raw		GetMultiTouchExists()			Input	5	2	2							
+1320	Command	Input Raw		GetNFCExists()			Input	5	2	2							
+1321	Command	Input Raw		GetProximitySensorExists()			Input	5	2	2							
+1322	Command	Input Raw		GetRawAccelX()			Input	5	1								
+1323	Command	Input Raw		GetRawAccelY()			Input	5	1								
+1324	Command	Input Raw		GetRawAccelZ()			Input	5	1								
+1325	Command	Input Raw		GetRawFirstTouchEvent( bIncludeUnknown )			Input	5	1								
+1326	Command	Input Raw		GetRawGPSAltitude()			Input	5	1								
+1327	Command	Input Raw		GetRawGPSLatitude()			Input	5	1								
+1328	Command	Input Raw		GetRawGPSLongitude()			Input	5	1								
+1329	Command	Input Raw		GetRawGyroVelocityX()			Input	5	1								
+1330	Command	Input Raw		GetRawGyroVelocityY()			Input	5	1								
+1331	Command	Input Raw		GetRawGyroVelocityZ()			Input	5	1								
+1332	Command	Input Raw		GetRawJoystickButtonPressed( index, button )			Input	5	2	2							
+1333	Command	Input Raw		GetRawJoystickButtonReleased( index, button )			Input	5	2	2							
+1334	Command	Input Raw		GetRawJoystickButtonState( index, button )			Input	5	1								
+1335	Command	Input Raw		GetRawJoystickConnected( index )			Input	5	2	2							
+1336	Command	Input Raw		GetRawJoystickExists( index )			Input	5	2	2							
+1337	Command	Input Raw		GetRawJoystickName( index )			Input	5	1								
+1338	Command	Input Raw		GetRawJoystickPOV( index, pov )			Input	5	1								
+1339	Command	Input Raw		GetRawJoystickRX( index )			Input	5	1								
+1340	Command	Input Raw		GetRawJoystickRY( index )			Input	5	1								
+1341	Command	Input Raw		GetRawJoystickRZ( index )			Input	5	1								
+1342	Command	Input Raw		GetRawJoystickSlider( index, slider )			Input	5	1								
+1343	Command	Input Raw		GetRawJoystickX( index )			Input	5	1								
+1344	Command	Input Raw		GetRawJoystickY( index )			Input	5	1								
+1345	Command	Input Raw		GetRawJoystickZ( index )			Input	5	1								
+1346	Command	Input Raw		GetRawKeyPressed( key )	S:(in.keyPressed = ,N:1:J:key,S:)	S:key pressed ,J:key	Input	5	2	2							
+1347	Command	Input Raw		GetRawKeyReleased( key )	S:(in.keyReleased = ,N:1:J:key,S:)	S:key released ,J:key	Input	5	2	2							
+1348	Command	Input Raw		GetRawKeyState( key )	S:(in.keyState = ,N:1:J:key,S:)	S:key held ,J:key	Input	5	2	2							
+1349	Command	Input Raw		GetRawLastKey( )	S:in.keyScan	S:key code	Input	5	1	1							
+1350	Command	Input Raw		GetLastChar()	S:in.keyChr	S:key letter	Input	5	1								
+1351	Command	Input Raw			S:in.keyRepeat = ,N:1	S:set key press repeat to ,N:	Input	5	0								
+1352	Command	Input Raw		GetRawMagneticY()			Input	5	1								
+1353	Command	Input Raw		GetRawMagneticZ()			Input	5	1								
+1354	Command	Input Raw		1	S:getrawmouseleftpressed()	S:mouse pressed ,N:1	Input	5	2	2				N:1	1354	1356	
+1355	Command	Input Raw		2	S:getrawmouserightpressed()		Input	5	2	2							
+1356	Command	Input Raw		3	S:getrawmousemiddlepressed()		Input	5	2	2							
+1357	Command	Input Raw		1	S:getrawmouseleftreleased()	S:mouse released ,N:1	Input	5	2	2				N:1	1357	1359	
+1358	Command	Input Raw		2	S:getrawmouserightreleased()		Input	5	2	2							
+1359	Command	Input Raw		3	S:getrawmousemiddlereleased()		Input	5	2	2							
+1360	Command	Input Raw		1	S:getrawmouseleftstate()	S:mouse held ,N:1	Input	5	2	2				N:1	1360	1362	
+1361	Command	Input Raw		2	S:getrawmouserightstate()		Input	5	2	2							
+1362	Command	Input Raw		3	S:getrawmousemiddlestate()		Input	5	2	2							
+1363	Command	Input Raw			S:getrawmousewheel()	S:mouse wheel	Input	5	1	1							
+1364	Command	Input Raw			S:getrawmousewheeldelta()	S:mouse wheel delta	Input	5	1	1							
+1365	Command	Input Raw			S:getrawmousex()	S:mouse x	Input	5	1	1							
+1366	Command	Input Raw			S:getrawmousey()	S:mouse y	Input	5	1	1							
+1367	Command	Input Raw		GetRawNextTouchEvent( )			Input	5	1								
+1368	Command	Input Raw		GetRawProximityDistance()			Input	5	1								
+1369	Command	Input Raw		GetRawRotationVectorW()			Input	5	1								
+1370	Command	Input Raw		GetRawRotationVectorW2()			Input	5	1								
+1371	Command	Input Raw		GetRawRotationVectorX()			Input	5	1								
+1372	Command	Input Raw		GetRawRotationVectorX2()			Input	5	1								
+1373	Command	Input Raw		GetRawRotationVectorY()			Input	5	1								
+1374	Command	Input Raw		GetRawRotationVectorY2()			Input	5	1								
+1375	Command	Input Raw		GetRawRotationVectorZ()			Input	5	1								
+1376	Command	Input Raw		GetRawRotationVectorZ2()			Input	5	1								
+1377	Command	Input Raw		GetRawTouchCount( bIncludeUnknown )			Input	5	1								
+1378	Command	Input Raw		GetRawTouchCurrentX( iIndex )			Input	5	1								
+1379	Command	Input Raw		GetRawTouchCurrentY( iIndex )			Input	5	1								
+1380	Command	Input Raw		GetRawTouchLastX( iIndex )			Input	5	1								
+1381	Command	Input Raw		GetRawTouchLastY( iIndex )			Input	5	1								
+1382	Command	Input Raw		GetRawTouchReleased( iIndex )			Input	5	2	2							
+1383	Command	Input Raw		GetRawTouchStartX( iIndex )			Input	5	1								
+1384	Command	Input Raw		GetRawTouchStartY( iIndex )			Input	5	1								
+1385	Command	Input Raw		GetRawTouchTime( iIndex )			Input	5	1								
+1386	Command	Input Raw		GetRawTouchType( iIndex )			Input	5	1								
+1387	Command	Input Raw		GetRawTouchValue( iIndex )			Input	5	1								
+1388	Command	Input Raw		GetRotationVectorSensorExists()			Input	5	2	2							
+1389	Command	Input Raw		SetRawJoystickDeadZone( threshold )			Input	5	0								
+1390	Command	Input Raw		SetRawMousePosition( x, y )	S:setrawmouseposition(,F:1,S:,,F:3,S:)	s:set mouse x ,F:,S: y ,F:	Input	5	0								
+1391	Command	Input Raw		SetRawMouseVisible( visible )			Input	5	0								
+1392	Command	Input Raw		SetRawTouchMoveSensitivity( distance )			Input	5	2	2							
+1393	Command	Input Raw		SetRawTouchValue( iIndex, value )			Input	5	0								
+1394	Command	Input Raw		StartGPSTracking()			Input	5	0								
+1395	Command	Input Raw		StopGPSTracking()			Input	5	0								
+1396	Command	Sound		DeleteSound( iID )			Media	6	0								
+1397	Command	Sound		GetSoundExists( iID )			Media	6	2	2							
+1398	Command	Sound		GetSoundInstanceLoopCount( iID )			Media	6	1								
+1399	Command	Sound		GetSoundInstancePlaying( iID )			Media	6	2	2							
+1400	Command	Sound		GetSoundInstanceRate( iID )			Media	6	1								
+1401	Command	Sound		GetSoundInstances( iID )			Media	6	1								
+1402	Command	Sound		GetSoundInstanceVolume( iID )			Media	6	1								
+1403	Command	Sound		GetSoundMaxRate()			Media	6	1								
+1404	Command	Sound		GetSoundMinRate()			Media	6	1								
+1405	Command	Sound		GetSoundsPlaying( iID )			Media	6	2	2							
+1406	Command	Sound		GetSpeechNumVoices()			Media	6	1								
+1407	Command	Sound		GetSpeechVoiceID( index )			Media	6	1								
+1408	Command	Sound		GetSpeechVoiceLanguage( index )			Media	6	1								
+1409	Command	Sound		GetSpeechVoiceName( index )			Media	6	1								
+1410	Command	Sound		GetTextToSpeechReady()			Media	6	1								
+1411	Command	Sound		IsSoundRecording()			Media	6	2	2							
+1412	Command	Sound		IsSpeaking()			Media	6	2	2							
+1413	Command	Sound		LoadSound( sFilename )			Media	6	0								
+1414	Command	Sound		LoadSoundOGG( iID, sFilename )			Media	6	0								
+1415	Command	Sound		PlaySound( iID, iVol )			Media	6	0								
+1416	Command	Sound		RecordSound( szFilename )			Media	6	0								
+1417	Command	Sound		SaveSound( iID, sFilename )			Media	6	0								
+1418	Command	Sound		SetSoundInstanceBalance( iID, balance )			Media	6	0								
+1419	Command	Sound		SetSoundInstanceRate( iID, rate )			Media	6	0								
+1420	Command	Sound		SetSoundInstanceVolume( iID, vol )			Media	6	0								
+1421	Command	Sound		SetSoundSystemVolume( iVol )			Media	6	0								
+1422	Command	Sound		SetSpeechLanguage( lang )			Media	6	0								
+1423	Command	Sound		SetSpeechLanguageByID( sID )			Media	6	0								
+1424	Command	Sound		SetSpeechRate( rate )			Media	6	0								
+1425	Command	Sound		Speak( text )			Media	6	0								
+1426	Command	Sound		StopSound( iID )			Media	6	0								
+1427	Command	Sound		StopSoundInstance( iID )			Media	6	0								
+1428	Command	Sound		StopSoundRecording()			Media	6	0								
+1429	Command	Sound		StopSpeaking()			Media	6	0								
+1430	Command	Sound		TextToSpeechSetup()			Media	6	0								
+1431	Command	Sound		VibrateDevice( seconds )			Media	6	0								
+1432	Command	Music		DeleteMusic( iID )			Media	6	0								
+1433	Command	Music		DeleteMusicOGG( musicID )			Media	6	0								
+1434	Command	Music		GetMusicDuration( iID )			Media	6	1								
+1435	Command	Music		GetMusicDurationOGG( musicID )			Media	6	1								
+1436	Command	Music		GetMusicExists( iID )			Media	6	2	2							
+1437	Command	Music		GetMusicExistsOGG( musicID )			Media	6	2	2							
+1438	Command	Music		GetMusicLoopCountOGG( musicID )			Media	6	1								
+1439	Command	Music		GetMusicPlaying()			Media	6	2	2							
+1440	Command	Music		GetMusicPlayingOGG( musicID )			Media	6	2	2							
+1441	Command	Music		GetMusicPosition()			Media	6	1								
+1442	Command	Music		GetMusicPositionOGG( musicID )			Media	6	1								
+1443	Command	Music		LoadMusic( iID, sFile )			Media	6	0								
+1444	Command	Music		LoadMusicOGG( musicID, sFile )			Media	6	0								
+1445	Command	Music		PauseMusic( )			Media	6	0								
+1446	Command	Music		PauseMusicOGG( musicID )			Media	6	0								
+1447	Command	Music		PlayMusic( iID, bLoop )			Media	6	0								
+1448	Command	Music		PlayMusicOGG( musicID, iLoop )			Media	6	0								
+1449	Command	Music		ResumeMusic( )			Media	6	0								
+1450	Command	Music		ResumeMusicOGG( musicID )			Media	6	0								
+1451	Command	Music		SeekMusic( seconds, mode )			Media	6	0								
+1452	Command	Music		SeekMusicOGG( musicID, seconds, mode )			Media	6	0								
+1453	Command	Music		SetMusicFileVolume( ID, vol )			Media	6	0								
+1454	Command	Music		SetMusicLoopCountOGG(UINT musicID, loop)			Media	6	0								
+1455	Command	Music		SetMusicLoopTimesOGG(UINT musicID, startTime, endTime)			Media	6	0								
+1456	Command	Music		SetMusicSystemVolume( iVol )			Media	6	0								
+1457	Command	Music		SetMusicSystemVolumeOGG( vol )			Media	6	0								
+1458	Command	Music		SetMusicVolumeOGG( musicID, vol )			Media	6	0								
+1459	Command	Music		StopMusic( )			Media	6	0								
+1460	Command	Music		StopMusicOGG( musicID )			Media	6	0								
+1461	Command	Video		DeleteVideo()			Media	6	0								
+1462	Command	Video		GetVideoDuration()			Media	6	1								
+1463	Command	Video		GetVideoHeight()			Media	6	1								
+1464	Command	Video		GetVideoPlaying()			Media	6	2	2							
+1465	Command	Video		GetVideoPosition()			Media	6	1								
+1466	Command	Video		GetVideoWidth()			Media	6	1								
+1467	Command	Video		IsScreenRecording()			Media	6	2	2							
+1468	Command	Video		LoadVideo( szFilename )			Media	6	1	1							
+1469	Command	Video		PauseVideo()			Media	6	0								
+1470	Command	Video		PlayVideo()			Media	6	0								
+1471	Command	Video		PlayVideoToImage( imageID )			Media	6	0								
+1472	Command	Video		PlayYoutubeVideo( developerKey, videoID, startTime )			Media	6	0								
+1473	Command	Video		SetVideoDimensions( x, y, width, height )			Media	6	0								
+1474	Command	Video		SetVideoPosition( seconds )			Media	6	0								
+1475	Command	Video		SetVideoVolume( volume )			Media	6	0								
+1476	Command	Video		StartScreenRecording( szFilename, microphone )			Media	6	0								
+1477	Command	Video		StopScreenRecording()			Media	6	0								
+1478	Command	Video		StopVideo()			Media	6	0								
+1479	Command	HTTP		AddHTTPHeader( iHTTP, headerName, headerValue )			Advanced	7	0								
+1480	Command	HTTP		CloseHTTPConnection( iHTTP )			Advanced	7	0								
+1481	Command	HTTP		CreateHTTPConnection()			Advanced	7	1	1							
+1482	Command	HTTP		DeleteHTTPConnection( iHTTP )			Advanced	7	0								
+1483	Command	HTTP		GetHTTPFile( iHTTP, szServerFile, szLocalFile, szPostData )			Advanced	7	1								
+1484	Command	HTTP		GetHTTPFileComplete( iHTTP )			Advanced	7	2	2							
+1485	Command	HTTP		GetHTTPFileProgress( iHTTP )			Advanced	7	1								
+1486	Command	HTTP		GetHTTPResponse( iHTTP )			Advanced	7	1								
+1487	Command	HTTP		GetHTTPResponseReady( iHTTP )			Advanced	7	1								
+1488	Command	HTTP		GetHTTPStatusCode( iHTTP )			Advanced	7	1								
+1489	Command	HTTP		GetInternetState()			Advanced	7	1								
+1490	Command	HTTP		HTTPDecode( str )			Advanced	7	0								
+1491	Command	HTTP		HTTPEncode( str )			Advanced	7	0								
+1492	Command	HTTP		OpenBrowser( url )			Advanced	7	0								
+1493	Command	HTTP		RemoveHTTPHeader( iHTTP, headerName )			Advanced	7	0								
+1494	Command	HTTP		SendHTTPFile( iHTTP, szServerFile, szPostData, szLocalFile )			Advanced	7	0								
+1495	Command	HTTP		SendHTTPRequest( iHTTP, szServerFile )			Advanced	7	0								
+1496	Command	HTTP		SendHTTPRequestASync( iHTTP, szServerFile )			Advanced	7	0								
+1497	Command	HTTP		SetHTTPHost( iHTTP, szHost, iSecure )			Advanced	7	0								
+1498	Command	HTTP		SetHTTPTimeout( iHTTP, milliseconds )			Advanced	7	0								
+1499	Command	HTTP		SetHTTPVerifyCertificate( iHTTP, mode )			Advanced	7	0								
+1500	Command	Multiplayer		AddNetworkMessageFloat( iMsgID, value )			Advanced	7	0								
+1501	Command	Multiplayer		AddNetworkMessageInteger( iMsgID, value )			Advanced	7	0								
+1502	Command	Multiplayer		AddNetworkMessageString( iMsgID, value )			Advanced	7	0								
+1503	Command	Multiplayer		CloseNetwork( iNetID )			Advanced	7	0								
+1504	Command	Multiplayer		ConnectSocket( socketID, szIP, port, timeout )			Advanced	7	1	1							
+1505	Command	Multiplayer		CopyNetworkMessage( iFromMsgID )			Advanced	7	0								
+1506	Command	Multiplayer		CreateBroadcastListener( szIP, port )			Advanced	7	0								
+1507	Command	Multiplayer		CreateNetworkMessage( )			Advanced	7	0								
+1508	Command	Multiplayer		CreateSocketListener( listenerID, szIP, port )			Advanced	7	1	1							
+1509	Command	Multiplayer		CreateUDPListener( listenerID, ip, port )			Advanced	7	0								
+1510	Command	Multiplayer		DeleteBroadcastListener( iID )			Advanced	7	0								
+1511	Command	Multiplayer		DeleteNetworkClient( iNetID, client )			Advanced	7	0								
+1512	Command	Multiplayer		DeleteNetworkMessage( iMsgID )			Advanced	7	0								
+1513	Command	Multiplayer		DeleteSocket( socketID )			Advanced	7	0								
+1514	Command	Multiplayer		DeleteSocketListener( listenerID )			Advanced	7	0								
+1515	Command	Multiplayer		DeleteUDPListener( listenerID )			Advanced	7	0								
+1516	Command	Multiplayer		FlushSocket( socketID )			Advanced	7	0								
+1517	Command	Multiplayer		GetBroadcastMessage( iID )			Advanced	7	1								
+1518	Command	Multiplayer		GetDeviceIP()			Advanced	7	1								
+1519	Command	Multiplayer		GetDeviceIPv6()			Advanced	7	1								
+1520	Command	Multiplayer		GetNetworkClientDisconnected( iNetID, client )			Advanced	7	1								
+1521	Command	Multiplayer		GetNetworkClientFloat( iNetID, client, name )			Advanced	7	1								
+1522	Command	Multiplayer		GetNetworkClientInteger( iNetID, client, name )			Advanced	7	1								
+1523	Command	Multiplayer		GetNetworkClientName( iNetID, client )			Advanced	7	1								
+1524	Command	Multiplayer		GetNetworkClientPing( iNetID, client )			Advanced	7	1								
+1525	Command	Multiplayer		GetNetworkClientUserData( iNetID, client, index )			Advanced	7	1								
+1526	Command	Multiplayer		GetNetworkExists( iNetID )			Advanced	7	2	2							
+1527	Command	Multiplayer		GetNetworkFirstClient( iNetID )			Advanced	7	1								
+1528	Command	Multiplayer		GetNetworkMessage( iNetID )			Advanced	7	1								
+1529	Command	Multiplayer		GetNetworkMessageFloat( iMsgID )			Advanced	7	1								
+1530	Command	Multiplayer		GetNetworkMessageFromClient( iMsgID )			Advanced	7	1								
+1531	Command	Multiplayer		GetNetworkMessageFromIP( iMsgID )			Advanced	7	1								
+1532	Command	Multiplayer		GetNetworkMessageFromPort( iMsgID )			Advanced	7	1								
+1533	Command	Multiplayer		GetNetworkMessageInteger( iMsgID )			Advanced	7	1								
+1534	Command	Multiplayer		GetNetworkMessageString( iMsgID )			Advanced	7	1								
+1535	Command	Multiplayer		GetNetworkMyClientID( iNetID )			Advanced	7	1								
+1536	Command	Multiplayer		GetNetworkNextClient( iNetID )			Advanced	7	1								
+1537	Command	Multiplayer		GetNetworkNumClients( iNetID )			Advanced	7	1								
+1538	Command	Multiplayer		GetNetworkServerID( iNetID )			Advanced	7	1								
+1539	Command	Multiplayer		GetSocketByte( socketID )			Advanced	7	1								
+1540	Command	Multiplayer		GetSocketBytesAvailable( socketID )			Advanced	7	1								
+1541	Command	Multiplayer		GetSocketConnected( socketID )			Advanced	7	1								
+1542	Command	Multiplayer		GetSocketExists( socketID )			Advanced	7	2	2							
+1543	Command	Multiplayer		GetSocketFloat( socketID )			Advanced	7	1								
+1544	Command	Multiplayer		GetSocketInteger( socketID )			Advanced	7	1								
+1545	Command	Multiplayer		GetSocketListenerConnection( listenerID )			Advanced	7	1								
+1546	Command	Multiplayer		GetSocketRemoteIP( socketID )			Advanced	7	1								
+1547	Command	Multiplayer		GetSocketString( socketID )			Advanced	7	1								
+1548	Command	Multiplayer		GetUDPNetworkMessage( listenerID )			Advanced	7	1								
+1549	Command	Multiplayer		HostNetwork( szNetworkName, szMyName, port, portv6 )			Advanced	7	0								
+1550	Command	Multiplayer		IsNetworkActive( iNetID ) AppGameKit Studio Command Reference - Page 14/16			Advanced	7	2	2							
+1551	Command	Multiplayer		JoinNetwork( szIP, port, szMyName )			Advanced	7	0								
+1552	Command	Multiplayer		KickNetworkClient( iNetID, client )			Advanced	7	0								
+1553	Command	Multiplayer		SendNetworkMessage( iNetID, toClient, iMsgID )			Advanced	7	0								
+1554	Command	Multiplayer		SendSocketByte( socketID, value )			Advanced	7	0								
+1555	Command	Multiplayer		SendSocketFloat( socketID, value )			Advanced	7	0								
+1556	Command	Multiplayer		SendSocketInteger( socketID, value )			Advanced	7	0								
+1557	Command	Multiplayer		SendSocketString( socketID, value )			Advanced	7	0								
+1558	Command	Multiplayer		SendUDPNetworkMessage( listenerID, messageID, toIP, toPort )			Advanced	7	0								
+1559	Command	Multiplayer		SetNetworkAllowClients( iNetID )			Advanced	7	0								
+1560	Command	Multiplayer		SetNetworkClientUserData( iNetID, client, index, value )			Advanced	7	0								
+1561	Command	Multiplayer		SetNetworkLatency( iNetID, latency )			Advanced	7	0								
+1562	Command	Multiplayer		SetNetworkLocalFloat( iNetID, name, f )			Advanced	7	0								
+1563	Command	Multiplayer		SetNetworkLocalInteger( iNetID, name, i )			Advanced	7	0								
+1564	Command	Multiplayer		SetNetworkNoMoreClients( iNetID )			Advanced	7	0								
+1565	Command	Extra		ActivateSmartWatch( szReserved )			Advanced	7	0								
+1566	Command	Extra		ARControlCamera()			Advanced	7	0								
+1567	Command	Extra		ARCreateAnchorFromHitTest( index )			Advanced	7	1	1							
+1568	Command	Extra		ARCreateAnchorFromPlane( index )			Advanced	7	1	1							
+1569	Command	Extra		ARDeleteAnchor( anchorID )			Advanced	7	0								
+1570	Command	Extra		ARDestroy()			Advanced	7	0								
+1571	Command	Extra		ARDrawBackground()			Advanced	7	0								
+1572	Command	Extra		ARFixObjectToAnchor( objID, anchorID )			Advanced	7	0								
+1573	Command	Extra		ARGetAnchorStatus( anchorID )			Advanced	7	1	1							
+1574	Command	Extra		ARGetHitTestNormalX( index )			Advanced	7	0								
+1575	Command	Extra		ARGetHitTestNormalY( index )			Advanced	7	0								
+1576	Command	Extra		ARGetHitTestNormalZ( index )			Advanced	7	0								
+1577	Command	Extra		ARGetHitTestType( index )			Advanced	7	1	1							
+1578	Command	Extra		ARGetHitTestX( index )			Advanced	7	1	1							
+1579	Command	Extra		ARGetHitTestY( index )			Advanced	7	1	1							
+1580	Command	Extra		ARGetHitTestZ( index )			Advanced	7	1	1							
+1581	Command	Extra		ARGetLightEstimate()			Advanced	7	1	1							
+1582	Command	Extra		ARGetPlaneAngleX( index )			Advanced	7	1	1							
+1583	Command	Extra		ARGetPlaneAngleY( index )			Advanced	7	1	1							
+1584	Command	Extra		ARGetPlaneAngleZ( index )			Advanced	7	1	1							
+1585	Command	Extra		ARGetPlanes( reserved )			Advanced	7	1	1							
+1586	Command	Extra		ARGetPlanesFinish()			Advanced	7	1	1							
+1587	Command	Extra		ARGetPlaneSizeX( index )			Advanced	7	1	1							
+1588	Command	Extra		ARGetPlaneSizeZ( index )			Advanced	7	1	1							
+1589	Command	Extra		ARGetPlaneX( index )			Advanced	7	1	1							
+1590	Command	Extra		ARGetPlaneY( index )			Advanced	7	1	1							
+1591	Command	Extra		ARGetPlaneZ( index )			Advanced	7	1	1							
+1592	Command	Extra		ARGetStatus()			Advanced	7	1	1							
+1593	Command	Extra		ARHitTest( screenX, screenY )			Advanced	7	2	2							
+1594	Command	Extra		ARHitTestFinish()			Advanced	7	1	1							
+1595	Command	Extra		ARSetLightEstimationMode( mode )			Advanced	7	0								
+1596	Command	Extra		ARSetPlaneDetectionMode( mode )			Advanced	7	0								
+1597	Command	Extra		ARSetup()			Advanced	7	0								
+1598	Command	Extra		CancelLocalNotification( iID )			Advanced	7	0								
+1599	Command	Extra		CheckPermission( szPermission )			Advanced	7	1	1							
+1600	Command	Extra		DeleteCloudDataVariable( varName )			Advanced	7	0								
+1601	Command	Extra		DeleteSharedVariable( varName )			Advanced	7	0								
+1602	Command	Extra		FacebookActivateAppTracking()			Advanced	7	0								
+1603	Command	Extra		FacebookDestroyLikeButton()			Advanced	7	0								
+1604	Command	Extra		FacebookDownloadFriendsPhoto( iIndex )			Advanced	7	0								
+1605	Command	Extra		FacebookGetAccessstr()			Advanced	7	1	1							
+1606	Command	Extra		FacebookGetFriends()			Advanced	7	1	1							
+1607	Command	Extra		FacebookGetFriendsCount()			Advanced	7	1	1							
+1608	Command	Extra		FacebookGetFriendsID( iIndex )			Advanced	7	1	1							
+1609	Command	Extra		FacebookGetFriendsName( iIndex )			Advanced	7	1	1							
+1610	Command	Extra		FacebookGetFriendsState()			Advanced	7	1	1							
+1611	Command	Extra		FacebookGetUserID()			Advanced	7	1	1							
+1612	Command	Extra		FacebookGetUserName()			Advanced	7	1	1							
+1613	Command	Extra		FacebookInviteFriend( szID, szMessage )			Advanced	7	0								
+1614	Command	Extra		FacebookLogin()			Advanced	7	0								
+1615	Command	Extra		FacebookLogout()			Advanced	7	0								
+1616	Command	Extra		FacebookPostOnFriendsWall( szID, szLink, szPicture, szName, szCaption, szDescription )			Advanced	7	0								
+1617	Command	Extra		FacebookPostOnMyWall( szLink, szPicture, szName, szCaption, szDescription )			Advanced	7	0								
+1618	Command	Extra		FacebookSetup( szID )			Advanced	7	0								
+1619	Command	Extra		FacebookShowLikeButton( szURL, iX, iY, iWidth, iHeight )			Advanced	7	0								
+1620	Command	Extra		FirebaseLogEvent( event_name )			Advanced	7	0								
+1621	Command	Extra		FirebaseSetup()			Advanced	7	0								
+1622	Command	Extra		GameCenterAchievementsReset( )			Advanced	7	0								
+1623	Command	Extra		GameCenterAchievementsShow( )			Advanced	7	0								
+1624	Command	Extra		GameCenterLogin()			Advanced	7	0								
+1625	Command	Extra		GameCenterLogout()			Advanced	7	0								
+1626	Command	Extra		GameCenterSetup()			Advanced	7	0								
+1627	Command	Extra		GameCenterShowLeaderBoard( szBoardID )			Advanced	7	0								
+1628	Command	Extra		GameCenterSubmitAchievement( szAchievementID, iPercentageComplete )			Advanced	7	0								
+1629	Command	Extra		GameCenterSubmitScore( iScore, szBoardID )			Advanced	7	0								
+1630	Command	Extra		GetClipboardText()			Advanced	7	1								
+1631	Command	Extra		GetCloudDataAllowed()			Advanced	7	2	2							
+1632	Command	Extra		GetCloudDataChanged()			Advanced	7	2	2							
+1633	Command	Extra		GetCloudDataVariable( varName, defaultValue )			Advanced	7	1								
+1634	Command	Extra		GetFacebookDownloadFile()			Advanced	7	1								
+1635	Command	Extra		GetFacebookDownloadState()			Advanced	7	1								
+1636	Command	Extra		GetFacebookLoggedIn()			Advanced	7	2	2							
+1637	Command	Extra		GetGameCenterExists()			Advanced	7	2	2							
+1638	Command	Extra		GetGameCenterLoggedIn()			Advanced	7	2	2							
+1639	Command	Extra		GetGameCenterPlayerDisplayName()			Advanced	7	1								
+1640	Command	Extra		GetGameCenterPlayerID()			Advanced	7	1								
+1641	Command	Extra		GetInAppPurchaseAvailable( iID )			Advanced	7	2	2							
+1642	Command	Extra		GetInAppPurchaseDescription( iID )			Advanced	7	1								
+1643	Command	Extra		GetInAppPurchaseLocalPrice( iID )			Advanced	7	1								
+1644	Command	Extra		GetInAppPurchaseSignature(int iID)			Advanced	7	1								
+1645	Command	Extra		GetInAppPurchaseState()			Advanced	7	1								
+1646	Command	Extra		GetLocalNotificationExists( iID )			Advanced	7	2	2							
+1647	Command	Extra		GetLocalNotificationMessage( iID )			Advanced	7	1								
+1648	Command	Extra		GetLocalNotificationTime( iID )			Advanced	7	1								
+1649	Command	Extra		GetPushNotificationstr()			Advanced	7	1								
+1650	Command	Extra		GetSmartWatchState()			Advanced	7	1								
+1651	Command	Extra		InAppPurchaseActivate( iID )			Advanced	7	0								
+1652	Command	Extra		InAppPurchaseAddProductID( szID, type )			Advanced	7	0								
+1653	Command	Extra		InAppPurchaseRestore()			Advanced	7	0								
+1654	Command	Extra		InAppPurchaseSetKeys( szData1, szData2 )			Advanced	7	0								
+1655	Command	Extra		InAppPurchaseSetTitle( szTitle )			Advanced	7	0								
+1656	Command	Extra		InAppPurchaseSetup()			Advanced	7	0								
+1657	Command	Extra		LoadSharedVariable( varName, defaultValue )			Advanced	7	1	1							
+1658	Command	Extra		PushNotificationSetup()			Advanced	7	0								
+1659	Command	Extra		RateApp( szID, szTitle )			Advanced	7	0								
+1660	Command	Extra		ReceiveSmartWatchData()			Advanced	7	0								
+1661	Command	Extra		RequestAppReview()			Advanced	7	0								
+1662	Command	Extra		RequestPermission( szPermission )			Advanced	7	1	1							
+1663	Command	Extra		SaveSharedVariable( varName, varValue )			Advanced	7	0								
+1664	Command	Extra		SendSmartWatchData( szJson )			Advanced	7	0								
+1665	Command	Extra		SetClipboardText( szText )			Advanced	7	0								
+1666	Command	Extra		SetCloudDataVariable( varName, varValue )			Advanced	7	0								
+1667	Command	Extra		SetLocalNotification( iID, datetime, szMessage )			Advanced	7	0								
+1668	Command	Extra		SetPushNotificationKeys( keyName, keyValue			Advanced	7	0								
+1669	Command	Extra		SetSharedVariableAppGroup( group )			Advanced	7	0								
+1670	Command	Extra		SetupCloudData( reserved )			Advanced	7	0								
+1671	Command	Adverts		CacheRewardAdChartboost()			Advanced	7	0								
+1672	Command	Adverts		CreateAdvert( type, horz, vert, test )			Advanced	7	1	1							
+1673	Command	Adverts		CreateAdvertEx( type, horz, vert, test, offsetx, offsety )			Advanced	7	1	1							
+1674	Command	Adverts		CreateFullscreenAdvert()			Advanced	7	1	1							
+1675	Command	Adverts		DeleteAdvert()			Advanced	7	0								
+1676	Command	Adverts		GetConsentStatusAdMob()			Advanced	7	1								
+1677	Command	Adverts		GetFullscreenAdvertLoadedAdMob()			Advanced	7	1								
+1678	Command	Adverts		GetFullscreenAdvertLoadedAmazon()			Advanced	7	1								
+1679	Command	Adverts		GetFullscreenAdvertLoadedChartboost()			Advanced	7	1								
+1680	Command	Adverts		GetRewardAdLoadedAdMob()			Advanced	7	1								
+1681	Command	Adverts		GetRewardAdLoadedChartboost()			Advanced	7	1								
+1682	Command	Adverts		GetRewardAdRewardedAdMob()			Advanced	7	1								
+1683	Command	Adverts		GetRewardAdRewardedChartboost()			Advanced	7	1								
+1684	Command	Adverts		LoadConsentStatusAdMob( szPubID, privacyPolicy )			Advanced	7	1	1							
+1685	Command	Adverts		OverrideConsentAdMob( consent )			Advanced	7	0								
+1686	Command	Adverts		OverrideConsentChartboost( consent )			Advanced	7	0								
+1687	Command	Adverts		RequestAdvertRefresh()			Advanced	7	0								
+1688	Command	Adverts		RequestConsentAdMob()			Advanced	7	0								
+1689	Command	Adverts		ResetRewardAdMob()			Advanced	7	0								
+1690	Command	Adverts		ResetRewardChartboost()			Advanced	7	0								
+1691	Command	Adverts		SetAdMobDetails( szID )			Advanced	7	0								
+1692	Command	Adverts		SetAdMobRewardAdDetails( szID )			Advanced	7	0								
+1693	Command	Adverts		SetAdMobTesting( mode )			Advanced	7	0								
+1694	Command	Adverts		SetAdvertLocation( horz, vert, width )			Advanced	7	0								
+1695	Command	Adverts		SetAdvertLocationEx( horz, vert, offsetx, offsety, width )			Advanced	7	0								
+1696	Command	Adverts		SetAdvertPosition( x, y, width )			Advanced	7	0								
+1697	Command	Adverts		SetAdvertVisible( iVisible )			Advanced	7	0								
+1698	Command	Adverts		SetAmazonAdDetails( szKey )			Advanced	7	0								
+1699	Command	Adverts		SetAmazonAdTesting( mode )			Advanced	7	0								
+1700	Command	Adverts		SetChartboostDetails( szKey1, szKey2 )			Advanced	7	0								
+1701	Command	Adverts		SetInneractiveDetails( szCode )			Advanced	7	0								
+1702	Command	Adverts		ShowFullscreenAdvertAdMob()			Advanced	7	0								
+1703	Command	Adverts		ShowFullscreenAdvertAmazon()			Advanced	7	0								
+1704	Command	Adverts		ShowFullscreenAdvertChartboost()			Advanced	7	0								
+1705	Command	Adverts		ShowRewardAdAdMob()			Advanced	7	0								
+1706	Command	Adverts		ShowRewardAdChartboost()			Advanced	7	0								
+1707	Command	Benchmarks		GetDrawingSetupTime()			Advanced	7	1								
+1708	Command	Benchmarks		GetDrawingTime()			Advanced	7	1								
+1709	Command	Benchmarks		GetImageMemoryUsage()			Advanced	7	1								
+1710	Command	Benchmarks		GetLoadedImages()			Advanced	7	1								
+1711	Command	Benchmarks		GetManagedSpriteCount()			Advanced	7	1								
+1712	Command	Benchmarks		GetManagedSpriteDrawCalls()			Advanced	7	1								
+1713	Command	Benchmarks		GetManagedSpriteDrawnCount()			Advanced	7	1								
+1714	Command	Benchmarks		GetManagedSpriteSortedCount()			Advanced	7	1								
+1715	Command	Benchmarks		GetParticleDrawnPointCount()			Advanced	7	1								
+1716	Command	Benchmarks		GetParticleDrawnQuadCount()			Advanced	7	1								
+1717	Command	Benchmarks		GetPhysicsTime()			Advanced	7	1								
+1718	Command	Benchmarks		GetPixelsDrawn()			Advanced	7	1								
+1719	Command	Benchmarks		GetUnassignedImageFileName( index )			Advanced	7	1								
+1720	Command	Benchmarks		GetUnassignedImages()			Advanced	7	1								
+1721	Command	Benchmarks		GetUpdateTime()			Advanced	7	1								
+1722	Command	File		AddZipEntry( zipID, str, zipstr )			Advanced	7	0								
+1723	Command	File		CancelZipExtract()			Advanced	7	0								
+1724	Command	File		ChooseRawFile( ext )			Advanced	7	1	1							
+1725	Command	File		CloseFile( iFileID )			Advanced	7	0								
+1726	Command	File		CloseRawFolder( ID )			Advanced	7	0								
+1727	Command	File		CloseZip( zipID )			Advanced	7	0								
+1728	Command	File		CountWindowsDrives()			Advanced	7	0								
+1729	Command	File		CreateZip( filename )			Advanced	7	1	1							
+1730	Command	File		DeleteFile( szFile )			Advanced	7	0								
+1731	Command	File		DeleteFolder( szName )			Advanced	7	0								
+1732	Command	File		ExtractZip(const zipfilename, str, password)			Advanced	7	0								
+1733	Command	File		ExtractZipASync(const zipfilename, str, password)			Advanced	7	0								
+1734	Command	File		FileEOF( iFileID )			Advanced	7	1	1							
+1735	Command	File		FileIsOpen( iFileID )			Advanced	7	1	1							
+1736	Command	File		GetCurrentDir()			Advanced	7	1								
+1737	Command	File		GetDocumentsstr()			Advanced	7	1								
+1738	Command	File		GetFileCount( mode )			Advanced	7	1								
+1739	Command	File		GetFileExists( szFile )			Advanced	7	2	2							
+1740	Command	File		GetFilePos( iFileID )			Advanced	7	1								
+1741	Command	File		GetFileSize( iFileID )			Advanced	7	1								
+1742	Command	File		GetFirstFile( mode )			Advanced	7	1								
+1743	Command	File		GetFirstFolder()			Advanced	7	1								
+1744	Command	File		GetFolder()			Advanced	7	1								
+1745	Command	File		GetFolderCount( mode )			Advanced	7	1								
+1746	Command	File		GetNextFile()			Advanced	7	1								
+1747	Command	File		GetNextFolder()			Advanced	7	1								
+1748	Command	File		GetRawFolderFileName( ID, index )			Advanced	7	1								
+1749	Command	File		GetRawFolderFolderName( ID, index )			Advanced	7	1								
+1750	Command	File		GetRawFolderNumFiles( ID )			Advanced	7	1								
+1751	Command	File		GetRawFolderNumFolders( ID )			Advanced	7	1								
+1752	Command	File		GetReadstr()			Advanced	7	1								
+1753	Command	File		GetWindowsDrive( index )			Advanced	7	1								
+1754	Command	File		GetWritestr()			Advanced	7	1								
+1755	Command	File		GetZipExtractComplete()			Advanced	7	1								
+1756	Command	File		GetZipExtractProgress()			Advanced	7	1								
+1757	Command	File		IsAbsolutestr( szstr )			Advanced	7	2	2							
+1758	Command	File		Joinstrs( szstr, szstr )			Advanced	7	0								
+1759	Command	File		MakeFolder( szName )			Advanced	7	0								
+1760	Command	File		OpenRawFolder( szstr )			Advanced	7	0								
+1761	Command	File		OpenToRead( ID, szFile )			Advanced	7	0								
+1762	Command	File		OpenToWrite( ID, szFile )			Advanced	7	0								
+1763	Command	File		ReadByte( iFileID )			Advanced	7	1	1							
+1764	Command	File		ReadFloat( iFileID )			Advanced	7	1	1							
+1765	Command	File		ReadInteger( iFileID )			Advanced	7	1	1							
+1766	Command	File		ReadLine( iFileID )			Advanced	7	1	1							
+1767	Command	File		ReadString( iFileID )			Advanced	7	1	1							
+1768	Command	File		ReadString2( iFileID )			Advanced	7	1	1							
+1769	Command	File		SetCurrentDir( szstr )			Advanced	7	0								
+1770	Command	File		SetFilePos( iFileID, pos )			Advanced	7	0								
+1771	Command	File		SetFolder( str )			Advanced	7	0								
+1772	Command	File		SetRawWritestr( str )			Advanced	7	0								
+1773	Command	File		Simplifystr( szstr )			Advanced	7	0								
+1774	Command	File		WriteByte( iFileID, b )			Advanced	7	0								
+1775	Command	File		WriteFloat( iFileID, f )			Advanced	7	0								
+1776	Command	File		WriteInteger( iFileID, i )			Advanced	7	0								
+1777	Command	File		WriteLine( iFileID, str )			Advanced	7	0								
+1778	Command	File		WriteString( iFileID, str )			Advanced	7	0								
+1779	Command	File		WriteString2( iFileID, str )			Advanced	7	0								
+1780	Command	Time		GetCurrentDate()			Advanced	7	1								
+1781	Command	Time		GetCurrentTime()			Advanced	7	1								
+1782	Command	Time		GetDayOfWeek()			Advanced	7	1								
+1783	Command	Time		GetDaysFromUnix( unixtime )			Advanced	7	1								
+1784	Command	Time		GetHoursFromUnix( unixtime )			Advanced	7	1								
+1785	Command	Time		GetLeapYear( year )			Advanced	7	1								
+1786	Command	Time		GetMinutesFromUnix( unixtime )			Advanced	7	1								
+1787	Command	Time		GetMonthFromUnix( unixtime )			Advanced	7	1								
+1788	Command	Time		GetSecondsFromUnix( unixtime )			Advanced	7	1								
+1789	Command	Time		GetUnixFromDate( year, month, days, hours, minutes, seconds )			Advanced	7	1								
+1790	Command	Time		GetUnixTime()			Advanced	7	1								
+1791	Command	Time		GetYearFromUnix( unixtime )			Advanced	7	1								
+1792	Command	Memblocks		AddObjectMeshFromMemblock( objID, memID )			Advanced	7	0								
+1793	Command	Memblocks		CopyMemblock( memSrcID, memDstID, srcOffset, dstOffset, size )			Advanced	7	0								
+1794	Command	Memblocks		CreateFileFromMemblock( filename, memID )			Advanced	7	1	1							
+1795	Command	Memblocks		CreateImageFromMemblock( imageID, memID )			Advanced	7	1	1							
+1796	Command	Memblocks		CreateMemblock( memID, size )			Advanced	7	1	1							
+1797	Command	Memblocks		CreateMemblockFromFile( filename )			Advanced	7	1	1							
+1798	Command	Memblocks		CreateMemblockFromImage( imageID )			Advanced	7	1	1							
+1799	Command	Memblocks		CreateMemblockFromObjectMesh( objID, meshIndex )			Advanced	7	1	1							
+1800	Command	Memblocks		CreateMemblockFromSound( soundID )			Advanced	7	1	1							
+1801	Command	Memblocks		CreateObjectFromMeshMemblock( memID )			Advanced	7	1	1							
+1802	Command	Memblocks		CreateSoundFromMemblock( memID )			Advanced	7	1	1							
+1803	Command	Memblocks		DeleteMemblock( memID )			Advanced	7	0								
+1804	Command	Memblocks		GetMemblockByte( memID, offset )			Advanced	7	1								
+1805	Command	Memblocks		GetMemblockByteSigned( memID, offset )			Advanced	7	1								
+1806	Command	Memblocks		GetMemblockExists( memID )			Advanced	7	1								
+1807	Command	Memblocks		GetMemblockFloat( memID, offset )			Advanced	7	1								
+1808	Command	Memblocks		GetMemblockInt( memID, offset )			Advanced	7	1								
+1809	Command	Memblocks		GetMemblockShort( memID, offset )			Advanced	7	1								
+1810	Command	Memblocks		GetMemblockSize( memID )			Advanced	7	1								
+1811	Command	Memblocks		GetMemblockString( memID, offset, length )			Advanced	7	1								
+1812	Command	Memblocks		GetMeshMemblockVertexAlpha( memID, vertexIndex )			Advanced	7	1								
+1813	Command	Memblocks		GetMeshMemblockVertexBlue( memID, vertexIndex )			Advanced	7	1								
+1814	Command	Memblocks		GetMeshMemblockVertexGreen( memID, vertexIndex )			Advanced	7	1								
+1815	Command	Memblocks		GetMeshMemblockVertexNormalX( memID, vertexIndex )			Advanced	7	1								
+1816	Command	Memblocks		GetMeshMemblockVertexNormalY( memID, vertexIndex )			Advanced	7	1								
+1817	Command	Memblocks		GetMeshMemblockVertexNormalZ( memID, vertexIndex )			Advanced	7	1								
+1818	Command	Memblocks		GetMeshMemblockVertexRed( memID, vertexIndex )			Advanced	7	1								
+1819	Command	Memblocks		GetMeshMemblockVertexU( memID, vertexIndex )			Advanced	7	1								
+1820	Command	Memblocks		GetMeshMemblockVertexV( memID, vertexIndex )			Advanced	7	1								
+1821	Command	Memblocks		GetMeshMemblockVertexX( memID, vertexIndex )			Advanced	7	1								
+1822	Command	Memblocks		GetMeshMemblockVertexY( memID, vertexIndex )			Advanced	7	1								
+1823	Command	Memblocks		GetMeshMemblockVertexZ( memID, vertexIndex )			Advanced	7	1								
+1824	Command	Memblocks		SetMemblockByte( memID, offset, value )			Advanced	7	0								
+1825	Command	Memblocks		SetMemblockByteSigned( memID, offset, value )			Advanced	7	0								
+1826	Command	Memblocks		SetMemblockFloat( memID, offset, value )			Advanced	7	0								
+1827	Command	Memblocks		SetMemblockInt( memID, offset, value )			Advanced	7	0								
+1828	Command	Memblocks		SetMemblockShort( memID, offset, value )			Advanced	7	0								
+1829	Command	Memblocks		SetMemblockString( memID, offset, value )			Advanced	7	0								
+1830	Command	Memblocks		SetMeshMemblockVertexColor( memID, vertexIndex, red, green, blue, alpha )			Advanced	7	0								
+1831	Command	Memblocks		SetMeshMemblockVertexNormal( memID, vertexIndex, x, y, z )			Advanced	7	0								
+1832	Command	Memblocks		SetMeshMemblockVertexPosition( memID, vertexIndex, x, y, z )			Advanced	7	0								
+1833	Command	Memblocks		SetMeshMemblockVertexUV( memID, vertexIndex, u, v )			Advanced	7	0								
+1834	Command	Memblocks		SetObjectMeshFromMemblock( objID, meshIndex, memID )			Advanced	7	0								
+1835	Command	Errors		GetErrorOccurred()			Advanced	7	2	2							
+1836	Command	Errors		GetLastError()			Advanced	7	1								
+1837	Command	Errors		Log( szMessage )			Advanced	7	0								
+1838	Command	Errors		SetErrorMode( mode )			Advanced	7	0								
